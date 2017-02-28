@@ -1,0 +1,26 @@
+.rise-enabled #notebook-container{
+width: 100% !important;
+}
+.rise-enabled .rendered_html td, 
+.rise-enabled .rendered_html th {
+    padding: 12px;
+}
+.reveal blockquote{
+width: inherit;
+}
+.rise-enabled .reveal section img{
+margin-left: auto;
+margin-right: auto;
+}
+
+img[alt=thumb] {
+ float: right;
+ max-width:25%; 
+}
+.tag{background:#ffff93; border: 1px solid orange; font-weight: bold; 
+     padding: 3px 6px; border-radius: 7px 0px 0px 7px; white-space: nowrap;}
+.tag:before {content:'o '; color:orange; }
+.rendered_html blockquote cite{
+text-align:right;
+    display: block;
+}
