@@ -1,8 +1,0 @@
-﻿name: mame
-channels:
-  - defaults
-  - conda-forge
-dependencies:
-  - bqplot
-  - seaborn
-  - matplotlib >=2.0.0
