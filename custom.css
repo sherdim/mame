@@ -2,11 +2,10 @@ img[alt=thumb] {
  float: right;
  max-width:25%; 
 }
-.rendered_html p[alt=tag],
 .rendered_html p[title=tag],
 .rendered_html img[src=""],
 .tag{background:#ffff93; border: 1px solid orange; font-weight: bold; display: inline;
-     padding: 3px 6px; border-radius: 7px 0px 0px 7px; white-space: nowrap;}
+    padding: 3px 6px 3px 11px; border-radius: 7px 0px 0px 7px; white-space: nowrap;}
 .tag:before {content:'o '; color:orange; }
 .rendered_html blockquote cite{
 text-align:right;
