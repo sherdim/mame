@@ -17,7 +17,7 @@ img[alt=thumb] {
  float: right;
  max-width:25%; 
 }
-.tag{background:#ff0093; border: 1px solid orange; font-weight: bold; 
+.tag{background:#ffff93; border: 1px solid orange; font-weight: bold; 
      padding: 3px 6px; border-radius: 7px 0px 0px 7px; white-space: nowrap;}
 .tag:before {content:'o '; color:orange; }
 .rendered_html blockquote cite{
