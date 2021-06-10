@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🗎 Анализ изображения &#8212; Практикум по математическим методам в исследовательской деятельности</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Вероятностные модели" href="pr_proba.html" />
+    <link rel="prev" title="Обработка изображений" href="i_pictu.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Практикум по математическим методам в исследовательской деятельности</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Искать в этой книге ..." aria-label="Искать в этой книге ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Предисловие
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_intro.html">
+   Освоение рабочей среды
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_python.html">
+     Освоение языка Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sreda.html">
+     Подготовка рабочего места
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sredaonline.html">
+     Онлайн-платформы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb.html">
+     Создание нового блокнота
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cell.html">
+     Операции с ячейками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_str.html">
+     Строки в кавычках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cycle.html">
+     Циклы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_keyboard.html">
+     Управление с клавиатуры
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_types.html">
+     Разные типы - разное поведение!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_task.html">
+     Как работать с блокнотами упражнений?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_rename.html">
+     Как переименовать блокнот?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_def.html">
+     Функция
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_zaim.html">
+     Заимствование кода
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_scriptwork.html">
+     Выполнение практических работ на скриптовых языках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nbtips.html">
+     Памятка
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_intro.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_stohastic.html">
+   Стационарные стохастические процессы
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_empiric.html">
+     Эмпирические распределения значений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data1.html">
+     ✍ Получение набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_hist.html">
+     Построение гистограммы распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_random.html">
+     Генератор случайных чисел
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_random.html">
+     ☑ Генерация случайных выборок
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_eda.html">
+   Разведочный анализ
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_vector.html">
+     Составные типы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset.html">
+     Готовые наборы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pairplot.html">
+     Структура таблиц
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_demographic.html">
+     Сведенья о пациентах
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_standart.html">
+     Cтандартизация данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_turtle.html">
+     Работа с таблицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_turtle.html">
+     ☑ Подготовка данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_eda.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_linear.html">
+   Линейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset_rt.html">
+     Формирование набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_normality.html">
+     Проверка нормальности распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_groupmean.html">
+     Групповая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_combine.html">
+     Объединение наборов данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_anova.html">
+     Вариационный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_granada.html">
+     🗎 Сравнение выборок
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_logscale.html">
+     Логарифмирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_modeline.html">
+     🗎 Сравнение регрессионных моделей
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_retivo.html">
+     Подбор параметров распределения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_plan.html">
+   Планирование экспериментов
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_power.html">
+     Мощность исследования
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_quartile.html">
+     Анализ публикационного ландшафта
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_artana.html">
+     🗎 Анализ научной статьи
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_nonlinear.html">
+   Нелинейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data2.html">
+     ✍ Получение набора данных 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_exp.html">
+     Экспоненциальные рост и угасание
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_season.html">
+     Сезонные колебания
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_ecg.html">
+     Выделение событий в сигнале
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_wav.html">
+     Визуализация аудиозаписи
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_spectral.html">
+     Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_spec.html">
+     🗎 Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_perehod.html">
+     Переходные процессы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_prognoz.html">
+     Прогнозирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_gaupro.html">
+     Компоненты нелинейного процесса
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_struct.html">
+   Структурные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_kiss.html">
+     Дистанция между строками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_seq.html">
+     Обнаружение нарушений в структуре
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_clu.html">
+     🗎 Кластерный анализ
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="pr_matrix.html">
+   Двумерные массивы данных
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_coordinates.html">
+     Координаты
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_matrix.html">
+     Операции с матрицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dim.html">
+     Увеличение размерности
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pictu.html">
+     Обработка изображений
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     🗎 Анализ изображения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_proba.html">
+   Вероятностные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sexproba.html">
+     Случайность - двигатель прогресса?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_codon.html">
+     Частоты кодонов
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_age_logistic.html">
+     Скрининговая диагностика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_epistat.html">
+     Эпидемиологическая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_epistat.html">
+     ☑ Динамика заболеваний
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_qual.html">
+   Квалиметрические модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_qual.html">
+     🗎 Оценка качества
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pedagogic.html">
+   Заметки для преподавателей
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   Список литературы
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="annotation.html">
+   Аннотация
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Переключить навигацию" aria-controls="site-navigation"
+            title="Переключить навигацию" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Загрузите эту страницу"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/w_pictu.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Скачать исходный файл" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Распечатать в PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Полноэкранный режим"
+                title="Полноэкранный режим"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sherdim/mame/gh-pages?urlpath=tree/w_pictu.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Запуск Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Содержание
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Требования к отчету
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>🗎 Анализ изображения<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="admonition note">
+<p class="admonition-title">О среде выполнения </p>
+<p> 
+Данная расчётно-графическая работа выполняется в [программной среде Jupyter Notebook](i_sreda.ipynb).
+Если у Вас на компьютере нет установленной вычислительной среды, см. [Выполнение расчетно-графических работ онлайн](i_sredaonline.ipynb)
+</p>
+</div></div>
+</div>
+<p>Проверьте работу приведенного алгоритма подсчета колоний на других фрагментах этого или других изображениях.</p>
+<p>Сделайте вывод о возможных путях усовершенствования алгоритма при работе с выбранными вами образцами.</p>
+<div class="section" id="id2">
+<h2>Требования к отчету<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В отчете должны быть:</p>
+<ol class="simple">
+<li><p>Указание на источник данных.</p></li>
+<li><p>Обоснование выделения фрагмента с заданным положением и размером.</p></li>
+<li><p>Комментарий по поводу каждого выводимого значения, рисунока или операции по подбору параметров.</p></li>
+</ol>
+<p>Если какие-то операции кажутся вам понятными и не требующими комментариев - объединяйте их код со следующими ячейками с кодом, укрупняя блоки кода.
+Если подходящий блок кода содержит необходимую вычислительную операцию и дополнительный код для построения рисунка, который Вы не хотите комментировать, то оставьте только необходимую Вам часть кода, а остальное удалите.</p>
+<p>Рекомендуемый порядок включает проверку алгоритма на каком-нибудь фрагменте изображения, похожего на исходный фрагмент, то есть с четко различимыми колониями стафилококка на светлом агаре.
+Когда Вы подтвердите, что алгоритм работает, попробуйте взять другой более сложный фрагмент - или с худшим разрешением, или колониями разной формы и четкости, с другой цветовой гаммой.
+Приветствуется использование собственных изображений с большим количеством контрастных объектов (не обязательно круглых). Это могут быть пятна на поверхностях, узоры на одежде, любые природные паттерны с нерегулярным расположением отдельных частей.
+Возможно придется подстраивать некоторые параметры выделения контуров или проводить предварительное сглаживание для удаления шума.
+Сравните успешность алгоритма для четких и проблемных изображений.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>В конце отчета по расчётно-графической работе обязательно сделайте вывод.</p>
+<ol class="simple">
+<li><p>Основной результат. Прежде всего в выводе должен прозвучать ответ на поставленный вопрос.
+Что было целью работы, то и должно быть указано в выводе с конкретным числовым результатом.</p></li>
+<li><p>Ограничения данной работы. Если в ходе работе были выявлены новые обстоятельства, которые привели к изменению хода работы, к ошибкам, к необходимости переосмысления возможности ее выполнения, то эти соображения надо изложить во вторую очередь.</p></li>
+<li><p>Педагогические и эмоциональные замечания. Поскольку эта работа учебная, то можно поделиться впечатлениями от самого процесса решения задачи. Что было сложным, что особенно понравилось, что оказалось удивительным и неожиданным.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="i_pictu.html" title="previous page">Обработка изображений</a>
+    <a class='right-next' id="next-link" href="pr_proba.html" title="next page">Вероятностные модели</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Дмитрий Н. Щербина<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

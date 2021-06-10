@@ -1,0 +1,877 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Функция &#8212; Практикум по математическим методам в исследовательской деятельности</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Заимствование кода" href="i_zaim.html" />
+    <link rel="prev" title="Как переименовать блокнот?" href="i_rename.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Практикум по математическим методам в исследовательской деятельности</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Искать в этой книге ..." aria-label="Искать в этой книге ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Предисловие
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="pr_intro.html">
+   Освоение рабочей среды
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_python.html">
+     Освоение языка Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sreda.html">
+     Подготовка рабочего места
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sredaonline.html">
+     Онлайн-платформы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb.html">
+     Создание нового блокнота
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cell.html">
+     Операции с ячейками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_str.html">
+     Строки в кавычках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cycle.html">
+     Циклы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_keyboard.html">
+     Управление с клавиатуры
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_types.html">
+     Разные типы - разное поведение!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_task.html">
+     Как работать с блокнотами упражнений?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_rename.html">
+     Как переименовать блокнот?
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Функция
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_zaim.html">
+     Заимствование кода
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_scriptwork.html">
+     Выполнение практических работ на скриптовых языках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nbtips.html">
+     Памятка
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_intro.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_stohastic.html">
+   Стационарные стохастические процессы
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_empiric.html">
+     Эмпирические распределения значений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data1.html">
+     ✍ Получение набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_hist.html">
+     Построение гистограммы распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_random.html">
+     Генератор случайных чисел
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_random.html">
+     ☑ Генерация случайных выборок
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_eda.html">
+   Разведочный анализ
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_vector.html">
+     Составные типы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset.html">
+     Готовые наборы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pairplot.html">
+     Структура таблиц
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_demographic.html">
+     Сведенья о пациентах
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_standart.html">
+     Cтандартизация данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_turtle.html">
+     Работа с таблицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_turtle.html">
+     ☑ Подготовка данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_eda.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_linear.html">
+   Линейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset_rt.html">
+     Формирование набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_normality.html">
+     Проверка нормальности распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_groupmean.html">
+     Групповая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_combine.html">
+     Объединение наборов данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_anova.html">
+     Вариационный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_granada.html">
+     🗎 Сравнение выборок
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_logscale.html">
+     Логарифмирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_modeline.html">
+     🗎 Сравнение регрессионных моделей
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_retivo.html">
+     Подбор параметров распределения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_plan.html">
+   Планирование экспериментов
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_power.html">
+     Мощность исследования
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_quartile.html">
+     Анализ публикационного ландшафта
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_artana.html">
+     🗎 Анализ научной статьи
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_nonlinear.html">
+   Нелинейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data2.html">
+     ✍ Получение набора данных 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_exp.html">
+     Экспоненциальные рост и угасание
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_season.html">
+     Сезонные колебания
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_ecg.html">
+     Выделение событий в сигнале
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_wav.html">
+     Визуализация аудиозаписи
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_spectral.html">
+     Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_spec.html">
+     🗎 Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_perehod.html">
+     Переходные процессы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_prognoz.html">
+     Прогнозирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_gaupro.html">
+     Компоненты нелинейного процесса
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_struct.html">
+   Структурные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_kiss.html">
+     Дистанция между строками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_seq.html">
+     Обнаружение нарушений в структуре
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_clu.html">
+     🗎 Кластерный анализ
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_matrix.html">
+   Двумерные массивы данных
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_coordinates.html">
+     Координаты
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_matrix.html">
+     Операции с матрицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dim.html">
+     Увеличение размерности
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pictu.html">
+     Обработка изображений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_pictu.html">
+     🗎 Анализ изображения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_proba.html">
+   Вероятностные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sexproba.html">
+     Случайность - двигатель прогресса?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_codon.html">
+     Частоты кодонов
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_age_logistic.html">
+     Скрининговая диагностика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_epistat.html">
+     Эпидемиологическая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_epistat.html">
+     ☑ Динамика заболеваний
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_qual.html">
+   Квалиметрические модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_qual.html">
+     🗎 Оценка качества
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pedagogic.html">
+   Заметки для преподавателей
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   Список литературы
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="annotation.html">
+   Аннотация
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Переключить навигацию" aria-controls="site-navigation"
+            title="Переключить навигацию" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Загрузите эту страницу"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/i_def.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Скачать исходный файл" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Распечатать в PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Полноэкранный режим"
+                title="Полноэкранный режим"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sherdim/mame/gh-pages?urlpath=tree/i_def.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Запуск Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>Функция<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p><em>Функция</em> - это специально оформленный блок организованного, многократно используемого кода, который используется для выполнения определенного действия.
+Вы можете передавать данные в функцию - это так называемые параметры. И можете получать данные - это результат выполнения функции.</p>
+<p>Как вы уже знаете, Python предоставляет вам множество встроенных функций, таких как <code class="docutils literal notranslate"><span class="pre">print()</span></code> и т.д.
+Но Вы также можете создавать свои собственные функции. Эти функции называются <em>пользовательскими функциями</em>.</p>
+<p>Рассмотрим задачу расчета площади по известным ширине и длине. Гипотетически это может пригодиться при моделировании отбора формы лепестков при восприятии их насекомыми.</p>
+<div class="figure align-default" id="id2">
+<img alt="" src="_images/iris_petal_sepal.png" />
+<p class="caption"><span class="caption-number">Рис. 3 </span><span class="caption-text">Морфологические признаки цветка ириса</span><a class="headerlink" href="#id2" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Возьмем два измерения прилистника (sepal) - длина и ширина. Приближенно будем считать, что прилистник имеет форму ромба, т.е. его площадь равна половине площади прямоугольника с теми же размерами.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="mf">5.9</span>  <span class="c1">#sepal length, см</span>
+<span class="n">w</span><span class="o">=</span><span class="mf">3.0</span>  <span class="c1">#sepal width, см</span>
+<span class="p">(</span><span class="n">l</span><span class="o">*</span><span class="n">w</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.850000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<p>Для повторного использования мы создадим функцию, которую сможем повторно использовать для аналогичных расчетов.</p>
+<p>Определение функции начинается с оператора <code class="docutils literal notranslate"><span class="pre">def</span></code> (от англ. definition, определение).
+В функции можно включать произвольное количество команд для операций над данных и возращать итоговое значение с помощью команды <code class="docutils literal notranslate"><span class="pre">return</span></code> (возвратить).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ploshad</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;расчитывает площадь лепестка&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">l</span><span class="o">*</span><span class="n">w</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+
+<span class="n">ploshad</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.850000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<p>Теперь, для разных значений длины и ширины, мы можем вычислять площадь, вызывая специально созданную для этого функцию.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ploshad</span><span class="p">(</span><span class="mf">6.3</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.875
+</pre></div>
+</div>
+</div>
+</div>
+<p>Есть также специальная форма записи определения функции в одну строчку, получившая название - ламбда. Это упрощенная запись, где после двоеточия идет выражение, результат выполнения которого возвращается (команда return не используется).</p>
+<p>Обратите внимание: умножение на половину - это то же самое, что деление на два.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ploshad_v_1_strochku</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">l</span><span class="p">,</span><span class="n">w</span><span class="p">:</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">l</span><span class="o">*</span><span class="n">w</span>
+
+<span class="n">ploshad_v_1_strochku</span><span class="p">(</span><span class="mf">6.3</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.875
+</pre></div>
+</div>
+</div>
+</div>
+<p>Поскольку лепесток имеет форму более округлую, чем ромб, то и реальная его площадь чуть больше, чем половина прямоугольника.</p>
+<p><em>Коэффициент</em> - множитель, с помощью которого мы регулируем эффект основной величины.</p>
+<p>Введем коэффициент в функцию как изменяемый параметр, наделив его значением по-умолчанию.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ploshad</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.6</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;расчитывает площадь лепестка</span>
+<span class="sd">    </span>
+<span class="sd">    ver 1.1</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">l</span><span class="o">*</span><span class="n">w</span><span class="p">)</span>
+
+<span class="n">ploshad</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.620000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<p>Мы переопределили функцию - дали ей новое определение. В данном случае смысл функции не изменился. И формат вызова остался прежним - она принимает два аргумента длина и ширина.
+При этом функционал немного рассширился: появилась возможность влиять на результат с помощью дополнительного параметра - коэффициента округлости.
+Возвращаемое значение при той же форме вызова изменилось - стало чуть больше.</p>
+<p>Поведение исходной версии функции мы можем воспроизвести, задав коэффициент со значением 0.5. Задание параметра функции может производится несколькими способами:</p>
+<ul class="simple">
+<li><p>передача значения в нужной позиции;</p></li>
+<li><p>передача значения в паре имя=значение;</p></li>
+<li><p>передача переменной, которой до этого присвоили нужное значение.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ploshad</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.850000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ploshad</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.850000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">=</span><span class="mf">0.5</span>
+<span class="n">ploshad</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.850000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<p>Данная функция будет работать с любыми типами входных данных, поддерживающих операцию умножения.</p>
+<p>Например, объект <code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code> представляет собой организованный набор значений. В наборе данных с размерами лепесков от 150 цветков ириса отдельные колонки с длиной и шириной чашелистиков.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">sepal_length</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.series.Series
+</pre></div>
+</div>
+</div>
+</div>
+<p>Посчитаем площадь прилистников для всех 150 экземпляров ирисов в наборе данных.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ploshad</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">sepal_length</span><span class="p">,</span> <span class="n">D</span><span class="o">.</span><span class="n">sepal_width</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      10.710
+1       8.820
+2       9.024
+3       8.556
+4      10.800
+        ...  
+145    12.060
+146     9.450
+147    11.700
+148    12.648
+149    10.620
+Length: 150, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Наша простая функция справилась с этой задачей!</p>
+<blockquote>
+<div><p>Чтобы понять, что находится в аргументах, которые мы передали в нашу функцию - создайте новую ячейку, скопируйте в нее аргумент (<code class="docutils literal notranslate"><span class="pre">D.sepal_length</span></code>) и выполните. Повторите то же самое для переменной <code class="docutils literal notranslate"><span class="pre">D</span></code>, в которую мы загрузили весь набор данных.</p>
+</div></blockquote>
+<p>Чтобы использовать эту же формулу для расчета площади внутренних лепестков околоцветников, можно подкорректировать коэффициент <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">ploshad</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">petal_length</span><span class="p">,</span> <span class="n">D</span><span class="o">.</span><span class="n">petal_width</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.55</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">S</span><span class="o">.</span><span class="n">hist</span><span class="p">();</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Площадь лепестков ириса, $см^2$&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_def_23_0.png" src="_images/i_def_23_0.png" />
+</div>
+</div>
+<p>Итак, мы попробовали определить несложную пользовательскую функцию для расчета площади. Насмотря на простоту она имеет все стандартные атрибуты.
+Похожим образом Вы можете написать функции, обеспечивающие необходимый Вам уникальный функционал. Вот простые правила для определения функции в Python:</p>
+<ol class="simple">
+<li><p>Определение функции начинается с ключевого слова <code class="docutils literal notranslate"><span class="pre">def</span></code>, за которым следует имя функции и круглые скобки <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code>.</p></li>
+<li><p>Любые входные параметры или аргументы при вызове функции надо помещать в эти круглые скобки. При определении количество, тип и порядок аргументов Вы также можете определить параметры внутри этих скобок.</p></li>
+<li><p>Блок кода начинается с двоеточия (:) и имеет отступ. Первой строкой функции может быть необязательный оператор - строка документации функции (<em>doсstring</em>).</p></li>
+<li><p>Оператор <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">[result]</span></code> завершает работу функции, при необходимости возвращая результат выполнения вызывающему объекту (квадратные скобки указывают на необязательность аргумента). Оператор <code class="docutils literal notranslate"><span class="pre">return</span></code> без аргументов - это то же самое, что и оператор <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">None</span></code>.</p></li>
+</ol>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="i_rename.html" title="previous page">Как переименовать блокнот?</a>
+    <a class='right-next' id="next-link" href="i_zaim.html" title="next page">Заимствование кода</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Дмитрий Н. Щербина<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

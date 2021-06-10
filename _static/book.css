@@ -1,0 +1,14 @@
+﻿p {
+  text-align: justify;
+/*  font-family: Times;*/
+}
+
+.bd-content .footer {
+    display: none;
+}
+
+@media print {
+    .bd-toc {
+        display: none !important;
+    }
+}

@@ -1,0 +1,1084 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Компоненты нелинейного процесса &#8212; Практикум по математическим методам в исследовательской деятельности</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Структурные модели" href="pr_struct.html" />
+    <link rel="prev" title="Предсказание будущих реакций на основе предшествующих" href="i_prognoz.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Практикум по математическим методам в исследовательской деятельности</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Искать в этой книге ..." aria-label="Искать в этой книге ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Предисловие
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_intro.html">
+   Освоение рабочей среды
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_python.html">
+     Освоение языка Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sreda.html">
+     Подготовка рабочего места
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sredaonline.html">
+     Онлайн-платформы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb.html">
+     Создание нового блокнота
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cell.html">
+     Операции с ячейками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_str.html">
+     Строки в кавычках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cycle.html">
+     Циклы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_keyboard.html">
+     Управление с клавиатуры
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_types.html">
+     Разные типы - разное поведение!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_task.html">
+     Как работать с блокнотами упражнений?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_rename.html">
+     Как переименовать блокнот?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_def.html">
+     Функция
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_zaim.html">
+     Заимствование кода
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_scriptwork.html">
+     Выполнение практических работ на скриптовых языках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nbtips.html">
+     Памятка
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_intro.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_stohastic.html">
+   Стационарные стохастические процессы
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_empiric.html">
+     Эмпирические распределения значений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data1.html">
+     ✍ Получение набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_hist.html">
+     Построение гистограммы распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_random.html">
+     Генератор случайных чисел
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_random.html">
+     ☑ Генерация случайных выборок
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_eda.html">
+   Разведочный анализ
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_vector.html">
+     Составные типы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset.html">
+     Готовые наборы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pairplot.html">
+     Структура таблиц
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_demographic.html">
+     Сведенья о пациентах
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_standart.html">
+     Cтандартизация данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_turtle.html">
+     Работа с таблицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_turtle.html">
+     ☑ Подготовка данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_eda.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_linear.html">
+   Линейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset_rt.html">
+     Формирование набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_normality.html">
+     Проверка нормальности распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_groupmean.html">
+     Групповая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_combine.html">
+     Объединение наборов данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_anova.html">
+     Вариационный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_granada.html">
+     🗎 Сравнение выборок
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_logscale.html">
+     Логарифмирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_modeline.html">
+     🗎 Сравнение регрессионных моделей
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_retivo.html">
+     Подбор параметров распределения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_plan.html">
+   Планирование экспериментов
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_power.html">
+     Мощность исследования
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_quartile.html">
+     Анализ публикационного ландшафта
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_artana.html">
+     🗎 Анализ научной статьи
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="pr_nonlinear.html">
+   Нелинейные модели
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data2.html">
+     ✍ Получение набора данных 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_exp.html">
+     Экспоненциальные рост и угасание
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_season.html">
+     Сезонные колебания
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_ecg.html">
+     Выделение событий в сигнале
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_wav.html">
+     Визуализация аудиозаписи
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_spectral.html">
+     Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_spec.html">
+     🗎 Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_perehod.html">
+     Переходные процессы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_prognoz.html">
+     Прогнозирование
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Компоненты нелинейного процесса
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_struct.html">
+   Структурные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_kiss.html">
+     Дистанция между строками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_seq.html">
+     Обнаружение нарушений в структуре
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_clu.html">
+     🗎 Кластерный анализ
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_matrix.html">
+   Двумерные массивы данных
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_coordinates.html">
+     Координаты
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_matrix.html">
+     Операции с матрицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dim.html">
+     Увеличение размерности
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pictu.html">
+     Обработка изображений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_pictu.html">
+     🗎 Анализ изображения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_proba.html">
+   Вероятностные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sexproba.html">
+     Случайность - двигатель прогресса?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_codon.html">
+     Частоты кодонов
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_age_logistic.html">
+     Скрининговая диагностика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_epistat.html">
+     Эпидемиологическая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_epistat.html">
+     ☑ Динамика заболеваний
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_qual.html">
+   Квалиметрические модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_qual.html">
+     🗎 Оценка качества
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pedagogic.html">
+   Заметки для преподавателей
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   Список литературы
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="annotation.html">
+   Аннотация
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Переключить навигацию" aria-controls="site-navigation"
+            title="Переключить навигацию" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Загрузите эту страницу"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/i_gaupro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Скачать исходный файл" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Распечатать в PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Полноэкранный режим"
+                title="Полноэкранный режим"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sherdim/mame/gh-pages?urlpath=tree/i_gaupro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Запуск Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Содержание
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Рисунок с нелинейными трендами
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Прогноз
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>Компоненты нелинейного процесса<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Для процессов, в которых есть периодические составляющие, прогнозные модели на основе простой экстраполяции текущего состояния работают плохо. В правой части рисунка (<a class="reference internal" href="#nonlinear-prognoz"><span class="std std-numref">Рис. 16</span></a>), где данные (черные точки), представляющие собой синусоиду (темно-синяя линия) с шумом, закончились, видно, что регрессионная модель SVR (красная линия) не может прогнозировать продолжение колебаний, останавливаясь на некотором уровне.
+Модели KRR и GPR (голубая и оранжевая линии) способны прогнозировать будущие колебания.
+Модель GPR (Gaussian Process Regression) кроме среднего значения предсказывает дисперсию (область разброса) значений:
+область наиболее вероятного появления данных с учётом шума показана полупрозрачным оранжевым поясом вокруг оранжевой линии.</p>
+<div class="figure align-default" id="nonlinear-prognoz">
+<img alt="" src="_images/nonlinear_prognoz.png" />
+<p class="caption"><span class="caption-number">Рис. 16 </span><span class="caption-text">Сравнение различных моделей трендов. GPR - Gaussian Process Regression.
+<a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Regressions_sine_demo.svg/1024px-Regressions_sine_demo.svg.png">©</a></span><a class="headerlink" href="#nonlinear-prognoz" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Подберем параметры Гауссова процесса для данных в тесте ускорения нажатий.
+Подставьте ссылку на собственные данные, если вы прошли тест по инструкции.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.gaussian_process</span> <span class="kn">import</span> <span class="n">GaussianProcessRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.gaussian_process.kernels</span> <span class="kn">import</span> <span class="n">RBF</span><span class="p">,</span> <span class="n">WhiteKernel</span><span class="p">,</span> <span class="n">ConstantKernel</span> <span class="k">as</span> <span class="n">Constant</span><span class="p">,</span> \
+        <span class="n">Matern</span><span class="p">,</span> <span class="n">PairwiseKernel</span><span class="p">,</span> <span class="n">Exponentiation</span><span class="p">,</span> <span class="n">RationalQuadratic</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="o">=</span><span class="s1">&#39;http://stireac.com/uskor/result.tsv/sherdim</span><span class="si">%40g</span><span class="s1">mail.com/10.132.32.111__6158019760000190311&#39;</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+<span class="n">M</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;v&#39;</span><span class="p">:</span><span class="s1">&#39;code&#39;</span><span class="p">})</span>
+<span class="n">M</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 1000 entries, 0 to 999
+Data columns (total 2 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   t       1000 non-null   float64
+ 1   code    1000 non-null   int64  
+dtypes: float64(1), int64(1)
+memory usage: 15.8 KB
+</pre></div>
+</div>
+</div>
+</div>
+<p>Извлечем из списка маркеров информацию о нажатиях с разбивкой по этапам.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">itrial</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+    <span class="n">coab</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">+</span> <span class="n">itrial</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+    <span class="n">tab</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">t</span><span class="p">[</span><span class="n">M</span><span class="o">.</span><span class="n">code</span><span class="o">==</span><span class="n">coab</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">tad</span> <span class="o">=</span> <span class="n">M</span><span class="o">.</span><span class="n">t</span><span class="p">[(</span><span class="n">M</span><span class="o">.</span><span class="n">t</span><span class="o">&gt;</span><span class="n">tab</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">M</span><span class="o">.</span><span class="n">code</span><span class="o">==</span><span class="mi">13</span><span class="p">)]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">_R</span> <span class="o">=</span> <span class="n">M</span><span class="p">[(</span><span class="n">M</span><span class="o">.</span><span class="n">t</span><span class="o">&gt;=</span><span class="n">tab</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">M</span><span class="o">.</span><span class="n">t</span><span class="o">&lt;</span><span class="n">tad</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">_R</span><span class="p">[</span><span class="s1">&#39;trial&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">itrial</span><span class="o">+</span><span class="mi">1</span>
+<span class="c1">#     _R[&#39;d&#39;]=np.nan</span>
+    <span class="c1"># оставляем только нажатия (коды отжатия &lt; 0)</span>
+    <span class="n">_R</span> <span class="o">=</span> <span class="n">_R</span><span class="p">[(</span><span class="n">_R</span><span class="o">.</span><span class="n">code</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">_R</span><span class="o">.</span><span class="n">code</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)]</span>
+    <span class="c1"># выравниваем по времени относительно начала этапа</span>
+    <span class="n">_R</span><span class="o">.</span><span class="n">t</span> <span class="o">-=</span> <span class="n">tab</span>
+    <span class="n">_R</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">_R</span><span class="p">[</span><span class="s1">&#39;iri&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_R</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+    
+    <span class="n">R</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_R</span><span class="p">)</span>
+    
+<span class="n">R</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">R</span><span class="p">)</span>
+<span class="n">R</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(445, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Этапы отличаются между собой порядком нажатия на кнопки F и J, коды которых маркируют моменты нажатия.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">),</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;J&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(70, 74)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;trial&#39;</span><span class="p">,</span><span class="s1">&#39;code&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">code</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>trial  code
+1      70      48
+2      74      45
+3      70      43
+       74      43
+4      70      48
+       74      49
+5      70      22
+       74      62
+6      70      60
+       74      25
+Name: code, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Создадим справочную таблицу с паттернами этапов.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span>
+<span class="p">[</span><span class="s1">&#39;00000000&#39;</span><span class="p">,</span> <span class="s1">&#39;одна рука&#39;</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;11111111&#39;</span><span class="p">,</span> <span class="s1">&#39;одна рука&#39;</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;10101010&#39;</span><span class="p">,</span> <span class="s1">&#39;поочередно&#39;</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;01010101&#39;</span><span class="p">,</span> <span class="s1">&#39;поочередно&#39;</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;01110111&#39;</span><span class="p">,</span> <span class="s1">&#39;паттерн&#39;</span><span class="p">],</span>
+<span class="p">[</span><span class="s1">&#39;10001000&#39;</span><span class="p">,</span> <span class="s1">&#39;паттерн&#39;</span><span class="p">],</span>
+    <span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pattern&#39;</span><span class="p">,</span><span class="s1">&#39;тип&#39;</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1">#S</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Рисунок с нелинейными трендами<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Для построения рисунка мы для каждого этапа выводим исходные данные и накладываем на них в том же цвете модель (среднее и стандатное отклонение).</p>
+<p>Данными, динамику которых мы моделируем, являются интервалы между нажатиями, которые рассчитываются в строке</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>vv = np.diff(tt)
+</pre></div>
+</div>
+<p>Обученная модель Гауссова процесса хранится в переменной <code class="docutils literal notranslate"><span class="pre">gpor</span></code>.
+Из объекта модели мы извлекаем ряд параметров, которые сводим в таблицу параметров <code class="docutils literal notranslate"><span class="pre">P</span></code>, которую выводим в конце.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">kernel</span> <span class="o">=</span> <span class="p">(</span><span class="n">Constant</span><span class="p">(</span><span class="mi">1</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="mf">1e-6</span><span class="p">,</span> <span class="mf">2.</span><span class="p">))</span> 
+        <span class="o">+</span> <span class="mf">0.05</span> <span class="o">*</span> <span class="n">Matern</span><span class="p">(</span><span class="n">length_scale</span><span class="o">=</span><span class="mf">20.0</span><span class="p">,</span> <span class="n">length_scale_bounds</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">1e3</span><span class="p">),</span> <span class="n">nu</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+        <span class="o">+</span> <span class="n">WhiteKernel</span><span class="p">(</span><span class="n">noise_level</span><span class="o">=</span><span class="mf">1e-2</span><span class="p">,</span> <span class="n">noise_level_bounds</span><span class="o">=</span><span class="p">(</span><span class="mf">1e-5</span><span class="p">,</span> <span class="mf">1e3</span><span class="p">))</span>
+         <span class="p">)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mf">1.</span>
+
+<span class="n">papa</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">coco</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">tab20</span><span class="p">(</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">itrial</span><span class="p">,</span> <span class="n">co</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">coco</span><span class="p">):</span>
+    <span class="n">_R</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">R</span><span class="o">.</span><span class="n">trial</span><span class="o">==</span><span class="n">itrial</span><span class="p">]</span>
+        
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">_R</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">:</span>
+        <span class="k">continue</span>
+        
+    <span class="n">tt</span> <span class="o">=</span> <span class="n">_R</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">_R</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="n">tt</span> <span class="o">=</span> <span class="n">tt</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">tt</span><span class="p">)]</span>
+    <span class="n">vv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">tt</span><span class="p">)</span> <span class="c1">#_R.iri.values[1:]</span>
+    <span class="n">bb</span> <span class="o">=</span> <span class="n">vv</span> <span class="o">&lt;</span> <span class="mf">1.6</span>
+    <span class="n">tt</span><span class="p">,</span> <span class="n">vv</span> <span class="o">=</span> <span class="n">tt</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="n">bb</span><span class="p">]],</span> <span class="n">vv</span><span class="p">[</span><span class="n">bb</span><span class="p">]</span>
+    
+    <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">tt</span><span class="p">[</span><span class="mi">1</span><span class="p">:],(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">vv</span><span class="p">,(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">gpor</span> <span class="o">=</span> <span class="n">GaussianProcessRegressor</span><span class="p">(</span><span class="n">kernel</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">,</span> <span class="n">n_restarts_optimizer</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+    <span class="n">pa</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="n">S</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">itrial</span><span class="p">,</span> <span class="s1">&#39;pattern&#39;</span><span class="p">]}</span>
+    <span class="n">pa</span><span class="p">[</span><span class="s1">&#39;R2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gpor</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">pa</span><span class="p">[</span><span class="s1">&#39;LML&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gpor</span><span class="o">.</span><span class="n">log_marginal_likelihood_value_</span>
+    <span class="n">pa</span><span class="p">[</span><span class="s1">&#39;n&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vv</span><span class="p">)</span>
+    <span class="n">pa</span><span class="p">[</span><span class="s1">&#39;totalvar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">vv</span><span class="p">)</span>
+    <span class="n">_th</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">gpor</span><span class="o">.</span><span class="n">kernel_</span><span class="o">.</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">pa</span><span class="p">[</span><span class="s1">&#39;const&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">_th</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">pa</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">_th</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">pa</span><span class="p">[</span><span class="s1">&#39;period&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_th</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">pa</span><span class="p">[</span><span class="s1">&#39;noise&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_th</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">papa</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pa</span><span class="p">)</span>
+
+    
+    <span class="n">plot</span><span class="p">(</span><span class="n">tt</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="n">vv</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">co</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;_nolegend_&#39;</span><span class="p">)</span>
+
+    <span class="n">xx</span> <span class="o">=</span> <span class="n">tt</span>
+    <span class="n">y_mean</span><span class="p">,</span> <span class="n">y_std</span> <span class="o">=</span> <span class="n">gpor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xx</span><span class="p">[:,</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">return_std</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">y_mean</span> <span class="o">=</span> <span class="n">y_mean</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">y_mean</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">co</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">pa</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">y_mean</span> <span class="o">-</span> <span class="n">k</span> <span class="o">*</span> <span class="n">y_std</span><span class="p">,</span> <span class="n">y_mean</span> <span class="o">+</span> <span class="n">k</span> <span class="o">*</span> <span class="n">y_std</span><span class="p">,</span>
+                     <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">co</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Время, с&#39;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Интервал между нажатиями, с&#39;</span><span class="p">);</span>
+<span class="c1"># plt.ylim(0,1.2)</span>
+<span class="n">legend</span><span class="p">(</span><span class="n">frameon</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+        
+<span class="n">P</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">papa</span><span class="p">)</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">P</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;label&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">P</span><span class="p">[[</span><span class="s1">&#39;const&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;period&#39;</span><span class="p">,</span><span class="s1">&#39;noise&#39;</span><span class="p">,</span> <span class="s1">&#39;LML&#39;</span><span class="p">,</span><span class="s1">&#39;R2&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>const</th>
+      <th>a</th>
+      <th>period</th>
+      <th>noise</th>
+      <th>LML</th>
+      <th>R2</th>
+    </tr>
+    <tr>
+      <th>label</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>00000000</th>
+      <td>0.001222</td>
+      <td>0.497643</td>
+      <td>11.969143</td>
+      <td>0.000298</td>
+      <td>98.296158</td>
+      <td>0.993221</td>
+    </tr>
+    <tr>
+      <th>11111111</th>
+      <td>0.483434</td>
+      <td>0.706720</td>
+      <td>10.677941</td>
+      <td>0.000237</td>
+      <td>86.502677</td>
+      <td>0.998162</td>
+    </tr>
+    <tr>
+      <th>10101010</th>
+      <td>0.274411</td>
+      <td>0.887480</td>
+      <td>18.219857</td>
+      <td>0.001319</td>
+      <td>134.393564</td>
+      <td>0.984961</td>
+    </tr>
+    <tr>
+      <th>01010101</th>
+      <td>0.003352</td>
+      <td>1.062370</td>
+      <td>34.062973</td>
+      <td>0.001981</td>
+      <td>142.929722</td>
+      <td>0.978169</td>
+    </tr>
+    <tr>
+      <th>01110111</th>
+      <td>0.003453</td>
+      <td>0.929588</td>
+      <td>24.105527</td>
+      <td>0.000766</td>
+      <td>138.942631</td>
+      <td>0.993141</td>
+    </tr>
+    <tr>
+      <th>10001000</th>
+      <td>0.640024</td>
+      <td>0.646241</td>
+      <td>13.025212</td>
+      <td>0.001462</td>
+      <td>120.531530</td>
+      <td>0.989695</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="_images/i_gaupro_15_1.png" src="_images/i_gaupro_15_1.png" />
+</div>
+</div>
+<p>По параметру <code class="docutils literal notranslate"><span class="pre">period</span></code> можно сравнить выявленный колебательный компонент в с. Более пологий спуск соотвествует более длительному периоду колебаний.</p>
+<blockquote>
+<div><p>Попробуйте поменять параметры регуляризации при обучении Гауссова процесса. Гиперпараметр <code class="docutils literal notranslate"><span class="pre">alpha</span></code>, по умолчанию равный 1e-10 (0.0000000001), нужен для предотвращения потенциальных вычислительных проблем во время подгонки модели.
+Если его увеличить (сделать не таким ничтожным), то будут подобраны более плавные модели, не повторяющие столь подробно динамику процесса.
+Повышайте параметр <code class="docutils literal notranslate"><span class="pre">alpha</span></code> на порядок, начиная от 1e-3 до 1e0. Как изменяются параметры найденых моделей? В какой момент модели утрачивают способность описать переходный процесс?
+Игнорируйте предупреждения о проблемах сходимости модели.</p>
+</div></blockquote>
+<p><em>Гиперпараметр</em> - это параметр для управления процессом обучения по подбору других параметров.</p>
+</div>
+<div class="section" id="id3">
+<h2>Прогноз<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Воспользуемся уже рассмотренными ранее способами оценки качества прогноза для одного из этапов.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">play_prognoz</span><span class="p">(</span><span class="n">k</span><span class="o">=</span><span class="s1">&#39;prognoz&#39;</span><span class="p">,</span> <span class="n">n_future</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">k0</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">500</span><span class="p">):</span>
+
+    <span class="n">xx</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">tt</span><span class="o">=</span> <span class="n">xx</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">figure</span><span class="p">()</span>
+    <span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span> <span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.5</span><span class="p">);</span>
+
+    <span class="n">hh</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">hh</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">plot</span><span class="p">([],[],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span>
+    <span class="n">hh</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">D</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;*&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="c1">#prognoz</span>
+    <span class="n">hh</span><span class="o">.</span><span class="n">append</span><span class="p">(</span> <span class="n">vlines</span><span class="p">([],[],[],</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">)</span> <span class="p">)</span> <span class="c1">#residuals</span>
+    <span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Время, с&#39;</span><span class="p">);</span>
+    <span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Интервал между нажатиями, с&#39;</span><span class="p">);</span>
+    
+    <span class="k">def</span> <span class="nf">updatefig</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+        <span class="n">hh</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">xx</span><span class="p">[:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">D</span><span class="p">[</span><span class="n">k0</span><span class="p">][:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">hh</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">xx</span><span class="p">[[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="n">n_future</span><span class="p">]],</span> <span class="n">D</span><span class="p">[</span><span class="n">k</span><span class="p">][[</span><span class="n">i</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="n">n_future</span><span class="p">]])</span>
+        <span class="n">res1</span><span class="o">=</span><span class="n">vstack</span><span class="p">([</span><span class="n">tile</span><span class="p">(</span><span class="n">xx</span><span class="p">[</span><span class="n">i</span><span class="p">],(</span><span class="mi">2</span><span class="p">,)),</span> <span class="p">[</span><span class="n">D</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k0</span><span class="p">],</span><span class="n">D</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">k</span><span class="p">]]])</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">hh</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_segments</span><span class="p">((</span><span class="n">hh</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">get_segments</span><span class="p">()</span> <span class="o">+</span> <span class="p">[</span><span class="n">res1</span><span class="p">]))</span>
+                            
+        <span class="k">return</span> <span class="n">hh</span>
+
+    <span class="n">close</span><span class="p">()</span>
+    <span class="n">ani</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">updatefig</span><span class="p">,</span> <span class="n">tt</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="n">interval</span><span class="p">,</span> <span class="n">blit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">repeat</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ani</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Переменные <code class="docutils literal notranslate"><span class="pre">vv</span></code> и <code class="docutils literal notranslate"><span class="pre">y_mean</span></code> содержат данные и предсказания Гауссова процесса для последнего 6-го этапа. Организуем их в таблицу.</p>
+<p>Добавим помимо подогнанной модели Гауссова процесса (не забудьте вернуть гиперпараметр в исходное состояние и получить качественные модели) несколько простых сглаживающих моделей.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">vv</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;v&#39;</span><span class="p">])</span><span class="c1">#, index=tt[1:])</span>
+
+<span class="n">D</span><span class="p">[</span><span class="s1">&#39;pro_gaupro&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_mean</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+<span class="n">D</span><span class="p">[</span><span class="s1">&#39;pro_prev&#39;</span><span class="p">]</span><span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">shift</span><span class="p">()</span>
+<span class="n">D</span><span class="p">[</span><span class="s1">&#39;pro_median5&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">shift</span><span class="p">()</span>
+<span class="n">D</span><span class="p">[</span><span class="s1">&#39;pro_mean5&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">shift</span><span class="p">()</span>
+<span class="n">D</span><span class="p">[</span><span class="s1">&#39;pro_ewma&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">ewm</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">shift</span><span class="p">()</span>
+
+<span class="n">play_prognoz</span><span class="p">(</span><span class="s1">&#39;pro_median5&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="" src="_images/gaupro_median5.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">play_prognoz</span><span class="p">(</span><span class="s1">&#39;pro_prev&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="" src="_images/gaupro_prev.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">quo</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;чем больше отклонение - тем ниже эффективность&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean</span><span class="p">((</span><span class="n">D</span><span class="o">.</span><span class="n">v</span> <span class="o">-</span> <span class="n">D</span><span class="p">[</span><span class="n">k</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># vidy = [_k for _k in D.columns if _k.startswith(&#39;pro_&#39;)]</span>
+<span class="n">vidy</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pro_prev&#39;</span><span class="p">,</span> <span class="s1">&#39;pro_mean5&#39;</span><span class="p">,</span> <span class="s1">&#39;pro_median5&#39;</span><span class="p">,</span> <span class="s1">&#39;pro_ewma&#39;</span><span class="p">,</span> <span class="s1">&#39;pro_gaupro&#39;</span><span class="p">]</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">quo</span><span class="p">,</span> <span class="n">vidy</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">vidy</span><span class="p">)</span>
+<span class="n">Q</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pro_prev       16.387643
+pro_mean5       9.907941
+pro_median5     9.497796
+pro_ewma       10.681131
+pro_gaupro     20.683305
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Прогноз по предыдущему значению имеет преимущество для резких переходных процессов, поскольку обладает минимальной «памятью» о прошлых значениях.</p>
+<p>Компоненты процесса можно вычитать из общей динамики, и, таким образом, строить прогнозы с учетом разных сочетаний компонентов: медленных трендов, циклов, шума.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="i_prognoz.html" title="previous page">Предсказание будущих реакций на основе предшествующих</a>
+    <a class='right-next' id="next-link" href="pr_struct.html" title="next page">Структурные модели</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Дмитрий Н. Щербина<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

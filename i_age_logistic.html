@@ -1,0 +1,1285 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Скрининговая диагностика &#8212; Практикум по математическим методам в исследовательской деятельности</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Эпидемиологическая статистика" href="i_epistat.html" />
+    <link rel="prev" title="Частоты кодонов" href="i_codon.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Практикум по математическим методам в исследовательской деятельности</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Искать в этой книге ..." aria-label="Искать в этой книге ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Предисловие
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_intro.html">
+   Освоение рабочей среды
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_python.html">
+     Освоение языка Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sreda.html">
+     Подготовка рабочего места
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sredaonline.html">
+     Онлайн-платформы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb.html">
+     Создание нового блокнота
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cell.html">
+     Операции с ячейками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_str.html">
+     Строки в кавычках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cycle.html">
+     Циклы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_keyboard.html">
+     Управление с клавиатуры
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_types.html">
+     Разные типы - разное поведение!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_task.html">
+     Как работать с блокнотами упражнений?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_rename.html">
+     Как переименовать блокнот?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_def.html">
+     Функция
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_zaim.html">
+     Заимствование кода
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_scriptwork.html">
+     Выполнение практических работ на скриптовых языках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nbtips.html">
+     Памятка
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_intro.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_stohastic.html">
+   Стационарные стохастические процессы
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_empiric.html">
+     Эмпирические распределения значений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data1.html">
+     ✍ Получение набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_hist.html">
+     Построение гистограммы распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_random.html">
+     Генератор случайных чисел
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_random.html">
+     ☑ Генерация случайных выборок
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_eda.html">
+   Разведочный анализ
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_vector.html">
+     Составные типы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset.html">
+     Готовые наборы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pairplot.html">
+     Структура таблиц
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_demographic.html">
+     Сведенья о пациентах
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_standart.html">
+     Cтандартизация данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_turtle.html">
+     Работа с таблицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_turtle.html">
+     ☑ Подготовка данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_eda.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_linear.html">
+   Линейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset_rt.html">
+     Формирование набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_normality.html">
+     Проверка нормальности распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_groupmean.html">
+     Групповая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_combine.html">
+     Объединение наборов данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_anova.html">
+     Вариационный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_granada.html">
+     🗎 Сравнение выборок
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_logscale.html">
+     Логарифмирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_modeline.html">
+     🗎 Сравнение регрессионных моделей
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_retivo.html">
+     Подбор параметров распределения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_plan.html">
+   Планирование экспериментов
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_power.html">
+     Мощность исследования
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_quartile.html">
+     Анализ публикационного ландшафта
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_artana.html">
+     🗎 Анализ научной статьи
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_nonlinear.html">
+   Нелинейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data2.html">
+     ✍ Получение набора данных 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_exp.html">
+     Экспоненциальные рост и угасание
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_season.html">
+     Сезонные колебания
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_ecg.html">
+     Выделение событий в сигнале
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_wav.html">
+     Визуализация аудиозаписи
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_spectral.html">
+     Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_spec.html">
+     🗎 Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_perehod.html">
+     Переходные процессы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_prognoz.html">
+     Прогнозирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_gaupro.html">
+     Компоненты нелинейного процесса
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_struct.html">
+   Структурные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_kiss.html">
+     Дистанция между строками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_seq.html">
+     Обнаружение нарушений в структуре
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_clu.html">
+     🗎 Кластерный анализ
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_matrix.html">
+   Двумерные массивы данных
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_coordinates.html">
+     Координаты
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_matrix.html">
+     Операции с матрицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dim.html">
+     Увеличение размерности
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pictu.html">
+     Обработка изображений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_pictu.html">
+     🗎 Анализ изображения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="pr_proba.html">
+   Вероятностные модели
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sexproba.html">
+     Случайность - двигатель прогресса?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_codon.html">
+     Частоты кодонов
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Скрининговая диагностика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_epistat.html">
+     Эпидемиологическая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_epistat.html">
+     ☑ Динамика заболеваний
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_qual.html">
+   Квалиметрические модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_qual.html">
+     🗎 Оценка качества
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pedagogic.html">
+   Заметки для преподавателей
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   Список литературы
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="annotation.html">
+   Аннотация
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Переключить навигацию" aria-controls="site-navigation"
+            title="Переключить навигацию" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Загрузите эту страницу"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/i_age_logistic.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Скачать исходный файл" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Распечатать в PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Полноэкранный режим"
+                title="Полноэкранный режим"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sherdim/mame/gh-pages?urlpath=tree/i_age_logistic.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Запуск Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Содержание
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Зависимость от возраста
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>Скрининговая диагностика<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p><a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Mammographic+Mass">Данные по маммографии</a> - один из общедоступных наборов данных в архиве Центра машинного обучения.
+Собран в Институте Радиологии университета Эрланген-Нюрнберг, Erlangen, Germany в период между 2003 и 2006 гг.</p>
+<p>Маммография является наиболее эффективным методом скрининга рака молочной железы, доступных сегодня.
+Однако низкая положительная прогностическая ценность биопсии молочной железы в результате интерпретации маммографии приводит к примерно 70% ненужных биопсий с доброкачественными результатами.
+Для снижения количества ненужных биопсий молочных желез предлагаются системы автоматизированной диагностики, которые помогают врачу решить: делать биопсию подозрительного участка или пока отложить инвазивную проверку и понаблюдать.</p>
+<p>Колонки:</p>
+<ol class="simple">
+<li><p>Оценка BI-RADS в диапазоне от 1 (определенно доброкачественная)
+до 5 (очень подозрительно злокачественная), полученная в процессе двойного осмотра врачами. (порядковый)</p></li>
+<li><p>Возраст пациента в годах</p></li>
+<li><p>Форма образования: round=1 oval=2 lobular=3 irregular=4</p></li>
+<li><p>Край образования: очерченный = 1 мелкодольчатый = 2 расплывчатый = 3 плохо определенный = 4 пальчатый = 5</p></li>
+<li><p>Плотность образования: высокая = 1 изо = 2 низкая = 3 жиросодержащая = 4 (порядковый)</p></li>
+<li><p>Реальная тяжесть: доброкачественная = 0 или злокачественная = 1 (биноминальный)</p></li>
+</ol>
+<p>Первоисточник</p>
+<ul class="simple">
+<li><p>M. Elter, R. Schulz-Wendtland and T. Wittenberg (2007)
+The prediction of breast cancer biopsy outcomes using two CAD approaches that both emphasize an intelligible decision process.
+Medical Physics 34(11), pp. 4164-4172</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#https://archive.ics.uci.edu/ml/machine-learning-databases/mammographic-masses/mammographic_masses.data</span>
+<span class="n">kk</span> <span class="o">=</span> <span class="s1">&#39;est age forma krai dens itog&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;d/mammographic_masses.data&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">kk</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">na_values</span><span class="o">=</span><span class="s1">&#39;?&#39;</span><span class="p">)</span>
+<span class="n">D</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 961 entries, 0 to 960
+Data columns (total 6 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   est     959 non-null    float64
+ 1   age     956 non-null    float64
+ 2   forma   930 non-null    float64
+ 3   krai    913 non-null    float64
+ 4   dens    885 non-null    float64
+ 5   itog    961 non-null    int64  
+dtypes: float64(5), int64(1)
+memory usage: 45.2 KB
+</pre></div>
+</div>
+</div>
+</div>
+<blockquote>
+<div><p>Создайте ячейку и выполнив код <code class="docutils literal notranslate"><span class="pre">D</span></code> посмотрите содержимое таблицы. Возьмите одну строчку и объясните ситуацию у данного пациента.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># D.loc[562]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Посмотрим распределение всех четырех объясняющих показателей.</p>
+<p>При этом настроим палитру, чтобы плохой исход был пугающе красным, а хороший - успокаивающе зеленым. (n=2)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#pal = sns.choose_diverging_palette()</span>
+<span class="n">pal</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">diverging_palette</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">350</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="n">pal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><svg  width="110" height="55"><rect x="0" y="0" width="55" height="55" style="fill:#4f8438;stroke-width:2;stroke:rgb(255,255,255)"/><rect x="55" y="0" width="55" height="55" style="fill:#d03e7f;stroke-width:2;stroke:rgb(255,255,255)"/></svg></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">D</span><span class="p">,</span> <span class="n">x_vars</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">y_vars</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">dropna</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;itog&quot;</span><span class="p">,</span> 
+    <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span> 
+    <span class="n">palette</span><span class="o">=</span><span class="n">pal</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_age_logistic_8_0.png" src="_images/i_age_logistic_8_0.png" />
+</div>
+</div>
+<p>Видны расхождения по многим признакам, а значит можно настроить прогностическую модель, которая будет предсказывать итог.</p>
+<p>Авторами заявлено, что оценка врачей <code class="docutils literal notranslate"><span class="pre">est</span></code> варьирует от 1 до 5. Одно значение 55. Это явно опечатка.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">D</span><span class="o">.</span><span class="n">est</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;est&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">5</span>
+<span class="n">D</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">D</span><span class="o">.</span><span class="n">est</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;est&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">D</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="s1">&#39;est&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_age_logistic_11_0.png" src="_images/i_age_logistic_11_0.png" />
+</div>
+</div>
+<p>Могли ли врачи предсказать итоги биопсии?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span>
+    <span class="n">D</span><span class="o">.</span><span class="n">est</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">itog</span><span class="p">),</span>
+    <span class="n">D</span><span class="o">.</span><span class="n">est</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">itog</span><span class="p">,</span> <span class="s1">&#39;kendall&#39;</span><span class="p">),</span>
+    <span class="n">D</span><span class="o">.</span><span class="n">est</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">itog</span><span class="p">,</span> <span class="s1">&#39;spearman&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.5360230051347603, 0.6061147157824877, 0.6213620971586996)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Оценки врачей коррелировали с итоговыми данными биопсии.</p>
+<div class="section" id="id2">
+<h2>Зависимость от возраста<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Чем старше возраст пациентки, тем больше вероятность того, что образование злокачественное.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span><span class="s1">&#39;itog&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_age_logistic_17_0.png" src="_images/i_age_logistic_17_0.png" />
+</div>
+</div>
+<p>Диапазоны значительно перекрываются и, например, нельзя одназначно сказать о качестве новообразований у женщин в возрасте 50 лет. Поскольку исходов всего два, то можно говорить о вероятности.</p>
+<p>Давайте преобразуем данные в вероятности - доли одного исхода события от общего количества событий.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">bins</span><span class="o">=</span><span class="mi">25</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_age_logistic_19_0.png" src="_images/i_age_logistic_19_0.png" />
+</div>
+</div>
+<p>Следует отметить, что сходство распределения по возрасту с нормальным распределением говорит не о законе распределения признака (как известно возраст начинается с 0), а лишь о том, в каком возрасте у женщин встречаются образования в грудных железах.</p>
+<p>Давайте поделим весь диапазон на пятилетки и посчитаем процент злокачественности.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">agegroup</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">105</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">D</span><span class="p">[</span><span class="s1">&#39;agegroup&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="n">agegroup</span><span class="p">)</span>
+
+<span class="n">D</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;agegroup&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">itog</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>agegroup
+(15, 20]       6
+(20, 25]      23
+(25, 30]      19
+(30, 35]      44
+(35, 40]      58
+(40, 45]      94
+(45, 50]      96
+(50, 55]     111
+(55, 60]     139
+(60, 65]     114
+(65, 70]     108
+(70, 75]      67
+(75, 80]      49
+(80, 85]      15
+(85, 90]      11
+(90, 95]       1
+(95, 100]      1
+Name: itog, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Самыми многочисленными оказались возрастные группы от 50 до 70 лет.</p>
+<p>Наша задача сгруппировать по двум колонкам и посчитать количество случаев принадлежности к группам в одной и другой колонках.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;agegroup&#39;</span><span class="p">,</span><span class="s1">&#39;itog&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">itog</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span>
+<span class="n">G</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>itog</th>
+      <th>0</th>
+      <th>1</th>
+    </tr>
+    <tr>
+      <th>agegroup</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>(15, 20]</th>
+      <td>6</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>(20, 25]</th>
+      <td>23</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>(25, 30]</th>
+      <td>18</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>(30, 35]</th>
+      <td>38</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>(35, 40]</th>
+      <td>44</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>(40, 45]</th>
+      <td>66</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>(45, 50]</th>
+      <td>65</td>
+      <td>31</td>
+    </tr>
+    <tr>
+      <th>(50, 55]</th>
+      <td>64</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>(55, 60]</th>
+      <td>77</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <th>(60, 65]</th>
+      <td>53</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>(65, 70]</th>
+      <td>34</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <th>(70, 75]</th>
+      <td>14</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <th>(75, 80]</th>
+      <td>11</td>
+      <td>38</td>
+    </tr>
+    <tr>
+      <th>(80, 85]</th>
+      <td>2</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>(85, 90]</th>
+      <td>1</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>(90, 95]</th>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>(95, 100]</th>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Заменим отсутствующие значения и подсчитаем общее количество.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;dobro&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">&#39;zlo&#39;</span><span class="p">})</span>
+
+<span class="n">G</span><span class="p">[</span><span class="s1">&#39;N&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">dobro</span> <span class="o">+</span> <span class="n">G</span><span class="o">.</span><span class="n">zlo</span>
+<span class="n">G</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>itog</th>
+      <th>dobro</th>
+      <th>zlo</th>
+      <th>N</th>
+    </tr>
+    <tr>
+      <th>agegroup</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>(15, 20]</th>
+      <td>6</td>
+      <td>0</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>(20, 25]</th>
+      <td>23</td>
+      <td>0</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>(25, 30]</th>
+      <td>18</td>
+      <td>1</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>(30, 35]</th>
+      <td>38</td>
+      <td>6</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>(35, 40]</th>
+      <td>44</td>
+      <td>14</td>
+      <td>58</td>
+    </tr>
+    <tr>
+      <th>(40, 45]</th>
+      <td>66</td>
+      <td>28</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <th>(45, 50]</th>
+      <td>65</td>
+      <td>31</td>
+      <td>96</td>
+    </tr>
+    <tr>
+      <th>(50, 55]</th>
+      <td>64</td>
+      <td>47</td>
+      <td>111</td>
+    </tr>
+    <tr>
+      <th>(55, 60]</th>
+      <td>77</td>
+      <td>62</td>
+      <td>139</td>
+    </tr>
+    <tr>
+      <th>(60, 65]</th>
+      <td>53</td>
+      <td>61</td>
+      <td>114</td>
+    </tr>
+    <tr>
+      <th>(65, 70]</th>
+      <td>34</td>
+      <td>74</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>(70, 75]</th>
+      <td>14</td>
+      <td>53</td>
+      <td>67</td>
+    </tr>
+    <tr>
+      <th>(75, 80]</th>
+      <td>11</td>
+      <td>38</td>
+      <td>49</td>
+    </tr>
+    <tr>
+      <th>(80, 85]</th>
+      <td>2</td>
+      <td>13</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>(85, 90]</th>
+      <td>1</td>
+      <td>10</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>(90, 95]</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>(95, 100]</th>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Считаем вероятность…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">zlo</span><span class="o">/</span><span class="n">G</span><span class="o">.</span><span class="n">N</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;area&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;maroon&#39;</span><span class="p">,</span> <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_age_logistic_28_0.png" src="_images/i_age_logistic_28_0.png" />
+</div>
+</div>
+<p>Похоже на линейную зависимость вероятности от возраста. Но линейный тренд будет продолжаться вверх и вниз, а вероятность не может быть 120% в возрасте 110 лет или -10% в возрасте 10 лет.
+Адекватная модель должна попадать только в диапазон [0, 1].</p>
+<p>Нам подходит <a class="reference external" href="https://en.wikipedia.org/wiki/Logistic_function">логистическая модель</a>, описывающая переход от 1 к 0 или обратно.</p>
+<div class="math notranslate nohighlight">
+\[y(x) = { 1 \over 1+e^{-k(x-x_0)} }\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.optimize</span> <span class="k">as</span> <span class="nn">optimize</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<span class="c1">#     &#39;&#39;&#39;https://en.wikipedia.org/wiki/Logistic_function&#39;&#39;&#39;</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">x0</span><span class="p">)))</span>
+
+<span class="c1"># Чтобы попасть в середину пятилетних диапазонов, то к нижним границам </span>
+<span class="c1"># надо прибавить половину диапазона - 2.5 года.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">agegroup</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="o">+</span> <span class="mf">2.5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">values</span>
+<span class="c1"># добавим полочки, чтобы подбор модели был надежным</span>
+<span class="n">yopt</span> <span class="o">=</span> <span class="n">r_</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">xopt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">115</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mf">2.5</span>
+
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">xopt</span><span class="p">,</span> <span class="n">yopt</span><span class="p">,</span> 
+<span class="c1">#                                 bounds=([20, -1], [90, 0]),</span>
+                                <span class="n">p0</span><span class="o">=</span><span class="p">[</span><span class="mi">55</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">popt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([57.68166044, -0.0779198 ])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Чтобы оценить подгонку модели, наложим полученную кривую на исходные значения вероятности.</p>
+<p>Для оценки надежности эмпирической вероятности можно посчитать доверительный интервал, но алгоритм для этого должен быть особый - ведь границы интервала не должны выходить за пределы диапазона [0…1].</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.proportion</span> <span class="kn">import</span> <span class="n">proportion_confint</span>
+<span class="n">lower</span><span class="p">,</span> <span class="n">upper</span> <span class="o">=</span> <span class="n">proportion_confint</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">zlo</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span><span class="n">N</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
+
+<span class="n">co</span><span class="o">=</span><span class="s1">&#39;b&#39;</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">co</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;% злокач.&#39;</span><span class="p">)</span>
+<span class="c1"># добавим доверительные интервалы</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)),</span> <span class="n">c_</span><span class="p">[</span><span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">co</span><span class="p">)</span>
+
+<span class="n">xx</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">yy</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;модель&#39;</span><span class="p">);</span>
+
+<span class="n">axvline</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;перелом&#39;</span><span class="p">)</span>
+
+<span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">axhline</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Возраст&#39;</span><span class="p">);</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Вероятность&#39;</span><span class="p">)</span>
+<span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_age_logistic_33_0.png" src="_images/i_age_logistic_33_0.png" />
+</div>
+</div>
+<p>Вывод. После 58 лет преобладает вероятность злокачественного исхода новообразований в груди.</p>
+<p>Мы использовали огрубленные данные, поскольку считали вероятности с шагом в 5 лет.</p>
+<p>А что если попробовать подобрать логистическую модель к исходным данным без подсчета вероятности?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D_</span> <span class="o">=</span> <span class="n">D</span><span class="p">[</span><span class="n">D</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span> <span class="c1">#отберем только с указанием возраста</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">D_</span><span class="o">.</span><span class="n">age</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">D_</span><span class="o">.</span><span class="n">itog</span>
+
+<span class="c1"># зададим в качестве начальных значений полученные ранее</span>
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">curve_fit</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">p0</span><span class="o">=</span><span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.07</span><span class="p">])</span>
+<span class="n">popt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([58.52211327, -0.07062092])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Стандартную ошибку получаем как корень квадратный из вариаций, которые идут по диагонали ковариационной матрицы.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">perr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">pcov</span><span class="p">))</span>
+<span class="n">perr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.98835055, 0.00662141])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span><span class="s1">&#39;itog&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;данные&#39;</span><span class="p">);</span>
+
+<span class="n">xx</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">yy</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;модель&#39;</span><span class="p">);</span>
+
+<span class="n">yymax</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">popt</span><span class="o">+</span><span class="n">perr</span><span class="p">))</span>
+<span class="n">yymin</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">popt</span><span class="o">-</span><span class="n">perr</span><span class="p">))</span>
+<span class="n">fill_between</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yymin</span><span class="p">,</span> <span class="n">yymax</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+
+<span class="n">axvline</span><span class="p">(</span><span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;перелом&#39;</span><span class="p">)</span>
+<span class="n">axhline</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Возраст&#39;</span><span class="p">);</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Злокачественность&#39;</span><span class="p">)</span>
+<span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_age_logistic_39_0.png" src="_images/i_age_logistic_39_0.png" />
+</div>
+</div>
+<p>Вывод.
+Параметры логистической модели можно получить на выборке бинарных данных: из 0 и 1.</p>
+<p>После 58.5 лет преобладает вероятность злокачественного исхода новообразований в груди.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="i_codon.html" title="previous page">Частоты кодонов</a>
+    <a class='right-next' id="next-link" href="i_epistat.html" title="next page">Эпидемиологическая статистика</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Дмитрий Н. Щербина<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

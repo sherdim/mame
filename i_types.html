@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Разные типы - разное поведение! &#8212; Практикум по математическим методам в исследовательской деятельности</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Как работать с блокнотами упражнений?" href="i_task.html" />
+    <link rel="prev" title="Управление с клавиатуры" href="i_keyboard.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Практикум по математическим методам в исследовательской деятельности</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Искать в этой книге ..." aria-label="Искать в этой книге ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Предисловие
+  </a>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="pr_intro.html">
+   Освоение рабочей среды
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_python.html">
+     Освоение языка Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sreda.html">
+     Подготовка рабочего места
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sredaonline.html">
+     Онлайн-платформы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb.html">
+     Создание нового блокнота
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cell.html">
+     Операции с ячейками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_str.html">
+     Строки в кавычках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cycle.html">
+     Циклы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_keyboard.html">
+     Управление с клавиатуры
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Разные типы - разное поведение!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_task.html">
+     Как работать с блокнотами упражнений?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_rename.html">
+     Как переименовать блокнот?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_def.html">
+     Функция
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_zaim.html">
+     Заимствование кода
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_scriptwork.html">
+     Выполнение практических работ на скриптовых языках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nbtips.html">
+     Памятка
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_intro.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_stohastic.html">
+   Стационарные стохастические процессы
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_empiric.html">
+     Эмпирические распределения значений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data1.html">
+     ✍ Получение набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_hist.html">
+     Построение гистограммы распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_random.html">
+     Генератор случайных чисел
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_random.html">
+     ☑ Генерация случайных выборок
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_eda.html">
+   Разведочный анализ
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_vector.html">
+     Составные типы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset.html">
+     Готовые наборы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pairplot.html">
+     Структура таблиц
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_demographic.html">
+     Сведенья о пациентах
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_standart.html">
+     Cтандартизация данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_turtle.html">
+     Работа с таблицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_turtle.html">
+     ☑ Подготовка данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_eda.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_linear.html">
+   Линейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset_rt.html">
+     Формирование набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_normality.html">
+     Проверка нормальности распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_groupmean.html">
+     Групповая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_combine.html">
+     Объединение наборов данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_anova.html">
+     Вариационный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_granada.html">
+     🗎 Сравнение выборок
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_logscale.html">
+     Логарифмирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_modeline.html">
+     🗎 Сравнение регрессионных моделей
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_retivo.html">
+     Подбор параметров распределения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_plan.html">
+   Планирование экспериментов
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_power.html">
+     Мощность исследования
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_quartile.html">
+     Анализ публикационного ландшафта
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_artana.html">
+     🗎 Анализ научной статьи
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_nonlinear.html">
+   Нелинейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data2.html">
+     ✍ Получение набора данных 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_exp.html">
+     Экспоненциальные рост и угасание
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_season.html">
+     Сезонные колебания
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_ecg.html">
+     Выделение событий в сигнале
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_wav.html">
+     Визуализация аудиозаписи
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_spectral.html">
+     Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_spec.html">
+     🗎 Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_perehod.html">
+     Переходные процессы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_prognoz.html">
+     Прогнозирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_gaupro.html">
+     Компоненты нелинейного процесса
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_struct.html">
+   Структурные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_kiss.html">
+     Дистанция между строками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_seq.html">
+     Обнаружение нарушений в структуре
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_clu.html">
+     🗎 Кластерный анализ
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_matrix.html">
+   Двумерные массивы данных
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_coordinates.html">
+     Координаты
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_matrix.html">
+     Операции с матрицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dim.html">
+     Увеличение размерности
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pictu.html">
+     Обработка изображений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_pictu.html">
+     🗎 Анализ изображения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_proba.html">
+   Вероятностные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sexproba.html">
+     Случайность - двигатель прогресса?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_codon.html">
+     Частоты кодонов
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_age_logistic.html">
+     Скрининговая диагностика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_epistat.html">
+     Эпидемиологическая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_epistat.html">
+     ☑ Динамика заболеваний
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_qual.html">
+   Квалиметрические модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_qual.html">
+     🗎 Оценка качества
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pedagogic.html">
+   Заметки для преподавателей
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   Список литературы
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="annotation.html">
+   Аннотация
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Переключить навигацию" aria-controls="site-navigation"
+            title="Переключить навигацию" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Загрузите эту страницу"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/i_types.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Скачать исходный файл" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Распечатать в PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Полноэкранный режим"
+                title="Полноэкранный режим"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sherdim/mame/gh-pages?urlpath=tree/i_types.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Запуск Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>Разные типы - разное поведение!<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Результат выполнения одной и той же операции зависит от типа задействованных в ней объектов.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">12</span> <span class="o">+</span> <span class="mi">34</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>46
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;12&#39;</span> <span class="o">+</span> <span class="s1">&#39;34&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1234&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Функция <code class="docutils literal notranslate"><span class="pre">type()</span></code> выдаёт тип объекта. В языке несколько встроенных типов объектов.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="mf">12.</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;12&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(int, float, str)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>int - integer, целое число</p></li>
+<li><p>float - число с плавающей запятой</p></li>
+<li><p>str - строка</p></li>
+</ul>
+<p>Какими средствами нам удалось получить разные типы представления числа 12?
+Всё определяется нюансами синтаксиса: если рядом с числом поставить точку, то такая комбинация интерпретируется как дробное число (с плавающей запятой).
+Если последовательность любых символов ограничена с двух сторон кавычками, то такой синтаксис задаёт строковую переменную.</p>
+<p>Часто типы данных несовместимы в рамках конкретной операции.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;12&#39;</span> <span class="o">+</span> <span class="mi">34</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="n">afb1c3d28cba</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="s1">&#39;12&#39;</span> <span class="o">+</span> <span class="mi">34</span>
+
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
+</pre></div>
+</div>
+</div>
+</div>
+<p>В случае ошибки нужно прочитать последнюю строчку.
+<code class="docutils literal notranslate"><span class="pre">TypeError</span></code> - ошибка типа. Ошибка снабжена комментарием, что присоединить к строке можно только строку.
+В данном случае интерпретатору не удалось преобразовать целое число в строку.</p>
+<blockquote>
+<div><p>Подумайте, как нужно исправить код, чтобы он работал без ошибок? (Подсказка: см. ячейки выше, где операция проводится с объектами одного типа.)</p>
+</div></blockquote>
+<p>При этом, другая операция может быть доступна для данного сочетания переменных.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;12&#39;</span> <span class="o">*</span> <span class="mi">34</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;12121212121212121212121212121212121212121212121212121212121212121212&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Кроме термина «тип переменных» может встречаться термин «класс объектов».</p>
+<p><em>Класс</em> - программный конструкт, который определяет объекты, которые можно получить при его вызове - то есть экземпляры этого класса. Все экземпляры одного класса имеют один и тот же тип.</p>
+<p>Собственно <em>тип объекта</em> - это и есть ссылка на класс, при вызове которого был получен данный объект.</p>
+<p>В повседневном языке принадлежность вещей к одному классу или к одному типу обычно обозначает одно и то же.
+Для непрограммиста допустимо считать эти понятия синонимами.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;12&#39;</span><span class="o">.</span><span class="vm">__class__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>str
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">12</span><span class="p">)</span><span class="o">.</span><span class="vm">__class__</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>int
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;12&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;12&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">str</span></code> и <code class="docutils literal notranslate"><span class="pre">int</span></code> - это типы переменных. При их вызове в форме функций можно получить новые экземляры этих классов с использованием переданных данных. Данные могут быть другого типа - в этом случае происходит преобразование типа переменной. То есть из строки „12“ мы можем сделать целое число, и наоброт.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="i_keyboard.html" title="previous page">Управление с клавиатуры</a>
+    <a class='right-next' id="next-link" href="i_task.html" title="next page">Как работать с блокнотами упражнений?</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Дмитрий Н. Щербина<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

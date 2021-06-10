@@ -1,0 +1,1727 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сведенья о пациентах &#8212; Практикум по математическим методам в исследовательской деятельности</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/translations.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Cтандартизация данных" href="i_standart.html" />
+    <link rel="prev" title="Структура таблиц" href="i_pairplot.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Практикум по математическим методам в исследовательской деятельности</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Искать в этой книге ..." aria-label="Искать в этой книге ..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Предисловие
+  </a>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_intro.html">
+   Освоение рабочей среды
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_python.html">
+     Освоение языка Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sreda.html">
+     Подготовка рабочего места
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sredaonline.html">
+     Онлайн-платформы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb.html">
+     Создание нового блокнота
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cell.html">
+     Операции с ячейками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_str.html">
+     Строки в кавычках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nb_cycle.html">
+     Циклы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_keyboard.html">
+     Управление с клавиатуры
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_types.html">
+     Разные типы - разное поведение!
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_task.html">
+     Как работать с блокнотами упражнений?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_rename.html">
+     Как переименовать блокнот?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_def.html">
+     Функция
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_zaim.html">
+     Заимствование кода
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_scriptwork.html">
+     Выполнение практических работ на скриптовых языках
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_nbtips.html">
+     Памятка
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_intro.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_stohastic.html">
+   Стационарные стохастические процессы
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_empiric.html">
+     Эмпирические распределения значений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data1.html">
+     ✍ Получение набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_hist.html">
+     Построение гистограммы распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_random.html">
+     Генератор случайных чисел
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_random.html">
+     ☑ Генерация случайных выборок
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 current active collapsible-parent">
+  <a class="reference internal" href="pr_eda.html">
+   Разведочный анализ
+  </a>
+  <ul class="current collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_vector.html">
+     Составные типы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset.html">
+     Готовые наборы данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pairplot.html">
+     Структура таблиц
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Сведенья о пациентах
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_standart.html">
+     Cтандартизация данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_turtle.html">
+     Работа с таблицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_turtle.html">
+     ☑ Подготовка данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="z_eda.html">
+     * * *
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_linear.html">
+   Линейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dataset_rt.html">
+     Формирование набора данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_normality.html">
+     Проверка нормальности распределения
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_groupmean.html">
+     Групповая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_combine.html">
+     Объединение наборов данных
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_anova.html">
+     Вариационный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_granada.html">
+     🗎 Сравнение выборок
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_logscale.html">
+     Логарифмирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_modeline.html">
+     🗎 Сравнение регрессионных моделей
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_retivo.html">
+     Подбор параметров распределения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_plan.html">
+   Планирование экспериментов
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_power.html">
+     Мощность исследования
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_quartile.html">
+     Анализ публикационного ландшафта
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_artana.html">
+     🗎 Анализ научной статьи
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_nonlinear.html">
+   Нелинейные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_data2.html">
+     ✍ Получение набора данных 2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_exp.html">
+     Экспоненциальные рост и угасание
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_season.html">
+     Сезонные колебания
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_ecg.html">
+     Выделение событий в сигнале
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_wav.html">
+     Визуализация аудиозаписи
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_spectral.html">
+     Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_spec.html">
+     🗎 Спектральный анализ
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_perehod.html">
+     Переходные процессы
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_prognoz.html">
+     Прогнозирование
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_gaupro.html">
+     Компоненты нелинейного процесса
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_struct.html">
+   Структурные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_kiss.html">
+     Дистанция между строками
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_seq.html">
+     Обнаружение нарушений в структуре
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_clu.html">
+     🗎 Кластерный анализ
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_matrix.html">
+   Двумерные массивы данных
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_coordinates.html">
+     Координаты
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_matrix.html">
+     Операции с матрицами
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_dim.html">
+     Увеличение размерности
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_pictu.html">
+     Обработка изображений
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_pictu.html">
+     🗎 Анализ изображения
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_proba.html">
+   Вероятностные модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_sexproba.html">
+     Случайность - двигатель прогресса?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_codon.html">
+     Частоты кодонов
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_age_logistic.html">
+     Скрининговая диагностика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="i_epistat.html">
+     Эпидемиологическая статистика
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_epistat.html">
+     ☑ Динамика заболеваний
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="pr_qual.html">
+   Квалиметрические модели
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="w_qual.html">
+     🗎 Оценка качества
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pedagogic.html">
+   Заметки для преподавателей
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   Список литературы
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="annotation.html">
+   Аннотация
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Переключить навигацию" aria-controls="site-navigation"
+            title="Переключить навигацию" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Загрузите эту страницу"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/i_demographic.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Скачать исходный файл" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Распечатать в PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Полноэкранный режим"
+                title="Полноэкранный режим"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/sherdim/mame/gh-pages?urlpath=tree/i_demographic.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Запуск Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Содержание
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Анонимизация биомедицинских данных
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Индивидуальная динамика
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="id1">
+<h1>Сведенья о пациентах<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Представим ситуацию, что вам прислали файл с данными о результатах обследования группы пациентов. О формате файла известно, что он текстовый. Допустим, что Вам нужны лишь сведения о поле и возрасте пациентов, чтобы принять решение о дальнейших шагах.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ssylka</span> <span class="o">=</span> <span class="s1">&#39;d/data.txt&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Pandas</span></code> предоставляет методы для чтения не совсем идеальных файлов данных, с которыми приходится сталкиваться.</p>
+<p>Попробуем справиться с особенностями данного файла, которые могут помешать нам загрузить данные, если мы не будем задавать никаких дополнительных параметров к методу чтения текстовых файлов наиболее распространнего формата - <code class="docutils literal notranslate"><span class="pre">CSV</span></code> (comma-separated values).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ssylka</span><span class="p">)</span>
+<span class="n">D</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th># Data from the article</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td># Schleiger E. и др. Poststroke QEEG informs e...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td># http://onlinelibrary.wiley.com/doi/10.1111/p...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ID\tHemisphere\tAge\tGender\tMoCA predischarge...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1\tR\t77\tM\t26.0\t26.0\t3\t1.0\t1\t1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2L\tL\t84\tM\t15.0\t21.0\t1\t0.0\t1\t0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Содержимое файла загружено в таблицу, однако не так, как нам хотелось бы.</p>
+<p>Первые строчки, начинающиеся со знака <code class="docutils literal notranslate"><span class="pre">#</span></code> похожи на комментарии. Остальные строчки содержат наклонную черту с буквой <code class="docutils literal notranslate"><span class="pre">t</span></code> - обозначение символа табуляции (длинного пробела фиксированной ширины для формирования таблиц).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ssylka</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">)</span>
+<span class="n">D</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>Hemisphere</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>MoCA predischarge</th>
+      <th>MoCA outcome</th>
+      <th>NIHSS predischarge</th>
+      <th>NIHSS outcome</th>
+      <th>mRS predischarge</th>
+      <th>mRS outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>R</td>
+      <td>77</td>
+      <td>M</td>
+      <td>26.0</td>
+      <td>26.0</td>
+      <td>3</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2L</td>
+      <td>L</td>
+      <td>84</td>
+      <td>M</td>
+      <td>15.0</td>
+      <td>21.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>L</td>
+      <td>47</td>
+      <td>M</td>
+      <td>13.0</td>
+      <td>22.0</td>
+      <td>3</td>
+      <td>0.0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4L</td>
+      <td>R</td>
+      <td>72</td>
+      <td>M</td>
+      <td>20.0</td>
+      <td>23.0</td>
+      <td>10</td>
+      <td>1.0</td>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>L</td>
+      <td>61</td>
+      <td>F</td>
+      <td>26.0</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>С помощью дополнительных параметров мы указали команде чтения, что нужно пропускать комментарии и использовать специальный разделитель.</p>
+<p>Однако, в таблице много колонок, а нам нужны только две.
+При работе с большими наборами данных, где колонок могут быть сотни, может быть существенным ограничить количество загружаемых колонок.
+Для этого воспользуемся соответствующим параметром.</p>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ssylka</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span><span class="s1">&#39;Gender&#39;</span><span class="p">])</span>
+<span class="n">D</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>77</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>84</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>47</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>72</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>61</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>78</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>49</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>79</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>77</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>74</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>54</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>65</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>80</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>87</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>76</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>18</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>61</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>72</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>52</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>66</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>67</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>71</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>61</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>78</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>69</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>74</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>66</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>67</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>81</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>46</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>69</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>53</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>57</td>
+      <td>M</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>72</td>
+      <td>F</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>69</td>
+      <td>M</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Теперь можно легко оценить поло-возрастной состав выборки пациентов.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">Gender</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M    23
+F    12
+Name: Gender, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_demographic_13_0.png" src="_images/i_demographic_13_0.png" />
+</div>
+</div>
+<p>Рассмотрим этот набор данных, описывающий пациентов, принявших участие в исследовании
+<a class="reference external" href="http://onlinelibrary.wiley.com/doi/10.1111/psyp.12785/full">Schleiger E. et al. Poststroke QEEG informs early prognostication of cognitive impairment //Psychophysiology. – 2016.</a></p>
+<p>Задача исследования было найти биомаркер когнитивных нарушений после инсульта.</p>
+<p>Представим, что мы нашли онлайн версию статьи.
+Как извлечь данные из веб-страницы?</p>
+<p>Table 1. Patient Demographics</p>
+<table class="table table--article-section" style=""><thead class="table__header table__header-data--bottom"><tr class="table__row"><th class="table__header-data table-border--bottom ">ID</th><th class="table__header-data table-border--bottom table-align--center">Hemisphere</th><th class="table__header-data table-border--bottom table-align--center">Age</th><th class="table__header-data table-border--bottom table-align--center">Gender</th><th class="table__header-data table-border--bottom table-align--center">MoCA predischarge</th><th class="table__header-data table-border--bottom table-align--center">MoCA outcome</th><th class="table__header-data table-border--bottom table-align--center">NIHSS predischarge</th><th class="table__header-data table-border--bottom table-align--center">NIHSS outcome</th><th class="table__header-data table-border--bottom table-align--center">mRS predischarge</th><th class="table__header-data table-border--bottom table-align--center">mRS outcome</th></tr></thead><tfoot class="table__footer"><tr class="table__row"><td colspan="10" class="table__data"><ol><li id="psyp12785-note-0002"> <p><em>Note</em>. MoCA = Montreal Cognitive Assessment; NIHSS = National Institute of Health Stoke Scale; mRS = modified Rankin Scale; R = right hemisphere stroke; L = left hemisphere stroke.</p></li><li id="psyp12785-note-0003"> <p><sup>L</sup>Patient received tissue plasminogen activator (tPA).</p></li><li id="psyp12785-note-0004"> <p><sup>W</sup>Patient had wake-up stroke.</p></li></ol></td></tr></tfoot><tbody class="table__body table__data--top"><tr class="table__row"><td class="table__data ">1</td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">77</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">26</td><td class="table__data table-align--center">26</td><td class="table__data table-align--center">3</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">1</td></tr><tr class="table__row"><td class="table__data ">2<a href="#psyp12785-note-0003" rel="references:#psyp12785-note-0003" class="js-link__note link__note" title="Link to note"><sup>L</sup></a></td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">84</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">15</td><td class="table__data table-align--center">21</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">3</td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">47</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">13</td><td class="table__data table-align--center">22</td><td class="table__data table-align--center">3</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">2</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">4<a href="#psyp12785-note-0003" rel="references:#psyp12785-note-0003" class="js-link__note link__note" title="Link to note"><sup>L</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">72</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">20</td><td class="table__data table-align--center">23</td><td class="table__data table-align--center">10</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">4</td><td class="table__data table-align--center">1</td></tr><tr class="table__row"><td class="table__data ">5</td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">61</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">26</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">6<a href="#psyp12785-note-0004" rel="references:#psyp12785-note-0004" class="js-link__note link__note" title="Link to note"><sup>W</sup></a></td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">78</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">25</td><td class="table__data table-align--center">24</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">7</td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">49</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">27</td><td class="table__data table-align--center">5</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">2</td><td class="table__data table-align--center">2</td></tr><tr class="table__row"><td class="table__data ">8<a href="#psyp12785-note-0003" rel="references:#psyp12785-note-0003" class="js-link__note link__note" title="Link to note"><sup>L</sup></a></td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">79</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">14</td><td class="table__data table-align--center">7</td><td class="table__data table-align--center">4</td><td class="table__data table-align--center">4</td><td class="table__data table-align--center">4</td></tr><tr class="table__row"><td class="table__data ">9<a href="#psyp12785-note-0003" rel="references:#psyp12785-note-0003" class="js-link__note link__note" title="Link to note"><sup>L</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">77</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">15</td><td class="table__data table-align--center">15</td><td class="table__data table-align--center">7</td><td class="table__data table-align--center">5</td><td class="table__data table-align--center">4</td></tr><tr class="table__row"><td class="table__data ">10</td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">74</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">22</td><td class="table__data table-align--center">3</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">2</td></tr><tr class="table__row"><td class="table__data ">11<a href="#psyp12785-note-0003" rel="references:#psyp12785-note-0003 #psyp12785-note-0004" class="js-link__note link__note" title="Link to notes"><sup>WL</sup></a></td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">54</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">28</td><td class="table__data table-align--center">30</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">12</td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">65</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">26</td><td class="table__data table-align--center">29</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">13</td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">80</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">3</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">2</td><td class="table__data table-align--center">1</td></tr><tr class="table__row"><td class="table__data ">14<a href="#psyp12785-note-0004" rel="references:#psyp12785-note-0004" class="js-link__note link__note" title="Link to note"><sup>W</sup></a></td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">87</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">16</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">5</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">4</td><td class="table__data table-align--center">3</td></tr><tr class="table__row"><td class="table__data ">15</td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">76</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">4</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">3</td><td class="table__data table-align--center">3</td></tr><tr class="table__row"><td class="table__data ">16</td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">18</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">28</td><td class="table__data table-align--center">30</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">1</td></tr><tr class="table__row"><td class="table__data ">17</td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">61</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">24</td><td class="table__data table-align--center">27</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">2</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">18</td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">72</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">21</td><td class="table__data table-align--center">21</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">2</td></tr><tr class="table__row"><td class="table__data ">19<a href="#psyp12785-note-0003" rel="references:#psyp12785-note-0003" class="js-link__note link__note" title="Link to note"><sup>L</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">52</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">27</td><td class="table__data table-align--center">21</td><td class="table__data table-align--center">13</td><td class="table__data table-align--center">5</td><td class="table__data table-align--center">4</td></tr><tr class="table__row"><td class="table__data ">20<a href="#psyp12785-note-0003" rel="references:#psyp12785-note-0003" class="js-link__note link__note" title="Link to note"><sup>L</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">66</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">22</td><td class="table__data table-align--center">28</td><td class="table__data table-align--center">7</td><td class="table__data table-align--center">3</td><td class="table__data table-align--center">4</td><td class="table__data table-align--center">3</td></tr><tr class="table__row"><td class="table__data ">21</td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">67</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">18</td><td class="table__data table-align--center">24</td><td class="table__data table-align--center">5</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">3</td><td class="table__data table-align--center">2</td></tr><tr class="table__row"><td class="table__data ">22<a href="#psyp12785-note-0004" rel="references:#psyp12785-note-0004" class="js-link__note link__note" title="Link to note"><sup>W</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">71</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">11</td><td class="table__data table-align--center">25</td><td class="table__data table-align--center">2</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">3</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">23<a href="#psyp12785-note-0004" rel="references:#psyp12785-note-0004" class="js-link__note link__note" title="Link to note"><sup>W</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">61</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">25</td><td class="table__data table-align--center">28</td><td class="table__data table-align--center">4</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">3</td><td class="table__data table-align--center">1</td></tr><tr class="table__row"><td class="table__data ">24<a href="#psyp12785-note-0004" rel="references:#psyp12785-note-0004" class="js-link__note link__note" title="Link to note"><sup>W</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">78</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">15</td><td class="table__data table-align--center">20</td><td class="table__data table-align--center">19</td><td class="table__data table-align--center">7</td><td class="table__data table-align--center">5</td><td class="table__data table-align--center">3</td></tr><tr class="table__row"><td class="table__data ">25</td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">69</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">27</td><td class="table__data table-align--center">27</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">1</td></tr><tr class="table__row"><td class="table__data ">26</td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">74</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">23</td><td class="table__data table-align--center">25</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">2</td></tr><tr class="table__row"><td class="table__data ">27</td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">66</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">23</td><td class="table__data table-align--center">23</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td></tr><tr class="table__row"><td class="table__data ">28<a href="#psyp12785-note-0004" rel="references:#psyp12785-note-0004" class="js-link__note link__note" title="Link to note"><sup>W</sup></a></td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">67</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">28</td><td class="table__data table-align--center">29</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">29<a href="#psyp12785-note-0004" rel="references:#psyp12785-note-0004" class="js-link__note link__note" title="Link to note"><sup>W</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">81</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">18</td><td class="table__data table-align--center">23</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">2</td><td class="table__data table-align--center">1</td></tr><tr class="table__row"><td class="table__data ">30</td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">46</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">29</td><td class="table__data table-align--center">29</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">31<a href="#psyp12785-note-0004" rel="references:#psyp12785-note-0004" class="js-link__note link__note" title="Link to note"><sup>W</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">69</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">24</td><td class="table__data table-align--center">27</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">32</td><td class="table__data table-align--center">L</td><td class="table__data table-align--center">53</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">NA</td><td class="table__data table-align--center">27</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">1</td></tr><tr class="table__row"><td class="table__data ">33<a href="#psyp12785-note-0004" rel="references:#psyp12785-note-0004" class="js-link__note link__note" title="Link to note"><sup>W</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">57</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">26</td><td class="table__data table-align--center">26</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">0</td></tr><tr class="table__row"><td class="table__data ">34<a href="#psyp12785-note-0003" rel="references:#psyp12785-note-0003 #psyp12785-note-0004" class="js-link__note link__note" title="Link to notes"><sup>WL</sup></a></td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">72</td><td class="table__data table-align--center">F</td><td class="table__data table-align--center">15</td><td class="table__data table-align--center">14</td><td class="table__data table-align--center">2</td><td class="table__data table-align--center">1</td><td class="table__data table-align--center">3</td><td class="table__data table-align--center">2</td></tr><tr class="table__row"><td class="table__data ">35</td><td class="table__data table-align--center">R</td><td class="table__data table-align--center">69</td><td class="table__data table-align--center">M</td><td class="table__data table-align--center">26</td><td class="table__data table-align--center">27</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">0</td><td class="table__data table-align--center">2</td><td class="table__data table-align--center">0</td></tr></tbody></table><p>Выделяем/копируем текст таблицы, делаем из него длинную строку и через строковый буфер (<code class="docutils literal notranslate"><span class="pre">StringIO</span></code>) передаём в функцию чтения табличных файлов как будто это текстовый файл стандартного табличного формата.</p>
+<div class="cell tag_output_scroll tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;ID	Hemisphere	Age	Gender	MoCA predischarge	MoCA outcome	NIHSS predischarge	NIHSS outcome	mRS predischarge	mRS outcome</span>
+<span class="s1">1	R	77	M	26	26	3	1	1	1</span>
+<span class="s1">2L	L	84	M	15	21	1	0	1	0</span>
+<span class="s1">3	L	47	M	13	22	3	0	2	0</span>
+<span class="s1">4L	R	72	M	20	23	10	1	4	1</span>
+<span class="s1">5	L	61	F	26	NA	0	NA	0	0</span>
+<span class="s1">6W	L	78	F	25	24	0	0	0	0</span>
+<span class="s1">7	L	49	M	NA	27	5	1	2	2</span>
+<span class="s1">8L	L	79	F	NA	14	7	4	4	4</span>
+<span class="s1">9L	R	77	M	NA	15	15	7	5	4</span>
+<span class="s1">10	L	74	M	NA	22	3	0	1	2</span>
+<span class="s1">11WL	L	54	M	28	30	0	0	0	0</span>
+<span class="s1">12	L	65	M	26	29	1	0	1	0</span>
+<span class="s1">13	R	80	M	NA	NA	3	0	2	1</span>
+<span class="s1">14W	L	87	F	16	NA	5	NA	4	3</span>
+<span class="s1">15	L	76	M	NA	NA	4	NA	3	3</span>
+<span class="s1">16	R	18	F	28	30	0	0	1	1</span>
+<span class="s1">17	L	61	M	24	27	0	0	2	0</span>
+<span class="s1">18	R	72	F	21	21	1	0	1	2</span>
+<span class="s1">19L	R	52	M	NA	27	21	13	5	4</span>
+<span class="s1">20L	R	66	M	22	28	7	3	4	3</span>
+<span class="s1">21	R	67	M	18	24	5	1	3	2</span>
+<span class="s1">22W	R	71	F	11	25	2	1	3	0</span>
+<span class="s1">23W	R	61	F	25	28	4	1	3	1</span>
+<span class="s1">24W	R	78	F	15	20	19	7	5	3</span>
+<span class="s1">25	R	69	F	27	27	0	1	1	1</span>
+<span class="s1">26	R	74	M	23	25	0	1	1	2</span>
+<span class="s1">27	R	66	M	23	23	0	0	0	1</span>
+<span class="s1">28W	L	67	M	28	29	0	0	0	0</span>
+<span class="s1">29W	R	81	F	18	23	1	0	2	1</span>
+<span class="s1">30	R	46	M	29	29	0	0	0	0</span>
+<span class="s1">31W	R	69	M	24	27	1	0	1	0</span>
+<span class="s1">32	L	53	M	NA	27	0	0	1	1</span>
+<span class="s1">33W	R	57	M	26	26	1	0	1	0</span>
+<span class="s1">34WL	R	72	F	15	14	2	1	3	2</span>
+<span class="s1">35	R	69	M	26	27	0	0	2	0&#39;&#39;&#39;</span><span class="p">))</span>
+<span class="n">D</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ID</th>
+      <th>Hemisphere</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>MoCA predischarge</th>
+      <th>MoCA outcome</th>
+      <th>NIHSS predischarge</th>
+      <th>NIHSS outcome</th>
+      <th>mRS predischarge</th>
+      <th>mRS outcome</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>R</td>
+      <td>77</td>
+      <td>M</td>
+      <td>26.0</td>
+      <td>26.0</td>
+      <td>3</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2L</td>
+      <td>L</td>
+      <td>84</td>
+      <td>M</td>
+      <td>15.0</td>
+      <td>21.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>L</td>
+      <td>47</td>
+      <td>M</td>
+      <td>13.0</td>
+      <td>22.0</td>
+      <td>3</td>
+      <td>0.0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4L</td>
+      <td>R</td>
+      <td>72</td>
+      <td>M</td>
+      <td>20.0</td>
+      <td>23.0</td>
+      <td>10</td>
+      <td>1.0</td>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>L</td>
+      <td>61</td>
+      <td>F</td>
+      <td>26.0</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6W</td>
+      <td>L</td>
+      <td>78</td>
+      <td>F</td>
+      <td>25.0</td>
+      <td>24.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>L</td>
+      <td>49</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>27.0</td>
+      <td>5</td>
+      <td>1.0</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8L</td>
+      <td>L</td>
+      <td>79</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>14.0</td>
+      <td>7</td>
+      <td>4.0</td>
+      <td>4</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9L</td>
+      <td>R</td>
+      <td>77</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>15.0</td>
+      <td>15</td>
+      <td>7.0</td>
+      <td>5</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>L</td>
+      <td>74</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>22.0</td>
+      <td>3</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11WL</td>
+      <td>L</td>
+      <td>54</td>
+      <td>M</td>
+      <td>28.0</td>
+      <td>30.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>L</td>
+      <td>65</td>
+      <td>M</td>
+      <td>26.0</td>
+      <td>29.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13</td>
+      <td>R</td>
+      <td>80</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>0.0</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14W</td>
+      <td>L</td>
+      <td>87</td>
+      <td>F</td>
+      <td>16.0</td>
+      <td>NaN</td>
+      <td>5</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15</td>
+      <td>L</td>
+      <td>76</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16</td>
+      <td>R</td>
+      <td>18</td>
+      <td>F</td>
+      <td>28.0</td>
+      <td>30.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17</td>
+      <td>L</td>
+      <td>61</td>
+      <td>M</td>
+      <td>24.0</td>
+      <td>27.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18</td>
+      <td>R</td>
+      <td>72</td>
+      <td>F</td>
+      <td>21.0</td>
+      <td>21.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19L</td>
+      <td>R</td>
+      <td>52</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>27.0</td>
+      <td>21</td>
+      <td>13.0</td>
+      <td>5</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20L</td>
+      <td>R</td>
+      <td>66</td>
+      <td>M</td>
+      <td>22.0</td>
+      <td>28.0</td>
+      <td>7</td>
+      <td>3.0</td>
+      <td>4</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>21</td>
+      <td>R</td>
+      <td>67</td>
+      <td>M</td>
+      <td>18.0</td>
+      <td>24.0</td>
+      <td>5</td>
+      <td>1.0</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>22W</td>
+      <td>R</td>
+      <td>71</td>
+      <td>F</td>
+      <td>11.0</td>
+      <td>25.0</td>
+      <td>2</td>
+      <td>1.0</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>23W</td>
+      <td>R</td>
+      <td>61</td>
+      <td>F</td>
+      <td>25.0</td>
+      <td>28.0</td>
+      <td>4</td>
+      <td>1.0</td>
+      <td>3</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>24W</td>
+      <td>R</td>
+      <td>78</td>
+      <td>F</td>
+      <td>15.0</td>
+      <td>20.0</td>
+      <td>19</td>
+      <td>7.0</td>
+      <td>5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>25</td>
+      <td>R</td>
+      <td>69</td>
+      <td>F</td>
+      <td>27.0</td>
+      <td>27.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>26</td>
+      <td>R</td>
+      <td>74</td>
+      <td>M</td>
+      <td>23.0</td>
+      <td>25.0</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>27</td>
+      <td>R</td>
+      <td>66</td>
+      <td>M</td>
+      <td>23.0</td>
+      <td>23.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>28W</td>
+      <td>L</td>
+      <td>67</td>
+      <td>M</td>
+      <td>28.0</td>
+      <td>29.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>29W</td>
+      <td>R</td>
+      <td>81</td>
+      <td>F</td>
+      <td>18.0</td>
+      <td>23.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>30</td>
+      <td>R</td>
+      <td>46</td>
+      <td>M</td>
+      <td>29.0</td>
+      <td>29.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>31W</td>
+      <td>R</td>
+      <td>69</td>
+      <td>M</td>
+      <td>24.0</td>
+      <td>27.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>32</td>
+      <td>L</td>
+      <td>53</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>27.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>33W</td>
+      <td>R</td>
+      <td>57</td>
+      <td>M</td>
+      <td>26.0</td>
+      <td>26.0</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>34WL</td>
+      <td>R</td>
+      <td>72</td>
+      <td>F</td>
+      <td>15.0</td>
+      <td>14.0</td>
+      <td>2</td>
+      <td>1.0</td>
+      <td>3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>35</td>
+      <td>R</td>
+      <td>69</td>
+      <td>M</td>
+      <td>26.0</td>
+      <td>27.0</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Обратите внимание, как библиотека pandas интеллектуально распознала текст „NA“ (Not Available) как отсутствующие значения и вставила в эти места NaN (Not a Number).</p>
+<p>MoCA (Montreal Cognitive Assessment) - это тест для оценки когнитивных способностей.
+Как видно из таблицы не все пациенты прошли его предварительно.
+Большинство прошли этот тест дважды - в начале лечения и в конце.
+Много тех, кто прошел тест только в конце - это возможно те, кто не смог участвовать в предварительных измерениях из-за тяжелого состояния.</p>
+<p>В любом случае мы видим, что данные неполные, и это нормально для реальных данных, собранных в медицинских учреждениях. Не все пациенты соглашаются на участие в исследованиях. Некоторые по тяжести состояния просто к этому не способны. Возможно кого-то выписали досрочно или перевели в другое отделение.</p>
+<p>По возрасту пациентов (колонка Age) понятно, что в основном это пожилые люди. Среди тех, кому за 70 немало со сниженными интеллектуальными способностями.</p>
+<p>Однако, под ID=16 записана 18-летняя девушка, которая впрочем перенесла инсульт почти без осложнений.</p>
+<p>Наборы данных для публикации как правило обезличивают. Распространение сведений о болезни может сделать пациента уязвимым в ряде случаев.
+Этика публикации данных о пациентах определяется понятием «врачебной тайны».</p>
+<div class="section" id="id2">
+<h2>Анонимизация биомедицинских данных<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Мероприятия по анонимизации как правило сводятся к:</p>
+<ul class="simple">
+<li><p>замена имен на коды</p></li>
+<li><p>сдвиг дат в пределах месяца</p></li>
+<li><p>согласие на использование в исследовательских целях</p></li>
+</ul>
+<p>Важным является размер выборки. Например, если в работе описывается всего пятеро пациентов с редким заболеванием в какой-то стране, и из них всего одна женщина, то знание факта, что данная женщина лежала в клинике, специализирующейся на этом заболевании, достаточно для установления идентичности личности и данных о течении болезни.</p>
+<p>В идеале данные для одного исследования собирают с нескольких клиник примерно в одно время. Это затрудняет идентификацию.</p>
+</div>
+<div class="section" id="id3">
+<h2>Индивидуальная динамика<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Попробуем воспроизвести рисунок из статьи <a class="reference internal" href="#psyp"><span class="std std-numref">Рис. 7</span></a>.</p>
+<div class="figure align-default" id="psyp">
+<img alt="" src="_images/psyp12785-fig-0002-m.png" />
+<p class="caption"><span class="caption-number">Рис. 7 </span><span class="caption-text">График взаимодействия, показывающий изменения в оценках Montreal Cognitive Assessment (MoCA) между предварительными и окончательными измерениями.</span><a class="headerlink" href="#psyp" title="Постоянная ссылка на рисунок">¶</a></p>
+</div>
+<p>Но сначала посмотрим на него и подумаем:</p>
+<blockquote>
+<div><p>Есть ли в этом рисунке какое-либо применение статистических методов?</p>
+</div></blockquote>
+<p>График имеет всего две координаты по горизонтальной оси: предварительный и окончательный. И значения из указанных колонок отложены по вертикальной оси.
+Т.е. это индивидуальные необработанные данные.</p>
+<blockquote>
+<div><p>Какую полезную информацию несет этот рисунок?</p>
+</div></blockquote>
+<p>Соединительные линии показывают изменения в ходе лечения. И наклон большинства линий идёт вверх - способности пациентов в общем восстанавливались. У некоторых не изменились, у двоих ухудшились, но у большинства тенденция было положительной. И это видно из этого риснука наглядно, без использования статистики!</p>
+<blockquote>
+<div><p>Как отображаются случаи, в которых одно из значений отсутствует (NaN)?</p>
+</div></blockquote>
+<p>В паре мест видно маркеры, которые не соединены линиями. Это значит, что у этого значения не было пары, и соединять его линией просто не с чем.</p>
+<p>Логика построения похожего рисунка сводится к отбору значений из соответствующих двух колонок и к подстановке к ним в качестве абсциссы значений 0.5 и 1.5. Можно и другие любые два числа, при условии установки подходящих пределов и подписей.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">figsize</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">xx</span><span class="o">=</span><span class="n">tile</span><span class="p">([</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">],(</span><span class="nb">len</span><span class="p">(</span><span class="n">D</span><span class="p">),</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+<span class="n">yy</span><span class="o">=</span><span class="n">D</span><span class="p">[[</span><span class="s1">&#39;MoCA predischarge&#39;</span><span class="p">,</span><span class="s1">&#39;MoCA outcome&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">T</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span> <span class="n">yy</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">2.5</span><span class="p">);</span>
+<span class="n">xlim</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span> <span class="n">xticks</span><span class="p">([</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Predischarge MoCA&#39;</span><span class="p">,</span><span class="s1">&#39;Outcome MoCA&#39;</span><span class="p">])</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;MoCA scores&#39;</span><span class="p">);</span> 
+<span class="n">yticks</span><span class="p">(</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">2</span><span class="p">));</span> <span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_demographic_27_0.png" src="_images/i_demographic_27_0.png" />
+</div>
+</div>
+<p>Чтобы контролировать форму и цвет маркеров - проще выводить по одной линии в цикле.</p>
+<p>Еще проще воспользоваться готовой функцией <code class="docutils literal notranslate"><span class="pre">parallel_coordinates</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">parallel_coordinates</span>
+<span class="n">parallel_coordinates</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">class_column</span><span class="o">=</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MoCA predischarge&#39;</span><span class="p">,</span><span class="s1">&#39;MoCA outcome&#39;</span><span class="p">],</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="s1">&#39;jet&#39;</span><span class="p">);</span>
+<span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">legend_</span><span class="o">.</span><span class="n">remove</span><span class="p">();</span> <span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/i_demographic_29_0.png" src="_images/i_demographic_29_0.png" />
+</div>
+</div>
+<p>Поскольку мы извекли данные из кода веб-страницы, то для дальнейшего анализа удобнее иметь данные в виде готового файла.</p>
+<p>Cохраним данные в текстовый файл.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;stroke.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="i_pairplot.html" title="previous page">Структура таблиц</a>
+    <a class='right-next' id="next-link" href="i_standart.html" title="next page">Cтандартизация данных</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Дмитрий Н. Щербина<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
