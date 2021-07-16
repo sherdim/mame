@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -616,8 +613,8 @@
 <p>Загрузим данные - время реакции, с.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;rt.tsv&#39;</span><span class="p">)</span>
-<span class="n">vv</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">v</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;d/rt.tsv&#39;</span><span class="p">)</span>
+<span class="n">vv</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
 <span class="n">hist</span><span class="p">(</span><span class="n">vv</span><span class="p">);</span> <span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;время реакции, с&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -641,7 +638,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NormaltestResult(statistic=19.306090837311309, pvalue=6.4229662667425542e-05)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NormaltestResult(statistic=19.306090837311295, pvalue=6.422966266742602e-05)
 </pre></div>
 </div>
 </div>
@@ -655,7 +652,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.8942419290542603, 0.0006301295361481607)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ShapiroResult(statistic=0.8942419290542603, pvalue=0.0006301295361481607)
 </pre></div>
 </div>
 </div>
@@ -671,7 +668,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KstestResult(statistic=0.13302340605342189, pvalue=0.37278688652794356)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KstestResult(statistic=0.1330234060534219, pvalue=0.37054082680262057)
 </pre></div>
 </div>
 </div>
@@ -684,7 +681,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AndersonResult(statistic=nan, critical_values=array([0.537, 0.612, 0.734, 0.856, 1.018]), significance_level=array([15. , 10. ,  5. ,  2.5,  1. ]))
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AndersonResult(statistic=1.0696390939463, critical_values=array([0.535, 0.609, 0.731, 0.853, 1.014]), significance_level=array([15. , 10. ,  5. ,  2.5,  1. ]))
 </pre></div>
 </div>
 </div>
@@ -694,12 +691,12 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vv_</span> <span class="o">=</span> <span class="n">vv</span><span class="p">[</span><span class="n">vv</span><span class="o">&lt;</span><span class="mf">0.5</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;изменение размера </span><span class="si">{}</span><span class="s1"> -&gt; </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vv</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">vv_</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;изменение размера </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">vv</span><span class="p">)</span><span class="si">}</span><span class="s1"> -&gt; </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">vv_</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>изменение размера 48 -&gt; 40
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>изменение размера 45 -&gt; 40
 </pre></div>
 </div>
 </div>
@@ -711,7 +708,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NormaltestResult(statistic=2.2501961865640294, pvalue=0.32462062269421166)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NormaltestResult(statistic=2.25019618656403, pvalue=0.3246206226942116)
 </pre></div>
 </div>
 </div>
@@ -723,7 +720,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.9592655301094055, 0.15807799994945526)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ShapiroResult(statistic=0.9592655301094055, pvalue=0.15807799994945526)
 </pre></div>
 </div>
 </div>
@@ -735,7 +732,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KstestResult(statistic=0.10612495428368313, pvalue=0.75890822227626531)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KstestResult(statistic=0.10612495428368313, pvalue=0.7187460361580543)
 </pre></div>
 </div>
 </div>

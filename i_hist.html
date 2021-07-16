@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -804,7 +801,7 @@
 </div>
 <p>По информации, возвращаемой функцией <code class="docutils literal notranslate"><span class="pre">hist</span></code>, ясно, что значения были разделены на 10 групп. Границы групп идут с равным шагом от 0.2 до 0.7, что видно по оси абсцисс.
 По оси ординат отложено количество значений в каждой группе.</p>
-<p>Чтобы не гадать, что за информация возращается функцией <code class="docutils literal notranslate"><span class="pre">hist</span></code>, обратимся к документации.</p>
+<p>Чтобы не гадать, что за информация возвращается функцией <code class="docutils literal notranslate"><span class="pre">hist</span></code>, обратимся к документации.</p>
 <div class="cell tag_scroll-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>hist<span class="o">?</span>
@@ -1053,15 +1050,16 @@ significantly faster than &#39;bar&#39; and &#39;barstacked&#39;.
 
 <span class="n">sturges</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">data</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">log2</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">rice</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">data</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">**</span><span class="mf">0.333</span><span class="p">)</span>
-<span class="n">doane</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">data</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">log</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">+</span> <span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">kurtosis</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="mf">6.</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span>
+<span class="n">wichard</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">data</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">log2</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">+</span> <span class="n">log2</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">kurtosis</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">/</span> <span class="mf">6.</span><span class="p">)</span> <span class="o">**</span> <span class="mf">0.5</span><span class="p">))</span>
+<span class="n">doane</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">data</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">log2</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="o">+</span> <span class="n">log2</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">skew</span><span class="p">(</span><span class="n">data</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">6</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">+</span><span class="mi">3</span><span class="p">)))</span><span class="o">**</span><span class="mf">0.5</span> <span class="p">))</span>
 
 <span class="n">vv</span> <span class="o">=</span> <span class="n">vv</span><span class="p">[</span><span class="o">~</span><span class="n">isnan</span><span class="p">(</span><span class="n">vv</span><span class="p">)]</span> <span class="c1"># удалим пропущенные значения</span>
-<span class="n">sturges</span><span class="p">(</span><span class="n">vv</span><span class="p">),</span> <span class="n">rice</span><span class="p">(</span><span class="n">vv</span><span class="p">),</span> <span class="n">doane</span><span class="p">(</span><span class="n">vv</span><span class="p">)</span>
+<span class="n">sturges</span><span class="p">(</span><span class="n">vv</span><span class="p">),</span> <span class="n">rice</span><span class="p">(</span><span class="n">vv</span><span class="p">),</span> <span class="n">doane</span><span class="p">(</span><span class="n">vv</span><span class="p">),</span> <span class="n">wichard</span><span class="p">(</span><span class="n">vv</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6, 7, 6)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6, 7, 8, 9)
 </pre></div>
 </div>
 </div>
@@ -1071,6 +1069,7 @@ significantly faster than &#39;bar&#39; and &#39;barstacked&#39;.
 <li><p>Sturges, H.A. (1926). «The choice of a class interval». Journal of the American Statistical Association: 65–66. doi:10.1080/01621459.1926.10502161.</p></li>
 <li><p>Lane D.M. (2007) <a class="reference external" href="http://onlinestatbook.com/2/graphing_distributions/histograms.html">http://onlinestatbook.com/2/graphing_distributions/histograms.html</a></p></li>
 <li><p>Doane D.P. (1976) Aesthetic frequency classiﬁcation. American Statistician, 30: 181–183</p></li>
+<li><p>Wichard J. D., Kuhne R., Ter Laak A. Binding site detection via mutual information //2008 IEEE International Conference on Fuzzy Systems (IEEE World Congress on Computational Intelligence). – IEEE, 2008. – С. 1770-1776.</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

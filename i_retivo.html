@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -628,8 +625,8 @@
   <div class="section" id="id1">
 <h1>Подбор параметров распределения<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <p>Когда мы характеризуем любую выборку чисел двумя параметрами - средним и стандратным отклонением, то подразумеваем, что выборка приближенно описывается нормальным распределением.</p>
-<p>Однако распределение значений времени реакций несимметричное и более точно описывается с помощью других распределений.</p>
-<p>Рекомендуемый способ получить коэффициенты таких распределений: экспортировать подвыборки ваших данных в текстовые файлы и подобрать модели с помощью интерактивного онлайн-приложения  <a class="reference external" href="https://sherdim.shinyapps.io/retivo/">https://sherdim.shinyapps.io/retivo/</a> .</p>
+<p>Однако распределение значений времени сенсомоторных реакций несимметричное и более точно описывается с помощью других распределений.
+Рекомендуемый способ получить коэффициенты таких распределений: экспортировать подвыборки ваших данных в текстовые файлы и подобрать модели с помощью интерактивного онлайн-приложения  <a class="reference external" href="https://sherdim.shinyapps.io/retivo/">https://sherdim.shinyapps.io/retivo/</a> .</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#загрузка данных</span>
@@ -654,8 +651,8 @@ memory usage: 896.0 bytes
 </div>
 </div>
 </div>
-<p>Для анализа распределений нужно разделить реакции по типу стимула.</p>
-<p>Первая половина - зрительно-моторные реакции, вторая - слухомоторные.</p>
+<p>Для анализа распределений нужно разделить реакции по типу стимула.
+Первая половина - зрительно-моторные реакции, вторая - слухомоторные.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">[</span><span class="s1">&#39;stimul&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">where</span><span class="p">(</span><span class="n">D</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">D</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span> <span class="p">,</span> <span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
@@ -666,7 +663,7 @@ memory usage: 896.0 bytes
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_retivo_5_0.png" src="_images/i_retivo_5_0.png" />
+<img alt="_images/i_retivo_4_0.png" src="_images/i_retivo_4_0.png" />
 </div>
 </div>
 <p>Гистограмма распределения времени реакции в большинстве случаев скошена влево.</p>
@@ -678,7 +675,7 @@ memory usage: 896.0 bytes
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_retivo_7_0.png" src="_images/i_retivo_7_0.png" />
+<img alt="_images/i_retivo_6_0.png" src="_images/i_retivo_6_0.png" />
 </div>
 </div>
 <div class="section" id="id2">

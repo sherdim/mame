@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -646,7 +643,7 @@ memory usage: 896.0 bytes
 <img alt="_images/i_prognoz_5_0.png" src="_images/i_prognoz_5_0.png" />
 </div>
 </div>
-<p>Представим, что мы хотим предсказывать время реакции (ВР) непосредственно в ходе эксперимента. Другими словами мы хотим делать прогноз в режиме «реального времени».</p>
+<p>Представим, что мы хотим предсказывать время реакции (ВР) непосредственно в ходе эксперимента. Другими словами, мы хотим делать прогноз в режиме «реального времени».</p>
 <p>Для упрощения представим, что мы ничего не знаем о заданном порядке МСИ и о модальности стимула.</p>
 <p>В нулевой момент времени у нас нет данных. Мы прогнозируем, что ВР будет как у большинства людей от 150 до 350 мс. Возмём среднее значение 0.25 с.</p>
 <div class="cell docutils container">
@@ -730,8 +727,8 @@ memory usage: 896.0 bytes
 </div>
 </div>
 </div>
-<p>В случае одного значения это абсолютное значение разности между прогнозируемым и реальным значениями.</p>
-<p>Если значений много, то все равно будет одно число. Это число - метрика качества нашего прогноза, на основании которой мы можем сравнивать разные алгоритмы.</p>
+<p>В случае одного значения это абсолютное значение разности между прогнозируемым и реальным значениями.
+Если значений много, то все равно будет одно число. Это число - метрика качества нашего прогноза, на основании которой мы можем сравнивать разные алгоритмы.</p>
 <p>Есть несколько принципов прогноза:</p>
 <ol class="simple">
 <li><p>Если что-то происходит сейчас так, то и в будущем будет так же.</p></li>
@@ -742,7 +739,7 @@ memory usage: 896.0 bytes
 <p>Мы попробуем сделать несколько логических шагов для понимания сути однонаправленного моделирования. Более зрелые модели доступны в специальных пакетах, на которые будут ссылки в конце.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#сохраним текущий прогноз как первый вариант подхода &quot;среднее по больнице&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#сохраним текущий прогноз как вариант подхода &quot;среднее по больнице&quot;</span>
 <span class="n">D</span><span class="p">[</span><span class="s1">&#39;pro_populatio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">D</span><span class="p">[</span><span class="s1">&#39;prognoz&#39;</span><span class="p">]</span>
 
 <span class="c1">#зададим функцию для удобства оценки качества прогноза</span>
@@ -8090,7 +8087,6 @@ khzAzMyskhzAzMyskhzAzMyskv4/lNv9EnznMqEAAAAASUVORK5CYII=\
 </script>
 </div></div>
 </div>
-<p><img alt="" src="_images/pro_prev.png" /></p>
 <p>Из-за выбросов становится понятно, что полагаться только на последнее значение опрометчиво. Лучше использовать для прогноза несколько последних значений.</p>
 <p>Для ослабления влияния выбросов в качестве оценки центральной тенденции лучше использовать медиану.</p>
 <div class="cell docutils container">
@@ -15269,8 +15265,8 @@ A5iZmVWSA5iZmVXS/werN7JtLNjJbAAAAABJRU5ErkJggg==\
 </div>
 </div>
 <p>И среднее, и медиана являются способами оценить центральную тенденцию (<em><a class="reference external" href="https://en.wikipedia.org/wiki/M-estimator">M-estimator</a></em>)</p>
-<p>Вместо усреднения можно ввести взвешенное среднее, чтобы более экстремальные значения вносили меньший вклад, чем более типичные близкие к среднему. На практике используются разные <a class="reference external" href="http://statsmodels.sourceforge.net/stable/rlm_techn1.html">весовые функции</a>.</p>
-<p>Например, после первых 5 значений мы хотели бы иметь прогноз в районе 0.3, т.е. ослабить влияние 4-го значения, превышающего 0.4.</p>
+<p>Вместо усреднения можно ввести взвешенное среднее, чтобы более экстремальные значения вносили меньший вклад, чем более типичные близкие к среднему. На практике используются разные <a class="reference external" href="http://statsmodels.sourceforge.net/stable/rlm_techn1.html">весовые функции</a>.
+Например, после первых 5 значений мы хотели бы иметь прогноз в районе 0.3, т.е. ослабить влияние 4-го значения, превышающего 0.4.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">v</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
@@ -15310,7 +15306,7 @@ A5iZmVWSA5iZmVXS/werN7JtLNjJbAAAAABJRU5ErkJggg==\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_prognoz_29_0.png" src="_images/i_prognoz_29_0.png" />
+<img alt="_images/i_prognoz_28_0.png" src="_images/i_prognoz_28_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -22508,7 +22504,7 @@ WSW5BWZmZpXkAGZmZpXkAGZmZpXkAGZmZpX0/wGIwV3zNrCHSgAAAABJRU5ErkJggg==\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_prognoz_34_0.png" src="_images/i_prognoz_34_0.png" />
+<img alt="_images/i_prognoz_33_0.png" src="_images/i_prognoz_33_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -29749,7 +29745,7 @@ zMzMKskBzMzMKskBzMzMKskBzMzMKun/A98/t61Z7ySEAAAAAElFTkSuQmCC\
 </script>
 </div></div>
 </div>
-<p>Используя экпоненциально взвешенную среднюю мы получили качество в 10 попугаев. Нам все еще мешают выбросы. Попробуем объединить веса, ослабляющие экстремальные значения, с весами, ослабляющими старые значения. Это так называемая <em>конволюция</em>.</p>
+<p>Используя экпоненциально взвешенную среднюю, мы еще меньше попугаев. Нам все еще мешают выбросы. Попробуем объединить веса, ослабляющие экстремальные значения, с весами, ослабляющими старые значения. Это так называемая <em>конволюция</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_conv1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">):</span>
@@ -37003,8 +36999,6 @@ Name: vwin, dtype: float64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">[</span><span class="s1">&#39;pro_win_conv&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">vwin</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;ffill&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">_conv1</span><span class="p">)</span><span class="o">.</span><span class="n">shift</span><span class="p">()</span>
-<span class="k">def</span> <span class="nf">quowin</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean</span><span class="p">((</span><span class="n">D</span><span class="o">.</span><span class="n">vwin</span> <span class="o">-</span> <span class="n">D</span><span class="p">[</span><span class="n">k</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
 <span class="n">quo</span><span class="p">(</span><span class="s1">&#39;pro_win_conv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -44160,7 +44154,7 @@ YII=\
 </div></div>
 </div>
 <p>Можно попробовать еще более продвинутые методы расчета весовых коэффициентов для подбора лучшего предсказания по группе последних значений, например <a class="reference external" href="https://en.wikipedia.org/wiki/Iteratively_reweighted_least_squares">IRLS</a> с <a class="reference external" href="https://en.wikipedia.org/wiki/Huber_loss">функцией потерь Хубера</a> или разные варианты ARIMA.</p>
-<p>Кроме линейной применяют более плавную сплайновую интерполяцию - <code class="docutils literal notranslate"><span class="pre">scipy.interpolate.spline</span></code>.</p>
+<p>Кроме линейной применяют более плавную сплайновую интерполяцию — <code class="docutils literal notranslate"><span class="pre">scipy.interpolate.spline</span></code>.</p>
 </div>
 
     <script type="text/x-thebe-config">

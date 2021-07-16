@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,6 +54,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="☑ Подготовка данных" href="w_turtle.html" />
@@ -236,7 +235,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -615,18 +614,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
+  <a class="reference internal nav-link" href="#id4">
    Анализ полноты набора данных
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
+  <a class="reference internal nav-link" href="#id5">
    Анализ корректности категорий
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
-   Рассчёт соотношений показателей
+  <a class="reference internal nav-link" href="#id6">
+   Расчёт соотношений показателей
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -635,7 +634,7 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id6">
+  <a class="reference internal nav-link" href="#id9">
    Перегруппировка
   </a>
  </li>
@@ -656,9 +655,8 @@
 <div class="section" id="id2">
 <h2>Набор данных<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
 <p><a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BE_%D0%A0%D0%B5%D0%BD%D1%87%D0%B0">Правило Ренча</a> (Rensch’s Rule)(положительная аллометрия полового диморфизма в размерах)
-решили проверить на черепахах. Для этого интегрировали данные из разных работ - в каких-то измерялись размеры и масса, в каких-то только размеры. Таблица неполная, так как информация по многим позициям отсутствует. Это пример реальных данных, с которыми приходится работать.</p>
+решили проверить на черепахах <span id="id3">[<a class="reference internal" href="references.html#id12"><span>RM17</span></a>]</span>. Для этого интегрировали данные из разных работ - в каких-то измерялись размеры и масса, в каких-то только размеры. Таблица неполная, так как информация по многим позициям отсутствует. Это пример реальных данных, с которыми приходится работать.</p>
 <p>Набор данных представлен в исходном виде, в котором он находится в открытом доступе в виде приложения к публикации - это файл Excel <code class="docutils literal notranslate"><span class="pre">Data_S1_Complete_Dataset.xlsx</span></code> размером 95Кб.</p>
-<p><a class="reference external" href="https://peerj.com/articles/2914">Regis KW, Meik JM (2017) Allometry of sexual size dimorphism in turtles: a comparison of mass and length data Ecology Evolutionary Studies Zoology</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#https://dfzljdn9uc3pi.cloudfront.net/2017/2914/1/Data_S1_Complete_Dataset.xlsx</span>
@@ -707,7 +705,7 @@ memory usage: 146.1+ KB
 </div>
 </div>
 <p>В таблице 692 записи со значениями в 27 колонках.</p>
-<p>Из сводки по колонкам по количеству ненулевых значений (non-null) можно видеть, что полностью заполнены лишь Family (Семейство), Genus (Род) и Species(Вид).
+<p>Из сводки по колонкам по количеству ненулевых значений (non-null) можно видеть, что полностью заполнены лишь Family (Семейство), Genus (Род) и Species (Вид).
 Остальные колонки заполнены частично.</p>
 <p>Посмотрим список мест сбора данных.</p>
 <div class="cell docutils container">
@@ -1001,8 +999,8 @@ Name: 633, dtype: object
 </div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>Анализ полноты набора данных<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id4">
+<h2>Анализ полноты набора данных<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Для анализа полового диморфизма каждая запись о популяции должна содержать размер женской особи и мужской особи.</p>
 <p><strong>Вопрос: сколько размеров без пары?</strong></p>
 <p>Первая проверка, сколько мужских без женских?</p>
@@ -1172,15 +1170,14 @@ Name: 633, dtype: object
 </div>
 </div>
 </div>
-<p>В трех случаях указаны только женские размеры.</p>
-<p>Для Pelomedusa 	subrufa (№ 466) правда указан максимальный размер самца.</p>
+<p>В трех случаях указаны только женские размеры.
+Для Pelomedusa 	subrufa (№ 466) правда указан максимальный размер самца.</p>
 <p>Можно заметить, что все три вида - морские черепахи. Поэтому становится понятным почему нет самцов.
 Вероятно, замеры самок производились во время кладки яиц, когда самки черепах выползают из воды на песок. Самцы же в это время плавали где-то в море.</p>
 </div>
-<div class="section" id="id4">
-<h2>Анализ корректности категорий<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id5">
+<h2>Анализ корректности категорий<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Для сравнительного анализа часто необходимо группировать наблюдения. В этом наборе данных группировку логично делать по систематическому признаку - Семейству (Family).</p>
-<p>Проверим, что у всех видов указано семейство.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">Family</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
@@ -1286,26 +1283,27 @@ Name: Family, dtype: int64
 </div>
 </div>
 </div>
-<p>В подобном случае операцию приведения строк в порядок можно делать сразу после загрузки набора данных. Например, мы все значения из колонки меняем на эти же значения, но исправленные.</p>
+<p>В подобном случае операцию приведения строк в порядок можно делать сразу после загрузки набора данных. Например, поменять все значения из колонки на эти же значения, но исправленные.</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">Genus</span> <span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">Genus</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Похожие операции стандартизации могут потребовать нестандартные сокращения, нестандартные указания даты и времени, строки с разным регистром символов и др.</p>
 <p>После «ремонта» набора данных его желательно сохранить в файле с другим именем для дальнейшей работы. Мы этого делать не будем, поскольку преследуем учебные цели.</p>
 </div>
-<div class="section" id="id5">
-<h2>Рассчёт соотношений показателей<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id6">
+<h2>Расчёт соотношений показателей<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
 <p><a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BE_%D0%A0%D0%B5%D0%BD%D1%87%D0%B0">Правило Ренча</a> (Rensch’s Rule)  - пример <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%BB%D0%BE%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8F">аллометрии</a>.
 В 1950 году Rensch впервые описал, что в группах родственных видов половой диморфизм в размерах тела более выражен у крупных видов.</p>
 <p>Были найдены исключения. Например, правило Ренча не соблюдается у сов
-<a class="reference external" href="http://www.journals.uchicago.edu/doi/abs/10.1086/286004"><cite data-cite="Abouheif1997">Abouheif E., Fairbairn D. J. A comparative analysis of allometry for sexual size dimorphism: assessing Rensch’s rule //The American Naturalist. – 1997. – Т. 149. – №. 3. – С. 540-562.</cite></a></p>
-<p>У птиц выраженность полового диморфизма была связана с половым отбором.
-Если поделить на группы по системе спаривания, то правило выражено только у многоженцев (Polygyny) <a class="reference internal" href="#rench-birds"><span class="std std-numref">Рис. 8</span></a>.</p>
+<span id="id7">[<a class="reference internal" href="references.html#id13"><span>AF97</span></a>]</span>.
+У птиц выраженность полового диморфизма была связана с половым отбором.
+Если поделить на группы по системе спаривания, то правило выражено только у многоженцев (Polygyny)
+<span id="id8">[<a class="reference internal" href="references.html#id14"><span>DDF+07</span></a>]</span>
+(<a class="reference internal" href="#rench-birds"><span class="std std-numref">Рис. 8</span></a>).</p>
 <div class="figure align-default" id="rench-birds">
 <img alt="" src="_images/rench_birds.jpg" />
 <p class="caption"><span class="caption-number">Рис. 8 </span><span class="caption-text">Стандартизированный размерный диморфизм (log male wing length−log female wing length) по сравнению с размером самцов в подсемействах с различными системами спаривания. Полигиния связана с положительной аллометрией (т. е. наклон графиков &gt; 0 ), а полиандрия связана с отрицательной аллометрией (т. е. наклоны &lt; 0).</span><a class="headerlink" href="#rench-birds" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
-<p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pubmed/17878139">Dale J. et al. Sexual selection explains Rensch’s rule of allometry for sexual size dimorphism //Proceedings of the Royal Society of London B: Biological Sciences. – 2007. – Т. 274. – №. 1628. – С. 2971-2979.</a></p>
 <p>Для визуализации соотношения между показателями используют скаттерограмму. Сопоставим размеры мужских и женских карапаксов для одного из семейств - Сухопутные черепахи.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1551,10 +1549,10 @@ Name: Family, dtype: int64
 <p>Сходная картина с межполовыми различиями в массе.</p>
 <p>Степень выраженности аллометрического правила оценивают по углу наклона линии тренда - или коэффициенту <span class="math notranslate nohighlight">\(a\)</span> в уравнении <span class="math notranslate nohighlight">\(y= ax+b\)</span>.</p>
 </div>
-<div class="section" id="id6">
-<h2>Перегруппировка<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Попробуем проверить пару гипотез, связано ли соблюдение правила Ренча с образом жизни и с типом складывания шеи (подотряды).</p>
-<p>Для этого нам надо создать новые колонки с факторами.</p>
+<div class="section" id="id9">
+<h2>Перегруппировка<a class="headerlink" href="#id9" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Попробуем проверить пару гипотез, связано ли соблюдение правила Ренча с образом жизни и с типом складывания шеи (подотряды).
+Для этого нам надо создать новые колонки с факторами.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">Family</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
@@ -1618,7 +1616,7 @@ Name: vita, dtype: int64
 </div>
 </div>
 </div>
-<p>Подотряд можно задать сопоставлением каждого семейства со своим подотрядом, но поскольку у Черепах подотряда всего два, то можно проверить принадлежность к одному из двух семейств бокошейных, и если нет, то к скрытошейным.</p>
+<p>Подотряд можно задать сопоставлением каждого семейства со своим подотрядом, но поскольку у Черепах подотряда всего два, то можно проверить принадлежность к одному из трёх семейств бокошейных, и если нет, то к скрытошейным.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">podotryad</span><span class="p">(</span><span class="n">fam</span><span class="p">):</span>
@@ -1685,9 +1683,9 @@ Name: Subordo, dtype: int64
 <img alt="_images/i_turtle_77_0.png" src="_images/i_turtle_77_0.png" />
 </div>
 </div>
-<p>При группировке по образу жизни чётко обособляется группа сухопутных черепах с сильно выраженной аллометрией. У мелких видов самцы всегда мельче (показатель ниже 0), у крупных - самцы всегда больше (показатель больше 0). При средних размерах встречаются разные варианты.</p>
-<p>У черепах, живущих в воде, фактор размера видимо менее значим, поскольку нет необходимости перемещения тяжелого панциря на ногах.</p>
-<p>После получения качественного решения, можно получить количественные значения коэффициентов отобранных моделей зависимостей. Для этого для каждой группы нужно сделать анализ с помощью функции <code class="docutils literal notranslate"><span class="pre">polyfit</span></code> или пакета <code class="docutils literal notranslate"><span class="pre">statmodels</span></code>, с которыми мы познакомимся в следующих разделах.</p>
+<p>При группировке по образу жизни чётко обособляется группа сухопутных черепах с сильно выраженной аллометрией. У мелких видов самцы всегда мельче (показатель ниже 0), у крупных - самцы всегда больше (показатель больше 0). При средних размерах встречаются разные варианты.
+У черепах, живущих в воде, фактор размера видимо менее значим, поскольку нет необходимости перемещения тяжелого панциря на ногах.</p>
+<p>После получения качественного решения можно получить количественные значения коэффициентов отобранных моделей зависимостей. Для этого для каждой группы нужно сделать анализ с помощью функции <code class="docutils literal notranslate"><span class="pre">polyfit</span></code> или пакета <code class="docutils literal notranslate"><span class="pre">statmodels</span></code>, с которыми мы познакомимся в следующих разделах.</p>
 </div>
 </div>
 

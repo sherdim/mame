@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -627,15 +624,15 @@
 Закрашенный кружок показывает, что ядро занято. Если это продолжается очень долго - можно прервать выполнение команды, поменять код и попробовать выполнить команду повторно.</p>
 <p>Кнопка со значком дискеты служит для сохранения блокнота. Как правило работает автосохранение и контрольные точки для восстановления предыдущих версий остаются в папке <code class="docutils literal notranslate"><span class="pre">.ipynb_checkpoints</span></code>. Эти служебные папки есть везде, где Вы работаете с блокнотами. Лучше их не трогать. Когда-нибудь потребуется восстановить испорченную версию блокнота, и тогда функция восстановления из контрольных точек пригодится.</p>
 <p>Кнопка с плюсом служит для создания новой ячейки.</p>
-<p>Кнопки с ножницами и две соседние служат для операций вырезания, копирования и вставки ячеек.</p>
-<p>За один раз можно выделить несколько ячеек - Для этого, удерживая Shift, нажимайте на внопку вниз (или вверх). Операции с ячейками похожи на операции с абзацами или строками таблиц в других приложениях.</p>
+<p>Кнопки с ножницами и две соседние служат для операций вырезания, копирования и вставки ячеек.
+За один раз можно выделить несколько ячеек - Для этого, удерживая Shift, нажимайте на внопку вниз (или вверх). Операции с ячейками похожи на операции с абзацами или строками таблиц в других приложениях.</p>
 <p>Кнопки со стрелками вверх и вниз служат для перемещения текущей ячейки относительно соседних.</p>
 <p>Следующий блок кнопок нужен для управления программным ядром блокнота.
-Можно выполнить ячейку с кодом, прервать выполнение, которое затянулось дольше положеного, перезапустить ядро, и выполнить заново весь код блокнота за один проход.</p>
+Можно выполнить ячейку с кодом, прервать выполнение, которое затянулось дольше положенного, перезапустить ядро, и выполнить заново весь код блокнота за один проход.</p>
 <p>В случае перезапуская ядра всё наработанное обнулится, все переменные будут удалены. Но оставшийся код позволит легко повторить выполнения команд заново.
 Если Вы много наработали в блокноте, создали много переменных в разных ячейках, и выражений, которые ссылаются на эти переменные, то лучший способ проверить работоспособность блокнота - прогнать выполнение всего кода «с чистого листа».</p>
-<p>Далее в меню расположен выпадающий список, в котором отображается тип текущей ячейки. Основных типов ячеек два: код (Code) и комментарии (Markdown).</p>
-<p>Новая ячейка создаётся c типом Code.</p>
+<p>Далее в меню расположен выпадающий список, в котором отображается тип текущей ячейки. Основных типов ячеек два: код (Code) и комментарии (Markdown).
+Новая ячейка создаётся c типом Code.</p>
 <p>Если же Вы хотите снабдить текущее место в блокноте комментариями, то можете поменять тип ячейки на Markdown (выберите в выпадающем списке).</p>
 <p>Markdown - это язык разметки для быстрого форматирования текста. Без форматирования введенный текст просто отображается как основной текст страницы.
 С некоторыми приёмами форматирования мы познакомимся позже.</p>

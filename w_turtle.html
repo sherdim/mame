@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -701,8 +698,8 @@ memory usage: 86.6+ KB
 </div>
 </div>
 </div>
-<p>Поле „vid“ удобно для отбора записей по виду. Например, в задаче спрашивается про средиземноморских черепах (Testudo graeca).</p>
-<p>Без сделанных преобразований код для отбора мог бы быть таким:</p>
+<p>Поле „vid“ удобно для отбора записей по виду. Например, в задаче спрашивается про средиземноморских черепах (Testudo graeca).
+Без сделанных преобразований код для отбора мог бы быть таким:</p>
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">D</span><span class="p">[(</span><span class="n">D</span><span class="o">.</span><span class="n">Species</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">==</span><span class="s1">&#39;graeca&#39;</span><span class="p">)]</span>
 </pre></div>
 </div>
@@ -711,7 +708,9 @@ memory usage: 86.6+ KB
 <div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">D</span><span class="p">[(</span><span class="n">D</span><span class="o">.</span><span class="n">vid</span><span class="o">==</span><span class="s1">&#39;Testudo graeca&#39;</span><span class="p">)]</span>
 </pre></div>
 </div>
-<p>Сделайте заголовки второго уровня для решения отдельных заданий. Это удобно, чтобы не запутаться в однотипных заданиях.</p>
+<blockquote>
+<div><p>Сделайте заголовки второго уровня для решения отдельных заданий. Это удобно, чтобы не запутаться в однотипных заданиях.</p>
+</div></blockquote>
 <div class="admonition tip">
 <p class="admonition-title">Совет</p>
 <p>Чтобы хорошо было видно код, удерживая <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> покрутите колёсико мыши до достижения удобной читаемости букв.</p>
@@ -725,7 +724,7 @@ memory usage: 86.6+ KB
 <h2>Задача 1.<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Для представителей какого семейства больше всего записей, в которых указан максимальный размер самок, но не указан самцов?</p>
 <blockquote>
-<div><p>Опеределитесь, о каких колонках данных идет речь?</p>
+<div><p>Определитесь, о каких колонках данных идет речь?</p>
 </div></blockquote>
 <p>Если просто размер самок, то это „F SCL (mm)“, а если максимальный, то в названии добавляется префикс «Max»: „F Max SCL (mm)“.</p>
 <blockquote>

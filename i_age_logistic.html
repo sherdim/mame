@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,6 +54,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Эпидемиологическая статистика" href="i_epistat.html" />
@@ -236,7 +235,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -610,7 +609,7 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
+  <a class="reference internal nav-link" href="#id3">
    Зависимость от возраста
   </a>
  </li>
@@ -628,7 +627,8 @@
   <div class="section" id="id1">
 <h1>Скрининговая диагностика<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <p><a class="reference external" href="https://archive.ics.uci.edu/ml/datasets/Mammographic+Mass">Данные по маммографии</a> - один из общедоступных наборов данных в архиве Центра машинного обучения.
-Собран в Институте Радиологии университета Эрланген-Нюрнберг, Erlangen, Germany в период между 2003 и 2006 гг.</p>
+Собран в Институте Радиологии университета Эрланген-Нюрнберг, Erlangen, Germany в период между 2003 и 2006 гг
+<span id="id2">[<a class="reference internal" href="references.html#id15"><span>ESWW07</span></a>]</span>.</p>
 <p>Маммография является наиболее эффективным методом скрининга рака молочной железы, доступных сегодня.
 Однако низкая положительная прогностическая ценность биопсии молочной железы в результате интерпретации маммографии приводит к примерно 70% ненужных биопсий с доброкачественными результатами.
 Для снижения количества ненужных биопсий молочных желез предлагаются системы автоматизированной диагностики, которые помогают врачу решить: делать биопсию подозрительного участка или пока отложить инвазивную проверку и понаблюдать.</p>
@@ -642,12 +642,6 @@
 <li><p>Плотность образования: высокая = 1 изо = 2 низкая = 3 жиросодержащая = 4 (порядковый)</p></li>
 <li><p>Реальная тяжесть: доброкачественная = 0 или злокачественная = 1 (биноминальный)</p></li>
 </ol>
-<p>Первоисточник</p>
-<ul class="simple">
-<li><p>M. Elter, R. Schulz-Wendtland and T. Wittenberg (2007)
-The prediction of breast cancer biopsy outcomes using two CAD approaches that both emphasize an intelligible decision process.
-Medical Physics 34(11), pp. 4164-4172</p></li>
-</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#https://archive.ics.uci.edu/ml/machine-learning-databases/mammographic-masses/mammographic_masses.data</span>
@@ -676,7 +670,7 @@ memory usage: 45.2 KB
 </div>
 </div>
 <blockquote>
-<div><p>Создайте ячейку и выполнив код <code class="docutils literal notranslate"><span class="pre">D</span></code> посмотрите содержимое таблицы. Возьмите одну строчку и объясните ситуацию у данного пациента.</p>
+<div><p>Создайте ячейку и, выполнив код <code class="docutils literal notranslate"><span class="pre">D</span></code>, посмотрите содержимое таблицы. Возьмите одну строчку и объясните ситуацию у данного пациента.</p>
 </div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -685,8 +679,8 @@ memory usage: 45.2 KB
 </div>
 </div>
 </div>
-<p>Посмотрим распределение всех четырех объясняющих показателей.</p>
-<p>При этом настроим палитру, чтобы плохой исход был пугающе красным, а хороший - успокаивающе зеленым. (n=2)</p>
+<p>Посмотрим распределение всех четырех объясняющих показателей.
+При этом настроим палитру, чтобы плохой исход был пугающе красным, а хороший - успокаивающе зеленым. (n=2)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#pal = sns.choose_diverging_palette()</span>
@@ -743,8 +737,8 @@ memory usage: 45.2 KB
 </div>
 </div>
 <p>Оценки врачей коррелировали с итоговыми данными биопсии.</p>
-<div class="section" id="id2">
-<h2>Зависимость от возраста<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id3">
+<h2>Зависимость от возраста<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Чем старше возраст пациентки, тем больше вероятность того, что образование злокачественное.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1163,8 +1157,8 @@ Name: itog, dtype: int64
 </div>
 </div>
 <p>Вывод. После 58 лет преобладает вероятность злокачественного исхода новообразований в груди.</p>
-<p>Мы использовали огрубленные данные, поскольку считали вероятности с шагом в 5 лет.</p>
-<p>А что если попробовать подобрать логистическую модель к исходным данным без подсчета вероятности?</p>
+<p>Мы использовали огрубленные данные, поскольку считали вероятности с шагом в 5 лет.
+А что, если попробовать подобрать логистическую модель к исходным данным без подсчета вероятности?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D_</span> <span class="o">=</span> <span class="n">D</span><span class="p">[</span><span class="n">D</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span> <span class="c1">#отберем только с указанием возраста</span>

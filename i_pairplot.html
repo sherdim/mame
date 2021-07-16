@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Структура таблиц &#8212; Практикум по математическим методам в исследовательской деятельности</title>
+    <title>Структура данных &#8212; Практикум по математическим методам в исследовательской деятельности</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -648,10 +645,10 @@
               <div>
                 
   <div class="section" id="id1">
-<h1>Структура таблиц<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Структура данных<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="id2">
 <h2>Широкие и длинные таблицы<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Одни и те же данные можно структурировать по разному.</p>
+<p>Одни и те же данные можно структурировать по-разному.</p>
 <p>Как? Зависит от задачи..</p>
 <div class="section" id="id3">
 <h3>Широкие таблицы<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h3>
@@ -664,7 +661,7 @@
 </div>
 <div class="section" id="id4">
 <h3>Длинные таблицы<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h3>
-<p>набор данных преобразуется в виде матрицы размером <code class="docutils literal notranslate"><span class="pre">[n_samples,</span> <span class="pre">n_features]</span></code>:</p>
+<p>Набор данных преобразуется в виде матрицы размером <code class="docutils literal notranslate"><span class="pre">[n_samples,</span> <span class="pre">n_features]</span></code>:</p>
 <ul class="simple">
 <li><p><strong>n_samples</strong>: Количество объектов (образцов, samples). Образцом может быть документ, изображение, звуко- или видеозапись, одно измерение прибора, обследование одного пациента, один образец живой ткани или что-то, что можно описать фиксированным набором количественных характеристик.</p></li>
 <li><p><strong>n_features</strong>: Количество характеристик (показателей, признаков, отличительных черт, features), которые могут быть использованы для количественного описания объекта. Количественные характеристики - это те, которые выражают числами с плавающей запятой. Значения типа категорий или да/нет также приводят к числовому выражению.</p></li>
@@ -702,7 +699,7 @@
 <img alt="_images/i_pairplot_7_0.png" src="_images/i_pairplot_7_0.png" />
 </div>
 </div>
-<p>Если представить все измерения в ряд, и соединить <em>паралелльные координаты</em> линиями, то объекты, входящие в кластер, выглядят ближе к друг другу.</p>
+<p>Если представить все измерения в ряд, и соединить <em>параллельные координаты</em> линиями, то объекты, входящие в кластер, выглядят ближе к друг другу.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">parallel_coordinates</span>
@@ -727,7 +724,7 @@
 </div>
 </div>
 <p>RadViz - еще один алгоритм для визуализации многомерных данных, основанный на метафоре минимизации натяжения струн.
-Если измерения представить как опорные точки на плоскости, а отдельные объекты как разноцветные шарики, соединненные с опорными точками резиночками, жесткость которых пропорциональна числовым значениям в данных измерениях, то на рисунке образцы будут отображены в позициях равновесия.</p>
+Если измерения представить как опорные точки на плоскости, а отдельные объекты как разноцветные шарики, соединенные с опорными точками резиночками, жесткость которых пропорциональна числовым значениям в данных измерениях, то на рисунке образцы будут отображены в позициях равновесия.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">radviz</span>

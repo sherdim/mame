@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,6 +54,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="🗎 Спектральный анализ" href="w_spec.html" />
@@ -236,7 +235,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -666,7 +665,7 @@
 </div>
 </div>
 </div>
-<p>Запись открылась в виде 2-х длинных последовательностей чисел - левый и правый стерео каналы.</p>
+<p>Запись открылась в виде 2-х длинных последовательностей чисел - левый и правый стереоканалы.</p>
 <blockquote>
 <div><p>Посмотрите значение в переменной <code class="docutils literal notranslate"><span class="pre">fs</span></code>. Убедитесь, что Вы четко понимаете, что характеризует частота оцифровки звука.</p>
 </div></blockquote>
@@ -699,7 +698,7 @@
 <img alt="_images/i_spectral_9_0.png" src="_images/i_spectral_9_0.png" />
 </div>
 </div>
-<p>Различия между каналами незначительны и дальше мы можем работать или с одним каналом или с их средним.</p>
+<p>Различия между каналами незначительны и дальше мы можем работать или с одним каналом, или с их средним.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
@@ -748,7 +747,7 @@
 </div>
 <p>По контуру можно различить шесть однотипных звуков, убывающих по интенсивности. Перед 4-м звуком еще один короткий резкий звук.</p>
 <p>В засимости от того, что мы хотим изучать - полезным сигналом и шумом можно считать разные компоненты звука.</p>
-<p>Даже там где за графике ничего не заметно - звук есть. Даже при записи полной тишины присутствуют помехи оборудования.</p>
+<p>Даже там, где на графике ничего не заметно - звук есть. Даже при записи полной тишины присутствуют помехи оборудования.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">shum</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">230000</span><span class="p">:</span><span class="mi">274000</span><span class="p">]</span>
@@ -811,7 +810,7 @@
 </div>
 </div>
 </div>
-<p>1 дБ означает увеличение звукового давления в <span class="math notranslate nohighlight">\(10^{0.05}\)</span>  ≈ 1.122 раза. Относительная громкость в дБ расчитывается по <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%86%D0%B8%D0%B1%D0%B5%D0%BB">формуле</a>:
+<p>1 дБ означает увеличение звукового давления в <span class="math notranslate nohighlight">\(10^{0.05}\)</span>  ≈ 1.122 раза. Относительная громкость в дБ расcчитывается по <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%86%D0%B8%D0%B1%D0%B5%D0%BB">формуле</a>:
 $<span class="math notranslate nohighlight">\( B = 20 \ lg_{10}\frac{F_1}{F_0}\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -1180,7 +1177,7 @@ B. Филогенетический анализ последовательно�
 </table>
 </div></div></div>
 </div>
-<p>Посчитаем дистанцию Хэмминга, которая по сути степень совпадения отдельных символов, попарно между всеми последовательностями.</p>
+<p>Посчитаем дистанцию Хэмминга, которая отражает степень совпадения отдельных символов, попарно между всеми последовательностями.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">squareform</span><span class="p">(</span><span class="n">pdist</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="s1">&#39;hamming&#39;</span><span class="p">)),</span> <span class="n">index</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">D</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
@@ -1326,7 +1323,7 @@ Name: cluster, dtype: int32
 basic local alignment search tool (BLAST),
 в котором оптимизируется мера локального сходства и рассчитывается показатель максимально спаренного сегмента (the maximal segment pair (MSP) score). Этот инструмент используется генетиками при выстраивании огромных геномных последовательностей.</p>
 <p><a class="reference external" href="http://biopython.org/DIST/docs/tutorial/Tutorial.html">Biopython</a> - специальная библиотека для работы с объектами молекулярной биологии.</p>
-<p><a class="reference external" href="http://nbviewer.jupyter.org/github/biocore/scikit-bio-cookbook/blob/master/Alignments%20and%20phylogenetic%20reconstruction.ipynb">Полноценный образец анализа с использованием реальных биологических примеров</a></p>
+<p><a class="reference external" href="http://nbviewer.jupyter.org/github/biocore/scikit-bio-cookbook/blob/master/Alignments%20and%20phylogenetic%20reconstruction.ipynb">Образец анализа с использованием scikit-bio</a></p>
 </div>
 </div>
 </div>

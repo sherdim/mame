@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -712,7 +709,7 @@
 <li><p>NUTS2 административное подразделение Бельгии, где сделали запись.</p></li>
 </ul>
 <p>Каждая строчка в наборе данных - это запись о заболевании конкретного человека. Т.е. по одной записи можно установить, когда и с кем случилась неприятность. В некоторых случаях это серьезные заболевания вроде СПИД.</p>
-<p>Однако, при анализе нас интересует количество случаев заболеваний за период времени в том или ином районе среде той или иной части населения.
+<p>Однако, при анализе нас интересует количество случаев заболеваний за период времени в том или ином районе среди той или иной части населения.
 Чтобы получать такие числа мы должны правильно отбирать строки в таблице и просто считать количество строк в полученных выборках.</p>
 <p><em>Эпидемиология</em> - наука на стыке микробиологии и социологии.</p>
 <p>Загрузим набор данных и попробуем автоматизировать некоторые задачи.</p>
@@ -987,7 +984,9 @@ dtype: object
 </div>
 </div>
 <p>Если заглянуть в <a href=view-source:https://epistat.wiv-isp.be/>исходный код веб-страницы</a> (нажать Ctrl-U на сайте Epistat), то можно найти много других расшифровок кодовых обозначений в таблице.</p>
-<p>Определите, кто скрывается за аббревиатурами:</p>
+<blockquote>
+<div><p>Определите, кто скрывается за аббревиатурами:</p>
+</div></blockquote>
 <ul class="simple">
 <li><p>TUBECULT  (неужели культ ютуба?)</p></li>
 <li><p>TREPAL</p></li>
@@ -1337,7 +1336,7 @@ Name: M, dtype: int64
 </div>
 </div>
 </div>
-<p>Для удобства можно новые колонки с латинскими названиями возбудителей и названиями провинций.</p>
+<p>Для удобства можно добавить новые колонки с латинскими названиями возбудителей и названиями провинций.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="p">[</span><span class="s1">&#39;Species&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">D</span><span class="o">.</span><span class="n">Subject</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">code</span><span class="p">:</span> <span class="n">species</span><span class="p">[</span><span class="n">code</span><span class="p">])</span>
@@ -1524,8 +1523,8 @@ Name: Species, dtype: float64
 <li><p>ЗППП (Neisseria gonorrhoeae, Chlamydia trachomatis)</p></li>
 <li><p>в общем безвредных паразитов, которые в редких случаях переходят в тяжелые системные заболевания (дизентерийная амёба, ВИЧ, Borrelia, Listeria, Neisseria meningitidis)</p></li>
 </ul>
-<p>Предсказуемость динамики заболеваемости осложняется тем, что безобидный микроорганизм, который легко распознается и ликвидируется иммунными клетками, в отдельных случаях приводит к заболеванию.</p>
-<p>Самый яркий пример - детские инфекции. Несмотря на то, что у новорожденных сильный иммунитет, часть которого приобретена пассивно через плаценту, при встрече с некоторыми микропаразитами врожденный иммунитет бессилен. А значит каждому ребенку «надо переболеть» ротавирусной (понос) или аденовирусной (сопли) инфекциями.</p>
+<p>Предсказуемость динамики заболеваемости осложняется тем, что безобидный микроорганизм, который легко распознается и ликвидируется иммунными клетками, в отдельных случаях приводит к заболеванию.
+Самый яркий пример - детские инфекции. Несмотря на то, что у новорожденных сильный иммунитет, часть которого приобретена пассивно через плаценту, при встрече с некоторыми микропаразитами врожденный иммунитет бессилен. А значит каждому ребенку «надо переболеть» ротавирусной (понос) или аденовирусной (сопли) инфекциями.</p>
 <div class="section" id="id6">
 <h3>Сезонная динамика<a class="headerlink" href="#id6" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Восприимчивость к патогенам зависит от погоды: зимой легче заболевают одними инфекционными болезнями, летом - другими.</p>
@@ -1922,9 +1921,9 @@ Name: Species, dtype: float64
 </div>
 </div>
 <p>Итого мы обнаружили сильную отрицательную корреляцию между температурой в начале весны и масштабом весенней вспышки ротавирусной инфекции среди детей.</p>
-<p>Корреляция может быть между любыми сходными по размеру данными.</p>
-<p>Например, корреляция изменений температуры в марте с другими месяцами с начала 21-века.</p>
-<p>Для таблиц <code class="docutils literal notranslate"><span class="pre">pandas</span></code> есть удобный метод для этого.</p>
+<p>Корреляция может быть между любыми сходными по размеру данными.
+Например, корреляция изменений температуры в марте с другими месяцами с начала 21-века.
+Для таблиц <code class="docutils literal notranslate"><span class="pre">pandas</span></code> есть удобный метод для этого.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2000</span><span class="p">:</span><span class="mi">2018</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
@@ -2308,7 +2307,7 @@ Name: Species, dtype: float64
 <img alt="_images/i_epistat_117_0.png" src="_images/i_epistat_117_0.png" />
 </div>
 </div>
-<p>Для рассчета исходной корреляционной функции без построения рисунка используют соответствующую функцию.</p>
+<p>Для расчета исходной корреляционной функции без построения рисунка используют соответствующую функцию.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vv</span> <span class="o">=</span> <span class="n">N</span><span class="p">[</span><span class="s1">&#39;Rotavirus&#39;</span><span class="p">]</span>
@@ -2325,7 +2324,7 @@ Name: Species, dtype: float64
 <img alt="_images/i_epistat_119_1.png" src="_images/i_epistat_119_1.png" />
 </div>
 </div>
-<p>Поскольку мы можем двигать один ряд значений относительно другого и вперед и назад, то полная функция имеет удвоенную длину. На предыдущем рисунке была показана только ее правая половина, причем нормализованная к общей мощности сигнала, чтобы не выходить за рамки диапазона от -1 до 1.</p>
+<p>Поскольку мы можем двигать один ряд значений относительно другого и вперед и назад, то полная функция имеет удвоенную длину. На предыдущем готовом рисунке была показана только ее правая половина, причем нормализованная к общей мощности сигнала, чтобы не выходить за рамки диапазона от -1 до 1.</p>
 <p>Давайте получим нормализованные значения корреляции.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2493,7 +2492,7 @@ Name: M, dtype: int64
 <img alt="_images/i_epistat_135_0.png" src="_images/i_epistat_135_0.png" />
 </div>
 </div>
-<p>Видно, что случаи болезни были единичными - возможно болезнь привозили туристы из поездок в теплые страны. Но с 2014 количество заболевших этой тропической лихорадкой резко возрасло.</p>
+<p>Видно, что случаи болезни были единичными - возможно болезнь привозили туристы из поездок в теплые страны. Но с 2014 количество заболевших этой тропической лихорадкой резко возросло.</p>
 <p>И этот график идеально совпадает с <a class="reference external" href="https://en.wikipedia.org/wiki/European_migrant_crisis#Global_refugee_crisis">волной мигрантов, захлестнувшей Европу в 2014-2015 гг</a>.
 Среди этих мигрантов и были носители вируса Чикунгунья.</p>
 </div>
@@ -2558,12 +2557,11 @@ Name: M, dtype: int64
 <p>По данным epistat постройте прогноз динамики распространения хламидиоза
 на неделю, начинающуюся c 2014-09-01, на основании предыдущих данных,
 используя метод скользящего среднего с окном в 4 нед.
-Ошибка в рассчетах составит по сравнению с реальным уровнем?</p>
+Ошибка в расчётах составит по сравнению с реальным уровнем?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">D</span><span class="p">[</span><span class="n">D</span><span class="o">.</span><span class="n">Subject</span><span class="o">==</span><span class="s1">&#39;CHLTRA&#39;</span><span class="p">]</span>
 <span class="n">N</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;DateMonday&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">DateMonday</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
-<span class="n">N</span>
 
 <span class="n">nreal</span> <span class="o">=</span> <span class="n">N</span><span class="p">[</span><span class="s1">&#39;2014-09-01&#39;</span><span class="p">]</span>
 <span class="n">nreal</span>
@@ -2601,9 +2599,7 @@ Name: DateMonday, dtype: int64
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nprognoz</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">nnprev</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-
 <span class="n">nerror</span> <span class="o">=</span> <span class="n">nprognoz</span> <span class="o">-</span> <span class="n">nreal</span>
-
 <span class="n">nprognoz</span><span class="p">,</span> <span class="n">nreal</span><span class="p">,</span> <span class="n">nerror</span>
 </pre></div>
 </div>
@@ -2844,6 +2840,7 @@ d. Antwerp
 <img alt="_images/i_epistat_154_1.png" src="_images/i_epistat_154_1.png" />
 </div>
 </div>
+<p>Применим ко всем провинциям…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_linreg</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
@@ -3017,6 +3014,7 @@ dtype: int32
 </div>
 </div>
 </div>
+<p>Прирост относительно предыдущего значения…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">last</span> <span class="o">=</span> <span class="n">N</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,:]</span>
@@ -3065,14 +3063,14 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_epistat_159_0.png" src="_images/i_epistat_159_0.png" />
+<img alt="_images/i_epistat_161_0.png" src="_images/i_epistat_161_0.png" />
 </div>
 </div>
 <p>В 2015 было всего 42 случая, но экстраполяция снижающегося тренда дала на 2016 год значение 109, что больше примерно в полтора раза.</p>
 </div>
 <div class="section" id="id15">
 <h3>Задача на лаг в неделях<a class="headerlink" href="#id15" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Каков лаг в неделях между сезонными колебаниями заболеваемости шигеллёза и аденовирусной инфекции ?</p>
+<p>Каков лаг в неделях между сезонными колебаниями заболеваемости шигеллёза и аденовирусной инфекции?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">D</span><span class="p">[</span><span class="n">D</span><span class="o">.</span><span class="n">Subject</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;SHIG&#39;</span><span class="p">,</span><span class="s1">&#39;V_ADV&#39;</span><span class="p">])]</span>
@@ -3084,7 +3082,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_epistat_162_0.png" src="_images/i_epistat_162_0.png" />
+<img alt="_images/i_epistat_164_0.png" src="_images/i_epistat_164_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3101,7 +3099,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_epistat_163_0.png" src="_images/i_epistat_163_0.png" />
+<img alt="_images/i_epistat_165_0.png" src="_images/i_epistat_165_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3127,7 +3125,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_epistat_166_0.png" src="_images/i_epistat_166_0.png" />
+<img alt="_images/i_epistat_168_0.png" src="_images/i_epistat_168_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3157,10 +3155,10 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_epistat_171_0.png" src="_images/i_epistat_171_0.png" />
+<img alt="_images/i_epistat_173_0.png" src="_images/i_epistat_173_0.png" />
 </div>
 </div>
-<p>Мы видим рост заболеваемости. С какими наборами данных нужно провести корреляцию? Нужно получить динамику для всех инфекций в этом регионе.</p>
+<p>Мы видим рост заболеваемости. С какими наборами данных нужно посчитать корреляцию? Нужно получить динамику для всех инфекций в этом регионе.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">D</span><span class="p">[(</span><span class="n">D</span><span class="o">.</span><span class="n">Province</span> <span class="o">==</span> <span class="s1">&#39;Antwerp&#39;</span><span class="p">)]</span>
@@ -3172,7 +3170,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_epistat_173_0.png" src="_images/i_epistat_173_0.png" />
+<img alt="_images/i_epistat_175_0.png" src="_images/i_epistat_175_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -3187,7 +3185,7 @@ dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_epistat_174_0.png" src="_images/i_epistat_174_0.png" />
+<img alt="_images/i_epistat_176_0.png" src="_images/i_epistat_176_0.png" />
 </div>
 </div>
 <div class="cell docutils container">

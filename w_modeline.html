@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,6 +54,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Подбор параметров распределения" href="i_retivo.html" />
@@ -236,7 +235,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -639,11 +638,14 @@
 <h1>🗎 Сравнение регрессионных моделей<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<blockquote>
-<div><p>Данная расчётно-графическая работа выполняется в <a class="reference internal" href="i_sreda.html"><span class="doc std std-doc">программной среде Jupyter Notebook</span></a>.
-Если у Вас на компьютере нет установленной вычислительной среды, см. <a class="reference internal" href="i_sredaonline.html"><span class="doc std std-doc">Выполнение расчетно-графических работ онлайн</span></a></p>
-</div></blockquote>
-</div>
+<div class="admonition note">
+<p class="admonition-title">О среде выполнения </p>
+<p> 
+    Данная расчётно-графическая работа выполняется в <a href=i_sreda.ipynb>программной среде Jupyter Notebook</a>.
+Если у Вас на компьютере нет установленной вычислительной среды, см. 
+  <a href=i_sredaonline.ipynb>Выполнение расчетно-графических работ онлайн</a>.
+</p>
+</div></div>
 </div>
 <p>В этой работе Вы должны продемонстрировать умение рассчитывать линейные регрессионные модели и сравнивать их между собой.</p>
 <p><strong>Задание</strong>: представить отчет о сравнении нескольких регрессионных моделей, различающихся по 1-2 условиям.</p>
@@ -670,7 +672,7 @@
 </div>
 <div class="section" id="id4">
 <h2>Про коэффициент детерминации<a class="headerlink" href="#id4" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Для рассчета нужно найти дисперсию данных и дисперсию остатков.</p>
+<p>Для расчёта нужно найти дисперсию данных и дисперсию остатков.</p>
 <div class="math notranslate nohighlight">
 \[R^2 = 1 - \frac{\sigma_r^2}{\sigma^2}\]</div>
 <p>Поскольку обе дисперсии при рассчете делятся на одно и то же n, то можно поделить сумму квадратов разницы с модельными значениями на сумму квадратов разницы со средним.</p>

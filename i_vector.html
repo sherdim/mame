@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -638,8 +635,8 @@
   <div class="section" id="id1">
 <h1>Составные типы данных<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <p>При обработке массивов чисел есть несколько подходов.</p>
-<p>Рассмострим несколько типов составных переменных и взаимосвязи между ними.</p>
-<p>В качестве данных будем использовать текстовый файл с данными по времени реакции (reaction time, RT).</p>
+<p>Рассмотрим несколько типов составных переменных и взаимосвязи между ними.
+В качестве данных будем использовать текстовый файл с данными по времени реакции (reaction time, RT).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span><span class="o">=</span><span class="s1">&#39;d/rt.tsv&#39;</span>
@@ -795,8 +792,8 @@
 </div>
 <div class="section" id="numpy-array">
 <h2>2. Numpy Array<a class="headerlink" href="#numpy-array" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Массивы чисел, с которыми можно обращаться как с единым целым. Библиотека <code class="docutils literal notranslate"><span class="pre">numpy</span></code> включает функции линейной алгебры для работы с матрицами.</p>
-<p>Типичный импорт в виде <code class="docutils literal notranslate"><span class="pre">np</span></code>.</p>
+<p>Массивы чисел, с которыми можно обращаться как с единым целым. Библиотека <code class="docutils literal notranslate"><span class="pre">numpy</span></code> включает функции линейной алгебры для работы с матрицами.
+Типичный импорт в виде <code class="docutils literal notranslate"><span class="pre">np</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -894,7 +891,7 @@
 </div>
 </div>
 <p>С массивом можно обращаться к с единым целым. При этом можно применять разные операции к колонкам и строчкам. В случае необходимости менять форму и переворачивать (транспонировать).</p>
-<p>Есть методы для базовой статистики.</p>
+<p>Массивы <code class="docutils literal notranslate"><span class="pre">numpy</span></code> включают методы для базовой статистики.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>

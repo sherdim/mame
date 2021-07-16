@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,6 +54,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Сезонные колебания" href="i_season.html" />
@@ -236,7 +235,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -700,7 +699,7 @@
 <p>На рисунке линии совпадают, поскольку при перемножении степеней их показатели складываются. Значение функции с аргументом <span class="math notranslate nohighlight">\(t=3\)</span> - это <span class="math notranslate nohighlight">\(e^6\)</span>.
 График включает также значения, где аргумент нецелое число.
 Несмотря на то, что представить нецелое количество умножений невозможно, возводить можно не только в целую степень, но и в дробную и отрицательную.</p>
-<p>Подобрать показатель степени можно так, что из любого основания получить заданное число. Такой показатель называет логарифм. С помощью логарифма можно заменить основание любой показательной функции на число <span class="math notranslate nohighlight">\(e\)</span>, если при этом показатель умножить на поправочный коэффициент.</p>
+<p>Подобрать показатель степени можно так, чтобы из любого основания получить заданное число. Такой показатель называет логарифм. С помощью логарифма можно заменить основание любой показательной функции на число <span class="math notranslate nohighlight">\(e\)</span>, если при этом показатель умножить на поправочный коэффициент.</p>
 <div class="admonition seealso">
 <p class="admonition-title">См.также</p>
 <p><a class="reference external" href="https://1cov-edu.ru/mat_analiz/funktsii/pokazatelnaya/">Памятка по показательным функциям</a></p>
@@ -723,8 +722,8 @@
 </div>
 </div>
 </div>
-<p>Через 1 временной шаг значение функции угасания составит примерно 0.37 от исходного. Так быстро в природе обычно ничего не убывает. В древности вывели степень красивого угасания под названием «<a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B5_%D1%81%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5">золотое сечение</a>», когда на каждом шаге должно оставаться примерно 0.618 от предыдущего количества. Т.е. скорость «золотого» угасания примерно в 2 раза медленнее, чем у чистого «экспоненциального спуска».</p>
-<p>Давайте посмотрим на эти угасания для нескольких временных шагов.</p>
+<p>Через 1 временной шаг значение функции угасания составит примерно 0.37 от исходного. Так быстро в природе обычно ничего не убывает. В древности вывели степень красивого угасания под названием «<a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%97%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B5_%D1%81%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5">золотое сечение</a>», когда на каждом шаге должно оставаться примерно 0.618 от предыдущего количества. Т.е. скорость «золотого» угасания примерно в 2 раза медленнее, чем у чистого «экспоненциального спуска».
+Давайте посмотрим на эти угасания для нескольких временных шагов.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
@@ -739,8 +738,8 @@
 <img alt="_images/i_exp_10_0.png" src="_images/i_exp_10_0.png" />
 </div>
 </div>
-<p>Процесс убывания по правилу золотого сечения удивительно похож на процесс экспоненциального убывания с половинным показателем степени. А можно ли последовательное золотое сечение привести к функции с основанием <span class="math notranslate nohighlight">\(e\)</span>?</p>
-<p>Пусть <span class="math notranslate nohighlight">\(z = 0.618... \)</span> - золотое сечение. Мы хотим подобрать такую функцию с основанием <span class="math notranslate nohighlight">\(e\)</span>, чтобы скорость изменения была такой же, как у функции последовательного золотого сечения <span class="math notranslate nohighlight">\( z^t \)</span>. Скорость изменения функции - это ее дифферециал. Дифференциал <span class="math notranslate nohighlight">\(e^t\)</span> равен t. Продифференцируем…</p>
+<p>Процесс убывания по правилу золотого сечения удивительно похож на процесс экспоненциального убывания с половинным показателем степени. А можно ли последовательное золотое сечение привести к функции с основанием <span class="math notranslate nohighlight">\(e\)</span>?
+Пусть <span class="math notranslate nohighlight">\(z = 0.618\)</span> - золотое сечение. Мы хотим подобрать такую функцию с основанием <span class="math notranslate nohighlight">\(e\)</span>, чтобы скорость изменения была такой же, как у функции последовательного золотого сечения <span class="math notranslate nohighlight">\( z^t \)</span>. Скорость изменения функции - это ее дифферециал. Дифференциал <span class="math notranslate nohighlight">\(e^t\)</span> равен t. Продифференцируем…</p>
 <div class="math notranslate nohighlight">
 \[ z^t = e^{ \ln(z^t)} = e^{ \ln(z) \cdot t} \]</div>
 <div class="math notranslate nohighlight">
@@ -907,6 +906,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0780869212357627
+</pre></div>
+</div>
+</div>
 </div>
 <p>Таким образом, постоянная времени многократного золотого сечения <span class="math notranslate nohighlight">\(\tau_z = - \frac{1}{\ln(z)} = 2.078\)</span>.</p>
 <p>Биологические процессы, в которых на каждом следующем шаге действует только часть агентов <span class="math notranslate nohighlight">\(0&lt;p&lt;1\)</span>, действовавших на предыдущем шаге, имеют вид экспоненциального спада (exponential decay).</p>
@@ -948,8 +952,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_exp_44_0.png" src="_images/i_exp_44_0.png" />
-</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "8beca1da6de2479284c99e6dda8be872", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 <p>В окрестности нуля функция почти прямой формы, но резко меняет направление - от снижения к росту.
 Если установить  а=0, то изменение b ведет к появлению циклических колебаний.</p>

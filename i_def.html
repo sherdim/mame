@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -639,7 +636,7 @@
 </div>
 <p>Для повторного использования мы создадим функцию, которую сможем повторно использовать для аналогичных расчетов.</p>
 <p>Определение функции начинается с оператора <code class="docutils literal notranslate"><span class="pre">def</span></code> (от англ. definition, определение).
-В функции можно включать произвольное количество команд для операций над данных и возращать итоговое значение с помощью команды <code class="docutils literal notranslate"><span class="pre">return</span></code> (возвратить).</p>
+В функции можно включать произвольное количество команд для операций с данными и возвращать итоговое значение с помощью команды <code class="docutils literal notranslate"><span class="pre">return</span></code> (возвратить).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ploshad</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
@@ -669,7 +666,7 @@
 </div>
 </div>
 </div>
-<p>Есть также специальная форма записи определения функции в одну строчку, получившая название - ламбда. Это упрощенная запись, где после двоеточия идет выражение, результат выполнения которого возвращается (команда return не используется).</p>
+<p>Есть также специальная форма записи определения функции в одну строчку, получившая название <em>ламбда</em>. Это упрощенная запись, где после двоеточия идет выражение, результат выполнения которого возвращается (команда return не используется).</p>
 <p>Обратите внимание: умножение на половину - это то же самое, что деление на два.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -707,10 +704,10 @@
 </div>
 </div>
 </div>
-<p>Мы переопределили функцию - дали ей новое определение. В данном случае смысл функции не изменился. И формат вызова остался прежним - она принимает два аргумента длина и ширина.
-При этом функционал немного рассширился: появилась возможность влиять на результат с помощью дополнительного параметра - коэффициента округлости.
+<p>Мы переопределили функцию - дали ей новое определение. В данном случае смысл функции не изменился. И формат вызова остался прежним - она принимает два аргумента: длина и ширина.
+При этом функционал немного расширился: появилась возможность влиять на результат с помощью дополнительного параметра - коэффициента округлости.
 Возвращаемое значение при той же форме вызова изменилось - стало чуть больше.</p>
-<p>Поведение исходной версии функции мы можем воспроизвести, задав коэффициент со значением 0.5. Задание параметра функции может производится несколькими способами:</p>
+<p>Поведение исходной версии функции мы можем воспроизвести, задав коэффициент со значением 0.5. Задание параметра функции может производиться несколькими способами:</p>
 <ul class="simple">
 <li><p>передача значения в нужной позиции;</p></li>
 <li><p>передача значения в паре имя=значение;</p></li>
@@ -754,7 +751,7 @@
 </div>
 </div>
 <p>Данная функция будет работать с любыми типами входных данных, поддерживающих операцию умножения.</p>
-<p>Например, объект <code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code> представляет собой организованный набор значений. В наборе данных с размерами лепесков от 150 цветков ириса отдельные колонки с длиной и шириной чашелистиков.</p>
+<p>Например, объект <code class="docutils literal notranslate"><span class="pre">pandas.Series</span></code> представляет собой организованный набор значений. В наборе данных с размерами лепестков 150 цветков ириса отдельные колонки с длиной и шириной чашелистиков.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -810,11 +807,11 @@ Length: 150, dtype: float64
 <img alt="_images/i_def_23_0.png" src="_images/i_def_23_0.png" />
 </div>
 </div>
-<p>Итак, мы попробовали определить несложную пользовательскую функцию для расчета площади. Насмотря на простоту она имеет все стандартные атрибуты.
+<p>Итак, мы попробовали определить несложную пользовательскую функцию для расчета площади. Несмотря на простоту она имеет все стандартные атрибуты.
 Похожим образом Вы можете написать функции, обеспечивающие необходимый Вам уникальный функционал. Вот простые правила для определения функции в Python:</p>
 <ol class="simple">
 <li><p>Определение функции начинается с ключевого слова <code class="docutils literal notranslate"><span class="pre">def</span></code>, за которым следует имя функции и круглые скобки <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code>.</p></li>
-<li><p>Любые входные параметры или аргументы при вызове функции надо помещать в эти круглые скобки. При определении количество, тип и порядок аргументов Вы также можете определить параметры внутри этих скобок.</p></li>
+<li><p>Любые входные параметры или аргументы при вызове функции надо помещать в эти круглые скобки. При создании функции количество, тип и порядок аргументов также задаются внутри скобок.</p></li>
 <li><p>Блок кода начинается с двоеточия (:) и имеет отступ. Первой строкой функции может быть необязательный оператор - строка документации функции (<em>doсstring</em>).</p></li>
 <li><p>Оператор <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">[result]</span></code> завершает работу функции, при необходимости возвращая результат выполнения вызывающему объекту (квадратные скобки указывают на необязательность аргумента). Оператор <code class="docutils literal notranslate"><span class="pre">return</span></code> без аргументов - это то же самое, что и оператор <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">None</span></code>.</p></li>
 </ol>

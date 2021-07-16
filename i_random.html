@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,6 +54,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="☑ Генерация случайных выборок" href="w_random.html" />
@@ -236,7 +235,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -649,10 +648,12 @@
 </div>
 </div>
 <p>Возвращаемый массив чисел включает положительные и отрицательные числа, самое маленькое из которых около -2, а самое большое - около +2.</p>
-<p>Для удобства восприятия будем выводить числа в созданном массиве в виде рисунка.
+<blockquote>
+<div><p>Для удобства восприятия будем выводить числа в созданном массиве в виде рисунка.
 Замените последнюю строку в блоке кода на команду построения рисунка <code class="docutils literal notranslate"><span class="pre">plot(x,</span> <span class="pre">'o');</span></code>.
-Таким образом, при выполнения кода ячейки мы будем создавать массив чисел и тут же отображать его на рисунке.
+Таким образом, при выполнении кода ячейки мы будем создавать массив чисел и тут же отображать его на рисунке.
 Для многократного выполнения кода ячейки нажимайте <code class="docutils literal notranslate"><span class="pre">Ctrl-Enter</span></code>.</p>
+</div></blockquote>
 <p>Команда <code class="docutils literal notranslate"><span class="pre">plot()</span></code> (англ. чертеж) рисует график по заданным координатам.
 Если на вход функции подать только один массив чисел, то по горизонтальной оси откладывается их порядковый номер, а их собственные значения откладываются по вертикали.
 Второй параметр функции - это формат графика, буква <code class="docutils literal notranslate"><span class="pre">'o'</span></code> означает круглые точки без соединительной линии между ними.</p>
@@ -663,10 +664,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_random_7_0.png" src="_images/i_random_7_0.png" />
+<img alt="_images/i_random_6_0.png" src="_images/i_random_6_0.png" />
 </div>
 </div>
-<p>Попробуем увеличить размер выборки (например, 400, 4000).</p>
+<blockquote>
+<div><p>Попробуйте увеличить размер выборки (например, 400, 4000).</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">4000</span><span class="p">)</span>
@@ -675,7 +678,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_random_9_0.png" src="_images/i_random_9_0.png" />
+<img alt="_images/i_random_8_0.png" src="_images/i_random_8_0.png" />
 </div>
 </div>
 <p>При большом количестве исходов видно, что случайная нормальная выборка представляет собой массив положительных и отрицательных чисел в диапазоне от -3 до 3.
@@ -688,7 +691,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_random_11_0.png" src="_images/i_random_11_0.png" />
+<img alt="_images/i_random_10_0.png" src="_images/i_random_10_0.png" />
 </div>
 </div>
 <p>Для генератора выборки из нормального распределения можно задать два параметра - <code class="docutils literal notranslate"><span class="pre">loc</span></code> (локализацию) и <code class="docutils literal notranslate"><span class="pre">scale</span></code> (шкалу, размах). Локализация сдвигает центр распределения туда, где ожидается среднее значение. Шкала задает размер ожидаемого стандартного отклонения.</p>
@@ -709,7 +712,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_random_14_0.png" src="_images/i_random_14_0.png" />
+<img alt="_images/i_random_13_0.png" src="_images/i_random_13_0.png" />
 </div>
 </div>
 <p>На полученном рисунке можно проиллюстрировать основную догму классической статистики.</p>
@@ -748,7 +751,7 @@
 </div></blockquote>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/i_random_21_0.png" src="_images/i_random_21_0.png" />
+<img alt="_images/i_random_20_0.png" src="_images/i_random_20_0.png" />
 </div>
 </div>
 <div class="figure align-default" id="hist4">
@@ -762,8 +765,8 @@
 <p class="caption"><span class="caption-number">Рис. 5 </span><span class="caption-text">Сравнение эмпирических и теоретических распределений Стьюдента и нормального</span><a class="headerlink" href="#student-normal" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>При повышении параметра <span class="math notranslate nohighlight">\(df\)</span> степени свободы распределение Стьюдента становится неотличимым от нормального.
-Параметр степень свободы на 1 меньше количества экземляров в выборке. <span class="math notranslate nohighlight">\(df=6\)</span> соответствует выборке из 7 объектов. Это считается маленькой выборкой.</p>
-<p>Различие <span class="math notranslate nohighlight">\(t-\)</span>распределения Стьюдента от нормального связано с более толстыми хвостами, то есть вероятность отклонения значений дальше от центра чуть выше, чем у нормального распределения. Поскольку часть вероятности «уходит» в хвосты, то вершина чуть ниже.</p>
+Параметр степень свободы на 1 меньше количества экземgляров в выборке. <span class="math notranslate nohighlight">\(df=6\)</span> соответствует выборке из 7 объектов. Это считается маленькой выборкой.</p>
+<p>Отличие <span class="math notranslate nohighlight">\(t-\)</span>распределения Стьюдента от нормального связано с более толстыми хвостами, то есть вероятность отклонения значений дальше от центра чуть выше, чем у нормального распределения. Поскольку часть вероятности «уходит» в хвосты, то вершина чуть ниже.</p>
 <p>При размере выборки 30 и выше различия полностью нивелируются, поэтому считается, что при таких выборках распределения Стьюдента утрачивает своё преимущество.
 На малых же выборках «толстохвостое» распределение даёт более точные оценки параметров локализации и разброса.</p>
 <p>Размер выборки экспериментальных данных, при котором гистограммы эмпирических распределений начинают соответствовать теоретическим, составляет <span class="math notranslate nohighlight">\(10^4...10^5\)</span>.
@@ -771,13 +774,13 @@
 <p>Для представления о том, настолько вариативны выборки при одних и тех же характеристиках генераторов, подвигайте бегунок параметра <code class="docutils literal notranslate"><span class="pre">iseed</span></code>.
 Если в выборках из сотни значений основная плотность всегда распределена около нуля, то в выборках из десятка значений иногда попадаются случаи, когда большинство значений одного цвета сильно смещены в одну половину диапазона.
 Также, в одних случаях все исходы компактно группируются между -2 и 2, то в других сразу несколько значений могут выйти за границы 3 стандартных отклонений от центра.</p>
-<p>Развитие интуиции о принципиальной неустойчивости выборочных оценок полезно для специалистов, которым приходится интерпретировать результы нативных наблюдений с небольшим количеством данных.</p>
+<p>Развитие интуиции о принципиальной неустойчивости выборочных оценок полезно для специалистов, которым приходится интерпретировать результаты нативных наблюдений с небольшим количеством данных.</p>
 <div class="section" id="id2">
 <h2>Воспроизводимая генерация случайных чисел<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
 <p><em>Генератор случайных чисел (ГСЧ)</em> работает по специальному алгоритму так, что следующее сгенерированное число невозможно предсказать.</p>
 <div class="admonition note">
 <p class="admonition-title">Примечание</p>
-<p>В большинстве совремного программного обеспечения используется алгоритм, разработанный в 1997 году под названием <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%85%D1%80%D1%8C_%D0%9C%D0%B5%D1%80%D1%81%D0%B5%D0%BD%D0%BD%D0%B0">Вихрь Мерсенна</a>.
+<p>В большинстве современного программного обеспечения используется алгоритм, разработанный в 1997 году под названием <a class="reference external" href="https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%85%D1%80%D1%8C_%D0%9C%D0%B5%D1%80%D1%81%D0%B5%D0%BD%D0%BD%D0%B0">Вихрь Мерсенна</a>.
 «Вихрь» — это преобразование, которое обеспечивает равномерное распределение генерируемых псевдослучайных чисел в 623 измерениях.
 Псевдослучайная последовательность, порождаемая вихрем Мерсенна MT19937, имеет очень большой период, равный числу Мерсенна <span class="math notranslate nohighlight">\(2^{19937} − 1\)</span> (более <span class="math notranslate nohighlight">\(10^{6001}\)</span>), что более чем достаточно для многих практических приложений.</p>
 </div>
@@ -787,18 +790,18 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seed</span><span class="p">(</span><span class="mi">1234567</span><span class="p">)</span>
-<span class="n">hist</span><span class="p">(</span><span class="n">binomial</span><span class="p">(</span> <span class="mi">20</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">20</span> <span class="p">));</span>
+<span class="n">hist</span><span class="p">(</span><span class="n">binomial</span><span class="p">(</span> <span class="mi">20</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">20</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/i_random_27_0.png" src="_images/i_random_27_0.png" />
+<img alt="_images/i_random_26_0.png" src="_images/i_random_26_0.png" />
 </div>
 </div>
 <p>Аргументом функции <code class="docutils literal notranslate"><span class="pre">seed()</span></code> может быть любое целое число, сколь угодно большое, а также отрицательное.
 Отменить действие «фиксированного» в каком-то состоянии ГСЧ можно запуском команды без аргумента или с нулем <code class="docutils literal notranslate"><span class="pre">seed(0)</span></code>.</p>
 <blockquote>
-<div><p>Попробуйте многократно выполнить код для генерации гистрограммы распределения на последнем рисунке, меняя семя на другие числа и на 0.</p>
+<div><p>Попробуйте многократно выполнить код для генерации гистограммы распределения на последнем рисунке, меняя семя на другие числа и на 0.</p>
 </div></blockquote>
 <blockquote>
 <div><p>Для наглядности скопируйте ячейку и вставьте тут же. Если задать одинаковое число для инициализации ГСЧ, то получатся идентичные рисунки.</p>

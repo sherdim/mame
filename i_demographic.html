@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -60,7 +57,7 @@
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Cтандартизация данных" href="i_standart.html" />
-    <link rel="prev" title="Структура таблиц" href="i_pairplot.html" />
+    <link rel="prev" title="Структура данных" href="i_pairplot.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -641,7 +638,7 @@
 </div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">Pandas</span></code> предоставляет методы для чтения не совсем идеальных файлов данных, с которыми приходится сталкиваться.</p>
-<p>Попробуем справиться с особенностями данного файла, которые могут помешать нам загрузить данные, если мы не будем задавать никаких дополнительных параметров к методу чтения текстовых файлов наиболее распространнего формата - <code class="docutils literal notranslate"><span class="pre">CSV</span></code> (comma-separated values).</p>
+<p>Попробуем справиться с особенностями данного файла, которые могут помешать нам загрузить данные, если мы не будем задавать никаких дополнительных параметров к методу чтения текстовых файлов наиболее распространённого формата - <code class="docutils literal notranslate"><span class="pre">CSV</span></code> (comma-separated values).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ssylka</span><span class="p">)</span>
@@ -1020,7 +1017,7 @@
 </table>
 </div></div></div>
 </div>
-<p>Теперь можно легко оценить поло-возрастной состав выборки пациентов.</p>
+<p>По этим колонкам можно оценить половозрастной состав выборки пациентов.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">Gender</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -1589,10 +1586,10 @@ Name: Gender, dtype: int64
 <p>MoCA (Montreal Cognitive Assessment) - это тест для оценки когнитивных способностей.
 Как видно из таблицы не все пациенты прошли его предварительно.
 Большинство прошли этот тест дважды - в начале лечения и в конце.
-Много тех, кто прошел тест только в конце - это возможно те, кто не смог участвовать в предварительных измерениях из-за тяжелого состояния.</p>
-<p>В любом случае мы видим, что данные неполные, и это нормально для реальных данных, собранных в медицинских учреждениях. Не все пациенты соглашаются на участие в исследованиях. Некоторые по тяжести состояния просто к этому не способны. Возможно кого-то выписали досрочно или перевели в другое отделение.</p>
-<p>По возрасту пациентов (колонка Age) понятно, что в основном это пожилые люди. Среди тех, кому за 70 немало со сниженными интеллектуальными способностями.</p>
-<p>Однако, под ID=16 записана 18-летняя девушка, которая впрочем перенесла инсульт почти без осложнений.</p>
+Много тех, кто прошел тест только в конце - это возможно те, кто не смог участвовать в предварительных измерениях из-за тяжелого состояния.
+В любом случае мы видим, что данные неполные, и это нормально для реальных данных, собранных в медицинских учреждениях. Не все пациенты соглашаются на участие в исследованиях. Некоторые по тяжести состояния просто к этому не способны. Возможно, кого-то выписали досрочно или перевели в другое отделение.</p>
+<p>По возрасту пациентов (колонка Age) понятно, что в основном это пожилые люди. Среди тех, кому за 70, немало со сниженными интеллектуальными способностями.
+Однако, под ID=16 записана 18-летняя девушка, которая, впрочем перенесла инсульт почти без осложнений.</p>
 <p>Наборы данных для публикации как правило обезличивают. Распространение сведений о болезни может сделать пациента уязвимым в ряде случаев.
 Этика публикации данных о пациентах определяется понятием «врачебной тайны».</p>
 <div class="section" id="id2">
@@ -1603,7 +1600,7 @@ Name: Gender, dtype: int64
 <li><p>сдвиг дат в пределах месяца</p></li>
 <li><p>согласие на использование в исследовательских целях</p></li>
 </ul>
-<p>Важным является размер выборки. Например, если в работе описывается всего пятеро пациентов с редким заболеванием в какой-то стране, и из них всего одна женщина, то знание факта, что данная женщина лежала в клинике, специализирующейся на этом заболевании, достаточно для установления идентичности личности и данных о течении болезни.</p>
+<p>Важным является размер выборки. Например, если в работе описывается всего пятеро пациентов с редким заболеванием в какой-то стране, и из них всего одна женщина, то знания факта, что данная женщина лежала в клинике, специализирующейся на этом заболевании, достаточно для установления идентичности личности и данных о течении болезни.</p>
 <p>В идеале данные для одного исследования собирают с нескольких клиник примерно в одно время. Это затрудняет идентификацию.</p>
 </div>
 <div class="section" id="id3">
@@ -1622,7 +1619,7 @@ Name: Gender, dtype: int64
 <blockquote>
 <div><p>Какую полезную информацию несет этот рисунок?</p>
 </div></blockquote>
-<p>Соединительные линии показывают изменения в ходе лечения. И наклон большинства линий идёт вверх - способности пациентов в общем восстанавливались. У некоторых не изменились, у двоих ухудшились, но у большинства тенденция было положительной. И это видно из этого риснука наглядно, без использования статистики!</p>
+<p>Соединительные линии показывают изменения в ходе лечения. И наклон большинства линий идёт вверх - способности пациентов в общем восстанавливались. У некоторых не изменились, у двоих ухудшились, но у большинства тенденция было положительной. И это видно из этого рисунка наглядно, без использования статистики!</p>
 <blockquote>
 <div><p>Как отображаются случаи, в которых одно из значений отсутствует (NaN)?</p>
 </div></blockquote>
@@ -1644,8 +1641,8 @@ Name: Gender, dtype: int64
 <img alt="_images/i_demographic_27_0.png" src="_images/i_demographic_27_0.png" />
 </div>
 </div>
-<p>Чтобы контролировать форму и цвет маркеров - проще выводить по одной линии в цикле.</p>
-<p>Еще проще воспользоваться готовой функцией <code class="docutils literal notranslate"><span class="pre">parallel_coordinates</span></code></p>
+<p>Чтобы контролировать форму и цвет маркеров - проще выводить по одной линии в цикле.
+Еще проще воспользоваться готовой функцией <code class="docutils literal notranslate"><span class="pre">parallel_coordinates</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">parallel_coordinates</span>
@@ -1658,8 +1655,8 @@ Name: Gender, dtype: int64
 <img alt="_images/i_demographic_29_0.png" src="_images/i_demographic_29_0.png" />
 </div>
 </div>
-<p>Поскольку мы извекли данные из кода веб-страницы, то для дальнейшего анализа удобнее иметь данные в виде готового файла.</p>
-<p>Cохраним данные в текстовый файл.</p>
+<p>Поскольку мы извлекли данные из кода веб-страницы, то для дальнейшего анализа удобнее иметь данные в виде готового файла.</p>
+<p>Сохраним данные в текстовый файл.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;stroke.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">b</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -1698,7 +1695,7 @@ Name: Gender, dtype: int64
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="i_pairplot.html" title="previous page">Структура таблиц</a>
+    <a class='left-prev' id="prev-link" href="i_pairplot.html" title="previous page">Структура данных</a>
     <a class='right-next' id="next-link" href="i_standart.html" title="next page">Cтандартизация данных</a>
 
     </div>

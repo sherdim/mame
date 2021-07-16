@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -634,7 +631,7 @@
 <p class="caption"><span class="caption-number">Рис. 1 </span><span class="caption-text">Меню для создания нового блокнота в среде Jupyter Notebook</span><a class="headerlink" href="#create-a-new" title="Постоянная ссылка на рисунок">¶</a></p>
 </div>
 <p>У Вас откроется пустой блокнот с одной пустой ячейкой.</p>
-<p>Блокнот состоит из ячеек для «ввода», каждая из которых имеет соответствующую ячейку для «вывода». При выполнении (запуске) ячейки, команда, введенная в нее, выполняется в программной среде, а результат выполнения отображается в ячейке «вывода».</p>
+<p>Блокнот состоит из ячеек для «ввода» команд. При выполнении (запуске) ячейки, команда, введенная в нее, выполняется в программной среде, а результат выполнения отображается в соответствующей ячейке «вывода».</p>
 <div class="section" id="id2">
 <h2>Режим калькулятора<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h2>
 <p>С числами и переменными можно работать как в калькуляторе.</p>
@@ -690,7 +687,7 @@
 Попробуйте поменять значения и проверить, что «калькулятор» работает.
 Операторы основных арифметических действий: <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">-</span> <span class="pre">*</span> <span class="pre">/</span></code>.</p>
 <p><em>Переменная</em> - это объект, обозначаемый произвольной последовательностью латинских букв, которой мы присваиваем значение.
-Команда приваивания состоит из трех элементов:</p>
+Команда присваивания состоит из трех элементов:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Имя переменной</p></th>
@@ -707,10 +704,10 @@
 </table>
 <p>Если при выполнении ячейка выдаёт ошибку - это много текста на английском, подкрашенного разными цветами, - то нужно посмотреть на последнюю строчку.
 В ней можно найти краткое описание ошибки, которое может навести на мысль, что пошло не так.</p>
-<p>Чтобы вернуться к прерыдущему состоянию ячейки обратно - вернитесь к редактированию ячейки и нажмите клавиши „Ctrl-Z“. Это стандартная комбинация для отмены ввода в редакторе.
-По сути ячейка с кодом - это маленький редактор, и в нем поддерживаются привычные команды редактирования.</p>
+<p>Чтобы вернуться к предыдущему состоянию ячейки обратно - вернитесь к редактированию ячейки и нажмите клавиши „<code class="docutils literal notranslate"><span class="pre">Ctrl-Z</span></code>“. Это стандартная комбинация для отмены ввода в редакторе.
+По сути, ячейка с кодом - это маленький редактор, и в нем поддерживаются привычные команды редактирования.</p>
 <p>Чтобы после выполнения ячейки выводилась какая-то информация - её нужно запросить.</p>
-<p>Например, можно ввести в ячейке код в виде названия переменной. Мы как бы запрашиваем у среды выполнения : «Покажи нам, что находится в <code class="docutils literal notranslate"><span class="pre">a</span></code> ?»</p>
+<p>Например, можно ввести в ячейке код в виде названия переменной. Мы как бы запрашиваем у среды выполнения: «Покажи нам, что находится в <code class="docutils literal notranslate"><span class="pre">a</span></code>?»</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>
@@ -733,7 +730,7 @@
 </div>
 </div>
 </div>
-<p>Кроме операторов, известных со школьного курса математики, в языке Python есть некоторые особенности синтаксиса, которые надо запомнить.</p>
+<p>Кроме операторов, известных со школьного курса математики, в языке Python есть некоторые особые операторы, которые надо запомнить.</p>
 <p>Двойной знак деления <code class="docutils literal notranslate"><span class="pre">//</span></code> - деление без остатка, т.е. в результате получаем целое число.</p>
 <p>Двойной знак умножения <code class="docutils literal notranslate"><span class="pre">**</span></code> - возведение в степень. Своя логика в этом обозначении есть - как бы усиленное умножение. В других языках символом возведения в степень выбрали <code class="docutils literal notranslate"><span class="pre">^</span></code>, например, в формулах Excel.</p>
 <div class="cell docutils container">
@@ -773,7 +770,7 @@
 </div>
 </div>
 <p>Как Вы могли заметить, в дробных числах в языке Python показывается 16 разрядов в дробной части. Это соответствует точности, с которой в памяти компьютера хранятся «числа с плавающей запятой» (англ. float).</p>
-<p>Фактически числа <code class="docutils literal notranslate"><span class="pre">0.100000000000000001</span></code> и <code class="docutils literal notranslate"><span class="pre">0.1</span></code> для компьютера одинаковы, а именно различаются в пределах погрешности разрешающей способности. Иногда алгоритмы расчета допускают такие погрешности при счёте - это нормально. При вставке чисел в текстовый документ их значения обычно округляют до 2-3 знаков после запятой, и тогда всё красиво без погрешностей. При непосредственной работе с числами программа показывает числа так как есть, поэтому когда дробная часть кажется слишкой длинной - надо относится к этому с пониманием.</p>
+<p>Фактически числа <code class="docutils literal notranslate"><span class="pre">0.100000000000000001</span></code> и <code class="docutils literal notranslate"><span class="pre">0.1</span></code> для компьютера одинаковы, а именно различаются в пределах погрешности разрешающей способности. Иногда алгоритмы расчета допускают такие погрешности при счёте - это нормально. При вставке чисел в текстовый документ их значения обычно округляют до 2-3 знаков после запятой, и тогда всё красиво без погрешностей. При непосредственной работе с числами программа показывает числа так как есть, поэтому, когда дробная часть кажется слишкой длинной - надо относиться к этому с пониманием.</p>
 <p>Также иногда можно столкнутся с инженерной записью числа, в котором количество разрядов задаётся степенью после буквы <code class="docutils literal notranslate"><span class="pre">E</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">

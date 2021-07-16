@@ -25,8 +25,8 @@
     href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -41,15 +41,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script src="_static/translations.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -236,7 +233,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="i_pairplot.html">
-     Структура таблиц
+     Структура данных
     </a>
    </li>
    <li class="toctree-l2">
@@ -683,7 +680,6 @@
 <span class="n">D2</span><span class="p">[</span><span class="s1">&#39;condition&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;После&#39;</span>
 
 <span class="n">D</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">D1</span><span class="p">,</span> <span class="n">D2</span><span class="p">],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">D</span>
 
 <span class="n">D</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">,</span> <span class="s1">&#39;isi&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span>
        <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;МСИ, с&#39;</span><span class="p">,</span>
@@ -751,7 +747,7 @@ Name: v, dtype: int64
 </div>
 </div>
 </div>
-<p>Получили 6 групп по 7-8 значений.</p>
+<p>Для каждого условия получили 6 групп по 7-8 значений.</p>
 </div>
 <div class="section" id="id3">
 <h2>Групповая статистика<a class="headerlink" href="#id3" title="Ссылка на этот заголовок">¶</a></h2>
@@ -849,8 +845,9 @@ T-тест также известен как тест Стьюдента.</p>
 </div>
 </div>
 </div>
-<p>Мы получили 6 p-values. Всего один результат находится на границе значимости.</p>
-<p>Значимость различий адекватно оценивается при выборках большего размера. Однако, при повторе одного и того же анализа на соседних выборках нужно использовать поправки на множественные сравнения.</p>
+<p>Мы получили 6 p-values. Всего один результат находится на границе значимости.
+Значимость различий адекватно оценивается при выборках большего размера.</p>
+<p>При повторе одного и того же анализа на соседних выборках нужно использовать поправки на множественные сравнения.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.stats.multitest</span> <span class="k">as</span> <span class="nn">multitest</span>
@@ -1059,8 +1056,8 @@ T-тест также известен как тест Стьюдента.</p>
 </div></div></div>
 </div>
 <p>В последней колонке искомые p-values.</p>
-<p>Чтобы понять как работают линейные модели с категориальными факторами, отобразим матрицу дизайна.</p>
-<p>Все сочетания уровней действующих факторов кодируются сочетаниями нулей и единиц.</p>
+<p>Чтобы понять, как работают линейные модели с категориальными факторами, отобразим матрицу дизайна.
+Все сочетания уровней действующих факторов кодируются сочетаниями нулей и единиц.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mo</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">exog_names</span>
@@ -1095,7 +1092,7 @@ T-тест также известен как тест Стьюдента.</p>
 </div>
 <div class="section" id="id5">
 <h2>Групповые рисунки<a class="headerlink" href="#id5" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Для визуального сравнения групп между собой можно отображать как отдельные значения, так и рассчётные параметры.</p>
+<p>Для визуального сравнения групп между собой можно отображать как отдельные значения, так и расчётные параметры.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;isi&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;v&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;condition&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">D</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;mod&#39;</span><span class="p">);</span>
