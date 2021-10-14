@@ -1,5 +1,5 @@
 matplotlib>=2.0.0
-seaborn
+seaborn  #pandas
 bqplot
 statsmodels
-pandas
+scikit-learn
