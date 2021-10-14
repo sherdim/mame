@@ -1,5 +1,3 @@
 # Ресурсы для выполнения заданий по "Матметоды в биологии"
 
-[![Binder](http://mybinder.org/badge.svg)](http://mybinder.org:/repo/sherdim/mame)
-
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sherdim/mame/HEAD)
