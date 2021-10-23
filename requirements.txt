@@ -3,3 +3,4 @@ seaborn  #pandas
 bqplot
 statsmodels
 scikit-learn
+openpyxl
