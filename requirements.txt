@@ -1,0 +1,4 @@
+seaborn
+statsmodels
+scikit-learn
+openpyxl
