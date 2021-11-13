@@ -1,6 +1,5 @@
-matplotlib>=2.0.0
-seaborn  #pandas
-bqplot
+seaborn
+openpyxl
 statsmodels
 scikit-learn
-openpyxl
+rise
