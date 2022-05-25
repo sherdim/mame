@@ -44,12 +44,11 @@
     <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
@@ -698,11 +697,14 @@
 <h1>🗎 Кластерный анализ<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<blockquote>
-<div><p>Данная расчётно-графическая работа выполняется в <a class="reference internal" href="i_sreda.html"><span class="doc std std-doc">программной среде Jupyter Notebook</span></a>.
-Если у Вас на компьютере нет установленной вычислительной среды, см. <a class="reference internal" href="i_sredaonline.html"><span class="doc std std-doc">Выполнение расчетно-графических работ онлайн</span></a></p>
-</div></blockquote>
-</div>
+<div class="admonition note">
+<p class="admonition-title">О среде выполнения </p>
+<p> 
+    Данная расчётно-графическая работа выполняется в <a href=i_sreda.html>программной среде Jupyter Notebook</a>.
+Если у Вас на компьютере нет установленной вычислительной среды, см. 
+  <a href=i_sredaonline.html>Выполнение расчетно-графических работ онлайн</a>.
+</p>
+</div></div>
 </div>
 <p>В этой работе Вам надо провести кластерный анализ мультипараметрических данных, в качестве которых выступают спектрограммы отдельных звуков, экспортированные по итогам спектрального анализа в файле „spectral_data.txt“.</p>
 <p>Работа заключается в подборе параметров связи, построении дендрограммы, выделении кластеров и их визуализации на фоне временной развертки звукового сигнала.</p>

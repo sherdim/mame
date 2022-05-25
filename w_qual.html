@@ -44,12 +44,11 @@
     <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
@@ -801,9 +800,9 @@
 <div class="admonition note">
 <p class="admonition-title">О среде выполнения </p>
 <p> 
-    Данная расчётно-графическая работа выполняется в <a href=i_sreda.ipynb>программной среде Jupyter Notebook</a>.
+    Данная расчётно-графическая работа выполняется в <a href=i_sreda.html>программной среде Jupyter Notebook</a>.
 Если у Вас на компьютере нет установленной вычислительной среды, см. 
-  <a href=i_sredaonline.ipynb>Выполнение расчетно-графических работ онлайн</a>.
+  <a href=i_sredaonline.html>Выполнение расчетно-графических работ онлайн</a>.
 </p>
 </div></div>
 </div>
@@ -968,21 +967,7 @@ Name: v, dtype: int64
 </div>
 </div>
 </div>
-<div class="cell tag_hide-cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tt</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">R</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">70</span><span class="p">,</span><span class="mi">74</span><span class="p">])]</span><span class="o">.</span><span class="n">t</span>
-<span class="n">iri</span> <span class="o">=</span> <span class="n">tt</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">tt</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">iri</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">);</span>
-<span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Время, с&#39;</span><span class="p">)</span>
-<span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Частота, Гц&#39;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/w_qual_28_0.png" src="_images/w_qual_28_0.png" />
-</div>
-</div>
+<p>Динамику частоты нажатий оцениваем так же, как для первого этапа.</p>
 <p>Еще одно улучшение - сохранение счета нажатий для двух рук в переменной <code class="docutils literal notranslate"><span class="pre">N</span></code>. После этого количество нажатий в таблицу заносим без ручного ввода числа.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
