@@ -44,15 +44,14 @@
     <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="🗎 Анализ изображения" href="w_pictu.html" />
@@ -965,7 +964,7 @@
 <a class="reference external" href="http://ilastik.org/gallery.html">Примеры интерфейсов программ для полуавтоматического распознавания разных клеток</a>.</p>
 <p>Если много шума, то нужно предварительно подготовить изображение, чтобы не выявлять мелкие частицы.
 Эти и другие процедуры берут на входе двухмерный массив и возвращают также двухмерный массив - в результате можно построить цепочку обработок.</p>
-<p>Чтобы получить номера сегментов в виде изображения используем специальную библиотеку для работы с изображениями. Сначала сделаем сглаживание, затем каждой колонии зададим свой цвет, чтобы отличать их друг от друга и от фона.</p>
+<p>Чтобы получить номера сегментов в виде изображения используем специальную библиотеку для работы с изображениями (при ошибке импорта выполните команду <code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">scikit-image</span></code>). Сначала сделаем сглаживание, затем каждой колонии зададим свой цвет, чтобы отличать их друг от друга и от фона.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">skimage.color</span>
